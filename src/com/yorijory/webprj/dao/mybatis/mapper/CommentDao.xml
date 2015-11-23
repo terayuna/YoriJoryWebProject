@@ -2,14 +2,13 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-
-<mapper namespace="com.yorijory.webprj.dao.NoticeDao">
-	<select id="getNotices" resultType="com.yorijory.webprj.vo.Notice">
+<mapper namespace="com.yorijory.webprj.dao.CommentDao">
+	<select id="getComments" resultType="com.yorijory.webprj.vo.Comment">
 	
 		SELECT * FROM(
          SELECT 
             ROW_NUMBER() OVER (ORDER BY REGDATE DESC) NUM, 
-            NOTICES. * FROM NOTICES 
+            COMMENTS. * FROM COMMENTS 
             WHERE ${param2} LIKE '%${param3}%'
             ) A 
             WHERE NUM BETWEEN 1+(#{param1}-1)*10 AND #{param1}*10
@@ -17,16 +16,15 @@
 	 </select>
 	 
 	 <update id="update">
-		UPDATE NOTICES SET CONTENT=#{content}, TITLE=#{title} WHERE MID=#{mid}
+		UPDATE COMMENTS SET NAME=#{name}, PWD=#{password} WHERE MID=#{mid}
 	 </update> 
 	 
 	 <insert id="insert">
-	 	INSERT INTO NOTICES(MID, CONTENT, TITLE) VALUES(#{mid},#{content},#{title})
+	 	INSERT INTO COMMENTS(MID, NAME, PWD) VALUES(#{mid},#{name},#{password})
 	 </insert>
 	 	
 	 <delete id="delete">
-	 	DELETE NOTICES WHERE MID=#{mid}
+	 	DELETE COMMENTS WHERE MID=#{mid}
 	 </delete>
-	 
 	
 </mapper>

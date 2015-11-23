@@ -43,6 +43,7 @@ public class MybatisNoticeDao implements NoticeDao{
 	}
 
 
+
 	@Override
 	public int update(Notice notice) throws SQLException {
 		// TODO Auto-generated method stub
@@ -63,6 +64,6 @@ public class MybatisNoticeDao implements NoticeDao{
 		return 0;
 	}
 	
-	
+
 
 }
