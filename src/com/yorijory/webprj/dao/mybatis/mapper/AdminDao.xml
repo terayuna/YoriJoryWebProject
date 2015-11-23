@@ -5,13 +5,8 @@
 
 <mapper namespace="com.yorijory.webprj.dao.AdminDao">
 	<select id="getAdmins" resultType="com.yorijory.webprj.vo.Admin">	
-		SELECT * FROM(
-         SELECT 
-            ROW_NUMBER() OVER (ORDER BY REGDATE DESC) NUM, 
-            ADMIN. * FROM ADMIN 
-            WHERE ${param2} LIKE '%${param3}%'
-            ) A 
-            WHERE NUM BETWEEN 1+(#{param1}-1)*10 AND #{param1}*10		 
+		SELECT * FROM ADMIN WHERE ${param2} LIKE '%${param3}%'
+           		 
 	 </select>
 	 
 

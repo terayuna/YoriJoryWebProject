@@ -5,9 +5,9 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import com.yorijory.webprj.dao.AdminDao;
-
+import com.yorijory.webprj.dao.AdministerDao;
 import com.yorijory.webprj.dao.mybatis.MybatisAdminDao;
-
+import com.yorijory.webprj.dao.mybatis.MybatisAdministerDao;
 import com.yorijory.webprj.dao.CommentDao;
 import com.yorijory.webprj.dao.JdbcMemberDao;
 import com.yorijory.webprj.dao.MemberDao;
@@ -24,7 +24,7 @@ import com.yorijory.webprj.dao.mybatis.MybatisQuestionDao;
 import com.yorijory.webprj.dao.mybatis.SqlYojoSessionFactoryBuilder;
 
 import com.yorijory.webprj.vo.Admin;
-
+import com.yorijory.webprj.vo.Administer;
 import com.yorijory.webprj.vo.Comment;
 import com.yorijory.webprj.vo.Member;
 import com.yorijory.webprj.vo.Message;
@@ -51,8 +51,11 @@ public class TestProgram {
 		 * MemberDao dao = new MybatisMemberDao(); List<Member> list =
 		 * dao.getMembers(1, "MID", "");
 		 */
-		NoticeDao dao2 = new MybatisNoticeDao();
-		List<Notice> list2 = dao2.getNotices(1, "MID", "");
+		/*NoticeDao dao2 = new MybatisNoticeDao();
+		List<Notice> list2 = dao2.getNotices(1, "MID", "");*/
+		
+		AdministerDao dao2 = new MybatisAdministerDao();
+		List<Administer> list2 = dao2.getAdministers(1, "MEMBERID", "");
 		/*
 		 * AdminDao dao2 = new MybatisAdminDao(); List<Admin> list2 =
 		 * dao2.getAdmins(1, "MID", "");
@@ -70,8 +73,8 @@ public class TestProgram {
 
 		System.out.println("검색결과 : " + list2.size());
 
-		for (Notice m : list2) {
-			System.out.printf("mid : %s, password : %s \n", m.getMid(), m.getTitle());
+		for (Administer m : list2) {
+			System.out.printf("mid : %s, password : %s \n", m.getMemberId(), m.getAdminId());
 
 		}
 

@@ -32,14 +32,14 @@ public class MybatisNoticeDao implements NoticeDao{
 	@Override
 	public List<Notice> getNotices() throws SQLException {
 		// TODO Auto-generated method stub
-		return getNotices(1, "MID", "");
+		return getNotices(1, "CODE", "");
 	}
 
 
 	@Override
 	public List<Notice> getNotices(int page) throws SQLException {
 		// TODO Auto-generated method stub
-		return getNotices(page, "MID", "");
+		return getNotices(page, "CODE", "");
 	}
 
 
