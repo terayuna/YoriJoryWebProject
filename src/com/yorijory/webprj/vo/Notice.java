@@ -9,6 +9,7 @@ public class Notice {
 	private String code;
 	private Date regDate;
 	private int hit;
+	
 	public String getMid() {
 		return mid;
 	}
