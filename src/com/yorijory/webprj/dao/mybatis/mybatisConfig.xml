@@ -8,13 +8,14 @@
       <transactionManager type="JDBC"/>
       <dataSource type="POOLED">
         <property name="driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
-        <property name="url" value="jdbc:sqlserver://211.238.142.251:1433;databaseName=edudb"/>
-        <property name="username" value="edu"/>
-        <property name="password" value="class2d"/>
+        <property name="url" value="jdbc:sqlserver://211.238.142.251:1433;databaseName=yorijorydb"/>
+        <property name="username" value="yojo"/>
+        <property name="password" value="yjoriy1511"/>
       </dataSource>
     </environment>
   </environments>
   <mappers>
     <mapper resource="com/yorijory/webprj/dao/mybatis/mapper/MemberDao.xml"/>
+    <mapper resource="com/yorijory/webprj/dao/mybatis/mapper/CommentDao.xml"/>
   </mappers>
 </configuration>
