@@ -7,6 +7,9 @@ public class Member {
 	private String name;
 	private String password;
 	private Date regDate;
+	private String phone;
+	private String profilePic;
+	private String Email;
 	
 	public String getMid() {
 		return mid;
@@ -31,6 +34,24 @@ public class Member {
 	}
 	public void setRegDate(Date regDate) {
 		this.regDate = regDate;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	public String getProfilePic() {
+		return profilePic;
+	}
+	public void setProfilePic(String profilePic) {
+		this.profilePic = profilePic;
+	}
+	public String getEmail() {
+		return Email;
+	}
+	public void setEmail(String email) {
+		Email = email;
 	}
 	
 	
