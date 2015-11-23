@@ -41,6 +41,27 @@ public class MybatisNoticeDao implements NoticeDao{
 		// TODO Auto-generated method stub
 		return getNotices(page, "MID", "");
 	}
+
+
+	@Override
+	public int update(Notice notice) throws SQLException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+	@Override
+	public int delete(String mid) throws SQLException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+	@Override
+	public int insert(Notice notice) throws SQLException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 	
 	
 
