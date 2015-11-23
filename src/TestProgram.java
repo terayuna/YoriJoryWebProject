@@ -38,9 +38,11 @@ public class TestProgram {
 
 	public static void main(String[] args) throws SQLException {
 	
-
 		SqlSessionFactory ssf = YojoSqlSessionFactoryBuilder.getSqlSessionFactory(); 
 		SqlSession session = ssf.openSession();
+		
+		
+/******************************여기부터 수정해서 테스트*************************************/
 		
 		NoticeDao dao = new MybatisNoticeDao();
 		List<Notice> list = dao.getNotices(1, "TITLE", "");
