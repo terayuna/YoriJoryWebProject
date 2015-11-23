@@ -1,7 +1,7 @@
 package com.yorijory.webprj.dao.mybatis;
 
 import java.sql.SQLException;
-import java.util.ArrayList;
+
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
@@ -41,5 +41,38 @@ public class MybatisNoticeDao implements NoticeDao{
 		// TODO Auto-generated method stub
 		return getNotices(page, "MID", "");
 	}
+
+
+
+	@Override
+	public int update(Notice notice) throws SQLException {
+		SqlSession session = ssf.openSession();
+		NoticeDao dao = session.getMapper(NoticeDao.class); 
+		int count = dao.update(notice);
+		session.commit();
+		session.close(); 
+		return count;
+	}
+
+	@Override
+	public int delete(String mid) throws SQLException {
+		SqlSession session = ssf.openSession();
+		NoticeDao dao = session.getMapper(NoticeDao.class); 
+		int count = dao.delete(mid);
+		session.commit();
+		session.close(); 
+		return count;
+	}
+
+	@Override
+	public int insert(Notice notice) throws SQLException {
+		SqlSession session = ssf.openSession();
+		NoticeDao dao = session.getMapper(NoticeDao.class); 
+		int count = dao.insert(notice);
+		session.commit();
+		session.close(); 
+		return count;
+	}
+
 
 }

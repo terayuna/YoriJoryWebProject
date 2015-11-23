@@ -2,17 +2,18 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-
-<mapper namespace="com.yorijory.webprj.dao.AdminDao">
-	<select id="getAdmins" resultType="com.yorijory.webprj.vo.Admin">	
+<mapper namespace="com.yorijory.webprj.dao.QuestionDao">
+	<select id="getQuestions" resultType="com.yorijory.webprj.vo.Question">
+	
 		SELECT * FROM(
          SELECT 
             ROW_NUMBER() OVER (ORDER BY REGDATE DESC) NUM, 
-            ADMIN. * FROM ADMIN 
+            Questions. * FROM Questions 
             WHERE ${param2} LIKE '%${param3}%'
             ) A 
-            WHERE NUM BETWEEN 1+(#{param1}-1)*10 AND #{param1}*10		 
+            WHERE NUM BETWEEN 1+(#{param1}-1)*10 AND #{param1}*10
+		 
 	 </select>
-	 
 
+	
 </mapper>
