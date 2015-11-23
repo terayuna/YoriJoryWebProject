@@ -14,7 +14,7 @@ import com.yorijory.webprj.vo.Notice;
 
 public class MybatisNoticeDao implements NoticeDao{
 	
-	SqlSessionFactory ssf = SqlYojoSessionFactoryBuilder.getSqlSessionFactory();
+	SqlSessionFactory ssf = YojoSqlSessionFactoryBuilder.getSqlSessionFactory();
 
 
 	@Override

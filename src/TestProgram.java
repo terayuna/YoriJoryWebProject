@@ -23,7 +23,7 @@ import com.yorijory.webprj.dao.mybatis.MybatisNoticeDao;
 
 import com.yorijory.webprj.dao.mybatis.MybatisQuestionDao;
 
-import com.yorijory.webprj.dao.mybatis.SqlYojoSessionFactoryBuilder;
+import com.yorijory.webprj.dao.mybatis.YojoSqlSessionFactoryBuilder;
 
 import com.yorijory.webprj.vo.Admin;
 
@@ -39,7 +39,7 @@ public class TestProgram {
 	public static void main(String[] args) throws SQLException {
 	
 
-		SqlSessionFactory ssf = SqlYojoSessionFactoryBuilder.getSqlSessionFactory(); 
+		SqlSessionFactory ssf = YojoSqlSessionFactoryBuilder.getSqlSessionFactory(); 
 		SqlSession session = ssf.openSession();
 		
 		NoticeDao dao = new MybatisNoticeDao();

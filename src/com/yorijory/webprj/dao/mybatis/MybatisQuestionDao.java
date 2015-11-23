@@ -12,7 +12,7 @@ import com.yorijory.webprj.vo.Notice;
 import com.yorijory.webprj.vo.Question;
 
 public class MybatisQuestionDao implements QuestionDao {
-	SqlSessionFactory ssf = SqlYojoSessionFactoryBuilder.getSqlSessionFactory();
+	SqlSessionFactory ssf = YojoSqlSessionFactoryBuilder.getSqlSessionFactory();
 
 
 	public List<Question> getQuestions(int page, String field, String query) throws SQLException {

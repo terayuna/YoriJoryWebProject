@@ -12,7 +12,7 @@ import com.yorijory.webprj.vo.Admin;
 
 
 public class MybatisAdminDao implements AdminDao{
-	SqlSessionFactory ssf = SqlYojoSessionFactoryBuilder.getSqlSessionFactory();
+	SqlSessionFactory ssf = YojoSqlSessionFactoryBuilder.getSqlSessionFactory();
 	
 	@Override
 	public List<Admin> getAdmins() throws SQLException {
