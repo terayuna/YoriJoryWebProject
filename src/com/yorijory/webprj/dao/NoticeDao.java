@@ -10,4 +10,10 @@ public interface NoticeDao {
 	public List<Notice> getNotices() throws SQLException;
 	public List<Notice> getNotices(int page) throws SQLException;
 	public List<Notice> getNotices(int page, String field, String query) throws SQLException;
+	public int update(Notice notice) throws SQLException; 
+	public int delete(String mid) throws SQLException; 
+	public int insert(Notice notice) throws SQLException;
+	
+	
+
 }

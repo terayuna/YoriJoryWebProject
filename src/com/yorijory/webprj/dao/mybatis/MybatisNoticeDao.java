@@ -41,5 +41,7 @@ public class MybatisNoticeDao implements NoticeDao{
 		// TODO Auto-generated method stub
 		return getNotices(page, "MID", "");
 	}
+	
+	
 
 }

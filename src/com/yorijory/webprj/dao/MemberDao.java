@@ -15,5 +15,4 @@ public interface MemberDao {
 	public int delete(String mid) throws SQLException; 
 	public int insert(Member member) throws SQLException; 
 
-
 }

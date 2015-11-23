@@ -2,13 +2,13 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.yorijory.webprj.dao.MemberDao">
-	<select id="getMembers" resultType="com.yorijory.webprj.vo.Member">
+<mapper namespace="com.yorijory.webprj.dao.NoticeDao">
+	<select id="getNotices" resultType="com.yorijory.webprj.vo.Notice">
 	
 		SELECT * FROM(
          SELECT 
             ROW_NUMBER() OVER (ORDER BY REGDATE DESC) NUM, 
-            MEMBERS. * FROM MEMBERS 
+            NOTICES. * FROM NOTICES 
             WHERE ${param2} LIKE '%${param3}%'
             ) A 
             WHERE NUM BETWEEN 1+(#{param1}-1)*10 AND #{param1}*10
@@ -16,15 +16,16 @@
 	 </select>
 	 
 	 <update id="update">
-		UPDATE MEMBERS SET NAME=#{name}, PWD=#{password} WHERE MID=#{mid}
+		UPDATE NOTICES SET CONTENT=#{content}, TITLE=#{title} WHERE MID=#{mid}
 	 </update> 
 	 
 	 <insert id="insert">
-	 	INSERT INTO MEMBERS(MID, NAME, PWD) VALUES(#{mid},#{name},#{password})
+	 	INSERT INTO NOTICES(MID, CONTENT, TITLE) VALUES(#{mid},#{content},#{title})
 	 </insert>
 	 	
 	 <delete id="delete">
-	 	DELETE MEMBERS WHERE MID=#{mid}
+	 	DELETE NOTICES WHERE MID=#{mid}
 	 </delete>
+	 
 	
 </mapper>
