@@ -18,5 +18,6 @@
     <mapper resource="com/yorijory/webprj/dao/mybatis/mapper/MemberDao.xml"/>
     <mapper resource="com/yorijory/webprj/dao/mybatis/mapper/CommentDao.xml"/>
     <mapper resource="com/yorijory/webprj/dao/mybatis/mapper/MessageDao.xml"/>
+    <mapper resource="com/yorijory/webprj/dao/mybatis/mapper/QuestionDao.xml"/>
   </mappers>
 </configuration>
