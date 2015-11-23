@@ -1,5 +1,8 @@
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
+
+import javax.annotation.Generated;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -74,6 +77,8 @@ public class TestProgram {
 			System.out.printf("mid : %s, password : %s \n", m.getMid(), m.getTitle());
 
 		}
+
+		
 
 	}
 }
