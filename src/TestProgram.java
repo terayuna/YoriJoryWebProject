@@ -13,9 +13,11 @@ import com.yorijory.webprj.dao.mybatis.MybatisAdminDao;
 import com.yorijory.webprj.dao.CommentDao;
 import com.yorijory.webprj.dao.JdbcMemberDao;
 import com.yorijory.webprj.dao.MemberDao;
+import com.yorijory.webprj.dao.MessageDao;
 import com.yorijory.webprj.dao.mybatis.MybatisCommentDao;
 import com.yorijory.webprj.dao.NoticeDao;
 import com.yorijory.webprj.dao.mybatis.MybatisMemberDao;
+import com.yorijory.webprj.dao.mybatis.MybatisMessageDao;
 import com.yorijory.webprj.dao.mybatis.MybatisNoticeDao;
 
 import com.yorijory.webprj.dao.mybatis.SqlYojoSessionFactoryBuilder;
@@ -24,6 +26,7 @@ import com.yorijory.webprj.vo.Admin;
 
 import com.yorijory.webprj.vo.Comment;
 import com.yorijory.webprj.vo.Member;
+import com.yorijory.webprj.vo.Message;
 import com.yorijory.webprj.vo.Notice;
 
 
@@ -40,11 +43,11 @@ public class TestProgram {
  		
 		/*MemberDao dao = new MybatisMemberDao();
 		List<Member> list = dao.getMembers(1, "MID", "");*/
-		/*NoticeDao dao2 = new MybatisNoticeDao();
-		List<Notice> list2 = dao2.getNotices(1, "MID", "");*/
-		AdminDao dao2 = new MybatisAdminDao();
+		NoticeDao dao2 = new MybatisNoticeDao();
+		List<Notice> list2 = dao2.getNotices(1, "MID", "");
+		/*AdminDao dao2 = new MybatisAdminDao();
 		List<Admin> list2 = dao2.getAdmins(1, "MID", "");
-		
+		*/
 /*		Member upM = new Member();
 		upM.setMid("GOD");
 		upM.setName("크크크");
@@ -63,11 +66,12 @@ public class TestProgram {
 		
 		System.out.println("검색결과 : " + list2.size());
 	
-		for(Admin m : list2){
-			System.out.printf("mid : %s, password : %s \n", m.getMid(), m.getPwd());
+		for(Notice m : list2){
+			System.out.printf("mid : %s, password : %s \n", m.getMid(), m.getTitle());
 		}
 		
 		
 
 }
+
 }

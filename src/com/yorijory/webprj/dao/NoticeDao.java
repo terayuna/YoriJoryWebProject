@@ -3,7 +3,6 @@ package com.yorijory.webprj.dao;
 import java.sql.SQLException;
 import java.util.List;
 
-import com.yorijory.webprj.vo.Member;
 import com.yorijory.webprj.vo.Notice;
 
 public interface NoticeDao {
