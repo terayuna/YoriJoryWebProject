@@ -14,7 +14,7 @@ import com.yorijory.webprj.vo.Question;
 public class MybatisQuestionDao implements QuestionDao {
 	SqlSessionFactory ssf = YojoSqlSessionFactoryBuilder.getSqlSessionFactory();
 
-
+	@Override
 	public List<Question> getQuestions(int page, String field, String query) throws SQLException {
 		SqlSession session = ssf.openSession();
 		QuestionDao dao = session.getMapper(QuestionDao.class); 
@@ -23,10 +23,43 @@ public class MybatisQuestionDao implements QuestionDao {
 		return list;
 	}
 	
+	@Override
+	public List<Question> getQuestions() throws SQLException {
+		return getQuestions(1, "Member_Mid", "") ;
+	}
+	
+	@Override
+	public List<Question> getQuestions(int page) throws SQLException {
+		return getQuestions(page, "Member_Mid", "") ;
+	}
+	
+	@Override
 	public int insert(Question question) throws SQLException {
 		SqlSession session = ssf.openSession();
 		QuestionDao dao = session.getMapper(QuestionDao.class); 
 		int count = dao.insert(question);
+		session.commit();
+		session.close(); 
+		return count;
+	}
+
+
+
+	@Override
+	public int update(Question question) throws SQLException {
+		SqlSession session = ssf.openSession();
+		QuestionDao dao = session.getMapper(QuestionDao.class); 
+		int count = dao.update(question);
+		session.commit();
+		session.close(); 
+		return count;
+	}
+
+	@Override
+	public int delete(String members_mid) throws SQLException {
+		SqlSession session = ssf.openSession();
+		QuestionDao dao = session.getMapper(QuestionDao.class); 
+		int count = dao.delete(members_mid);
 		session.commit();
 		session.close(); 
 		return count;

@@ -5,12 +5,14 @@ import java.util.Date;
 public class Question {
 	private String code;
 	private String title;
-	private String writer;
+	private String members_mid;
 	private String content;
 	private Date regDate;
 	private int hit;
 	private String WriterName;
 	private int cmtCount;
+	
+	
 	public String getCode() {
 		return code;
 	}
@@ -23,11 +25,12 @@ public class Question {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public String getWriter() {
-		return writer;
+	
+	public String getMembers_mid() {
+		return members_mid;
 	}
-	public void setWriter(String writer) {
-		this.writer = writer;
+	public void setMembers_mid(String members_mid) {
+		this.members_mid = members_mid;
 	}
 	public String getContent() {
 		return content;
