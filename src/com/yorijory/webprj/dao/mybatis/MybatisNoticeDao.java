@@ -11,8 +11,9 @@ import com.yorijory.webprj.dao.NoticeDao;
 import com.yorijory.webprj.vo.Admin;
 import com.yorijory.webprj.vo.Notice;
 
-public class MybatisNoticeDao implements NoticeDao{
-	SqlSessionFactory ssf = SqlYojoSessionFactoryBuilder.getSqlSessionFactory();
+public class MybatisNoticeDao implements NoticeDao{	
+	SqlSessionFactory ssf = YojoSqlSessionFactoryBuilder.getSqlSessionFactory();
+
 
 	@Override
 	public List<Notice> getNotices() throws SQLException {
@@ -49,10 +50,12 @@ public class MybatisNoticeDao implements NoticeDao{
 		return 0;
 	}
 
+
 	@Override
 	public int insert(Notice notice) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 	
+
 }

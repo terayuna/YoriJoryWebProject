@@ -12,8 +12,8 @@ import com.yorijory.webprj.vo.Comment;
 import com.yorijory.webprj.vo.Scrap;
 
 public class MybatisScrapDao implements ScrapDao{
-	SqlSessionFactory ssf = SqlYojoSessionFactoryBuilder.getSqlSessionFactory();
-
+	SqlSessionFactory ssf = YojoSqlSessionFactoryBuilder.getSqlSessionFactory();
+	
 	@Override
 	public List<Scrap> getScraps() throws SQLException {
 		// TODO Auto-generated method stub

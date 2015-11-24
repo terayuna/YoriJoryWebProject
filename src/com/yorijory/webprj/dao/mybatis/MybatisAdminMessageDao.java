@@ -12,7 +12,7 @@ import com.yorijory.webprj.vo.AdminMessage;
 import com.yorijory.webprj.vo.Comment;
 
 public class MybatisAdminMessageDao implements AdminMessageDao{
-	SqlSessionFactory ssf = SqlYojoSessionFactoryBuilder.getSqlSessionFactory();
+	SqlSessionFactory ssf = YojoSqlSessionFactoryBuilder.getSqlSessionFactory();
 
 	@Override
 	public List<AdminMessage> getAdminMessage() throws SQLException {

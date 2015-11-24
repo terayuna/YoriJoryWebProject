@@ -10,7 +10,7 @@ import com.yorijory.webprj.dao.CommentDao;
 import com.yorijory.webprj.vo.Comment;
 
 public class MybatisCommentDao implements CommentDao{
-	SqlSessionFactory ssf = SqlYojoSessionFactoryBuilder.getSqlSessionFactory();
+	SqlSessionFactory ssf = YojoSqlSessionFactoryBuilder.getSqlSessionFactory();
 
 	@Override
 	public List<Comment> getComments() throws SQLException {

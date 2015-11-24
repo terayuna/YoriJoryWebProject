@@ -12,7 +12,7 @@ import com.yorijory.webprj.vo.Comment;
 import com.yorijory.webprj.vo.Message;
 
 public class MybatisMessageDao implements MessageDao{
-	SqlSessionFactory ssf = SqlYojoSessionFactoryBuilder.getSqlSessionFactory();
+	SqlSessionFactory ssf = YojoSqlSessionFactoryBuilder.getSqlSessionFactory();
 
 	@Override
 	public List<Message> getMessages() throws SQLException {

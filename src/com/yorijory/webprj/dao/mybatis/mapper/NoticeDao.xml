@@ -14,17 +14,13 @@
             WHERE NUM BETWEEN 1+(#{param1}-1)*10 AND #{param1}*10
 		 
 	 </select>
-	 
 	 <update id="update">
 		UPDATE NOTICES SET NAME=#{name}, PWD=#{password} WHERE MID=#{mid}
-	 </update> 
-	 
+		</update>
 	 <insert id="insert">
 	 	INSERT INTO NOTICES(MID, NAME, PWD) VALUES(#{mid},#{name},#{password})
 	 </insert>
-	 	
 	 <delete id="delete">
 	 	DELETE NOTICES WHERE MID=#{mid}
 	 </delete>
-	
 </mapper>

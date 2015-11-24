@@ -7,7 +7,7 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-public class SqlYojoSessionFactoryBuilder {
+public class YojoSqlSessionFactoryBuilder {
 	static SqlSessionFactory ssf;
 	
 	static{

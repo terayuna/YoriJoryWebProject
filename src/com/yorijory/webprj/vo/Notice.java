@@ -9,13 +9,7 @@ public class Notice {
 	private int code;
 	private int hit;
 	private Date regDate;
-	
-	public String getAdmin_Mid() {
-		return admin_Mid;
-	}
-	public void setAdmin_Mid(String admin_Mid) {
-		this.admin_Mid = admin_Mid;
-	}
+
 	public String getTitle() {
 		return title;
 	}
