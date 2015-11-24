@@ -5,11 +5,10 @@ import java.util.Date;
 public class Message {
 	private String title;
 	private String content;
-	private String sendId;
-	private String receiveId;
-	private Date date;
+	private String send_Mid;
+	private String receive_Mid;
+	private Date regDate;
 	private int code;
-	
 	
 	public String getTitle() {
 		return title;
@@ -23,23 +22,23 @@ public class Message {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public String getSendId() {
-		return sendId;
+	public String getSend_Mid() {
+		return send_Mid;
 	}
-	public void setSendId(String sendId) {
-		this.sendId = sendId;
+	public void setSend_Mid(String send_Mid) {
+		this.send_Mid = send_Mid;
 	}
-	public String getReceiveId() {
-		return receiveId;
+	public String getReceive_Mid() {
+		return receive_Mid;
 	}
-	public void setReceiveId(String receiveId) {
-		this.receiveId = receiveId;
+	public void setReceive_Mid(String receive_Mid) {
+		this.receive_Mid = receive_Mid;
 	}
-	public Date getDate() {
-		return date;
+	public Date getRegDate() {
+		return regDate;
 	}
-	public void setDate(Date date) {
-		this.date = date;
+	public void setRegDate(Date regDate) {
+		this.regDate = regDate;
 	}
 	public int getCode() {
 		return code;

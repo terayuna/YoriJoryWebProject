@@ -2,13 +2,13 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.yorijory.webprj.dao.AdminDao">
-	<select id="getAdmin" resultType="com.yorijory.webprj.vo.Admin">
+<mapper namespace="com.yorijory.webprj.dao.AdminMessageDao">
+	<select id="getAdminMessage" resultType="com.yorijory.webprj.vo.AdminMessage">
 	
 		SELECT * FROM(
          SELECT 
             ROW_NUMBER() OVER (ORDER BY REGDATE DESC) NUM, 
-            ADMIN. * FROM ADMIN 
+            ADMINMESSAGE. * FROM ADMINMESSAGE 
             WHERE ${param2} LIKE '%${param3}%'
             ) A 
             WHERE NUM BETWEEN 1+(#{param1}-1)*10 AND #{param1}*10
@@ -16,15 +16,15 @@
 	 </select>
 	 
 	 <update id="update">
-		UPDATE ADMIN SET NAME=#{name}, PWD=#{password} WHERE MID=#{mid}
+		UPDATE ADMINMESSAGE SET NAME=#{name}, PWD=#{password} WHERE MID=#{mid}
 	 </update> 
 	 
 	 <insert id="insert">
-	 	INSERT INTO ADMIN(MID, NAME, PWD) VALUES(#{mid},#{name},#{password})
+	 	INSERT INTO ADMINMESSAGE(MID, NAME, PWD) VALUES(#{mid},#{name},#{password})
 	 </insert>
 	 	
 	 <delete id="delete">
-	 	DELETE ADMIN WHERE MID=#{mid}
+	 	DELETE ADMINMESSAGE WHERE MID=#{mid}
 	 </delete>
 	
 </mapper>

@@ -10,6 +10,6 @@ public interface MessageDao {
 	public List<Message> getMessages(int page) throws SQLException;
 	public List<Message> getMessages(int page, String field, String query) throws SQLException;
 	public int update(Message message) throws SQLException;
-	public int delete(String code);
+	public int delete(int code);
 	public int insert(Message message);
 }

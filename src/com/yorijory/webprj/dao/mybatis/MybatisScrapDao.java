@@ -6,39 +6,39 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
-import com.yorijory.webprj.dao.AdminDao;
-import com.yorijory.webprj.dao.NoticeDao;
-import com.yorijory.webprj.vo.Admin;
-import com.yorijory.webprj.vo.Notice;
+import com.yorijory.webprj.dao.CommentDao;
+import com.yorijory.webprj.dao.ScrapDao;
+import com.yorijory.webprj.vo.Comment;
+import com.yorijory.webprj.vo.Scrap;
 
-public class MybatisNoticeDao implements NoticeDao{
+public class MybatisScrapDao implements ScrapDao{
 	SqlSessionFactory ssf = SqlYojoSessionFactoryBuilder.getSqlSessionFactory();
 
 	@Override
-	public List<Notice> getNotices() throws SQLException {
+	public List<Scrap> getScraps() throws SQLException {
 		// TODO Auto-generated method stub
-		return getNotices(1, "CODE", "");
+		return getScraps(1, "MEMBERS_MID", "");
 	}
 
 	@Override
-	public List<Notice> getNotices(int page) throws SQLException {
+	public List<Scrap> getScraps(int page) throws SQLException {
 		// TODO Auto-generated method stub
-		return getNotices(page, "CODE", "");
+		return getScraps(page, "MEMBERS_MID", "");
 	}
 
 	@Override
-	public List<Notice> getNotices(int page, String field, String query) throws SQLException {
+	public List<Scrap> getScraps(int page, String field, String query) throws SQLException {
 		// TODO Auto-generated method stub
 		SqlSession session = ssf.openSession();
-		NoticeDao dao = session.getMapper(NoticeDao.class);
-		List<Notice> list = dao.getNotices(page, field, query);
+		ScrapDao dao = session.getMapper(ScrapDao.class);
+		List<Scrap> list = dao.getScraps(page, field, query);
 
 		session.close();
 		return list;
 	}
 
 	@Override
-	public int update(Notice notice) throws SQLException {
+	public int update(Scrap scrap) throws SQLException {
 		// TODO Auto-generated method stub
 		return 0;
 	}
@@ -50,9 +50,9 @@ public class MybatisNoticeDao implements NoticeDao{
 	}
 
 	@Override
-	public int insert(Notice notice) {
+	public int insert(Scrap scrape) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
-	
+
 }

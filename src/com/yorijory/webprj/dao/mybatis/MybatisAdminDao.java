@@ -7,52 +7,51 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import com.yorijory.webprj.dao.AdminDao;
-import com.yorijory.webprj.dao.NoticeDao;
 import com.yorijory.webprj.vo.Admin;
-import com.yorijory.webprj.vo.Notice;
 
-public class MybatisNoticeDao implements NoticeDao{
+public class MybatisAdminDao implements AdminDao{
 	SqlSessionFactory ssf = SqlYojoSessionFactoryBuilder.getSqlSessionFactory();
 
 	@Override
-	public List<Notice> getNotices() throws SQLException {
+	public List<Admin> getAdmin() throws SQLException {
 		// TODO Auto-generated method stub
-		return getNotices(1, "CODE", "");
+		return getAdmin(1, "MID", "");
 	}
 
 	@Override
-	public List<Notice> getNotices(int page) throws SQLException {
+	public List<Admin> getAdmin(int page) throws SQLException {
 		// TODO Auto-generated method stub
-		return getNotices(page, "CODE", "");
+		return getAdmin(page, "MID", "");
 	}
 
 	@Override
-	public List<Notice> getNotices(int page, String field, String query) throws SQLException {
+	public List<Admin> getAdmin(int page, String field, String query) throws SQLException {
 		// TODO Auto-generated method stub
 		SqlSession session = ssf.openSession();
-		NoticeDao dao = session.getMapper(NoticeDao.class);
-		List<Notice> list = dao.getNotices(page, field, query);
+		AdminDao dao = session.getMapper(AdminDao.class);
+		List<Admin> list = dao.getAdmin(page, field, query);
 
 		session.close();
 		return list;
 	}
 
 	@Override
-	public int update(Notice notice) throws SQLException {
+	public int update(Admin admin) throws SQLException {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public int delete(int code) {
+	public int delete(String mid) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public int insert(Notice notice) {
+	public int insert(Admin admin) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
 	
 }

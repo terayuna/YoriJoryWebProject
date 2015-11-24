@@ -2,12 +2,12 @@ package com.yorijory.webprj.vo;
 
 import java.util.Date;
 
-public class Notice {
+public class AdminMessage {
 	private String admin_Mid;
+	private String member_Mid;
 	private String title;
 	private String content;
 	private int code;
-	private int hit;
 	private Date regDate;
 	
 	public String getAdmin_Mid() {
@@ -15,6 +15,12 @@ public class Notice {
 	}
 	public void setAdmin_Mid(String admin_Mid) {
 		this.admin_Mid = admin_Mid;
+	}
+	public String getMember_Mid() {
+		return member_Mid;
+	}
+	public void setMember_Mid(String member_Mid) {
+		this.member_Mid = member_Mid;
 	}
 	public String getTitle() {
 		return title;
@@ -34,18 +40,11 @@ public class Notice {
 	public void setCode(int code) {
 		this.code = code;
 	}
-	public int getHit() {
-		return hit;
-	}
-	public void setHit(int hit) {
-		this.hit = hit;
-	}
 	public Date getRegDate() {
 		return regDate;
 	}
 	public void setRegDate(Date regDate) {
 		this.regDate = regDate;
 	}
-	
 	
 }

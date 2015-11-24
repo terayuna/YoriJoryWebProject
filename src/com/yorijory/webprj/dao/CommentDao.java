@@ -10,6 +10,6 @@ public interface CommentDao {
 	public List<Comment> getComments(int page) throws SQLException;
 	public List<Comment> getComments(int page, String field, String query) throws SQLException;
 	public int update(Comment comment) throws SQLException;
-	public int delete(String mid);
+	public int delete(String code);
 	public int insert(Comment comment);
 }

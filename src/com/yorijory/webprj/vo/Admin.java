@@ -1,8 +1,18 @@
 package com.yorijory.webprj.vo;
 
+import java.util.Date;
+
 public class Admin {
 	private String mid;
 	private String pwd;
+	private Date regDate;
+	
+	public Date getRegDate() {
+		return regDate;
+	}
+	public void setRegDate(Date regDate) {
+		this.regDate = regDate;
+	}
 	public String getMid() {
 		return mid;
 	}

@@ -4,33 +4,21 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
-import com.yorijory.webprj.dao.CommentDao;
-import com.yorijory.webprj.dao.JdbcMemberDao;
-import com.yorijory.webprj.dao.MemberDao;
-import com.yorijory.webprj.dao.MessageDao;
-import com.yorijory.webprj.dao.mybatis.MybatisCommentDao;
-import com.yorijory.webprj.dao.NoticeDao;
-import com.yorijory.webprj.dao.mybatis.MybatisMemberDao;
-import com.yorijory.webprj.dao.mybatis.MybatisMessageDao;
-import com.yorijory.webprj.dao.mybatis.MybatisNoticeDao;
-import com.yorijory.webprj.dao.mybatis.SqlYojoSessionFactoryBuilder;
-import com.yorijory.webprj.vo.Comment;
-import com.yorijory.webprj.vo.Member;
-import com.yorijory.webprj.vo.Message;
-import com.yorijory.webprj.vo.Notice;
+import com.yorijory.webprj.dao.AdminMessageDao;
+import com.yorijory.webprj.dao.mybatis.MybatisAdminMessageDao;
+import com.yorijory.webprj.vo.AdminMessage;
 
 public class TestProgram {
 
 	public static void main(String[] args) throws SQLException {
 	
-		MessageDao dao = new MybatisMessageDao();
-		List<Message> list = dao.getMessages(1);
-		Message message = new Message();
+		AdminMessageDao dao = new MybatisAdminMessageDao();
+		List<AdminMessage> list = dao.getAdminMessage(1);
+		AdminMessage message = new AdminMessage();
 		
-		
-		for(Message n : list)
+		for(AdminMessage n : list)
 		{
-			System.out.printf("mid = %s, name = %s\n", n.getCode(), n.getTitle());
+			System.out.printf("mid = %s, name = %d\n", n.getMember_Mid(), n.getCode());
 		}
 	}
 }
