@@ -20,12 +20,8 @@ import org.apache.ibatis.session.SqlSessionFactory;
 
 
 public class TestProgram {
-
-
 	public static void main(String[] args) throws SQLException {
 
-		 /*MemberDao dao = new MybatisMemberDao(); 
-		  * List<Member> list = dao.getMembers(1, "MID", "");*/
 		MemberDao dao = new MybatisMemberDao();
 		List<Member> list = dao.getMembers(1, "MID", "");
 
