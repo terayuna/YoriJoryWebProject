@@ -11,7 +11,7 @@ import com.yorijory.webprj.dao.RecipesCommentDao;
 import com.yorijory.webprj.vo.RecipesAdminister;
 
 public class MybatisRecipesAdministerDao implements RecipesAdministerDao{
-	SqlSessionFactory ssf = SqlYojoSessionFactoryBuilder.getSqlSessionFactory();
+	SqlSessionFactory ssf = YojoSqlSessionFactoryBuilder.getSqlSessionFactory();
 
 	@Override
 	public List<RecipesAdminister> getRecipesAdminister() throws SQLException {

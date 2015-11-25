@@ -1,5 +1,6 @@
 
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 
 
@@ -23,7 +24,7 @@ import com.yorijory.webprj.dao.MemberDao;
 import com.yorijory.webprj.dao.mybatis.MybatisMemberDao;
 
 
-import com.yorijory.webprj.dao.mybatis.SqlYojoSessionFactoryBuilder;
+import com.yorijory.webprj.dao.mybatis.YojoSqlSessionFactoryBuilder;
 
 
 import com.yorijory.webprj.vo.Board;
@@ -32,6 +33,17 @@ import com.yorijory.webprj.vo.BoardComment;
 import com.yorijory.webprj.vo.BoardReport;
 
 import com.yorijory.webprj.vo.Member;
+
+
+import javax.annotation.Generated;
+
+
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+
+import com.yorijory.webprj.dao.AdminMessageDao;
+import com.yorijory.webprj.dao.mybatis.MybatisAdminMessageDao;
+import com.yorijory.webprj.vo.AdminMessage;
 
 import com.yorijory.webprj.dao.RecipesAdministerDao;
 import com.yorijory.webprj.dao.RecipesCommentDao;
@@ -47,6 +59,10 @@ import com.yorijory.webprj.vo.Recipes;
 import com.yorijory.webprj.vo.RecipesAdminister;
 import com.yorijory.webprj.vo.RecipesComment;
 import com.yorijory.webprj.vo.RecipesRecommand;
+
+import com.yorijory.webprj.vo.RecipesReport;
+
+
 import com.yorijory.webprj.vo.RecipesReport;
 
 
@@ -55,19 +71,6 @@ public class TestProgram {
 
 	public static void main(String[] args) throws SQLException {
 
-		/*
-		 * JdbcMemberDao dao = new JdbcMemberDao(); List<Member> list =
-		 * dao.getMembers(2);
-		 */
-
-		SqlSessionFactory ssf = SqlYojoSessionFactoryBuilder.getSqlSessionFactory(); // 공장에서
-																						// 세션객체
-																						// 얻어옴
-		SqlSession session = ssf.openSession();
-		// MemberDao dao = session.getMapper(MemberDao.class); //인터페이스 구현한 클래스
-		// 얻어옴
-
-		
 		 /*MemberDao dao = new MybatisMemberDao(); 
 		  * List<Member> list = dao.getMembers(1, "MID", "");*/
 		MemberDao dao = new MybatisMemberDao();
@@ -79,7 +82,5 @@ public class TestProgram {
 			System.out.printf("mid : %s, title : %s \n", m.getMid(), m.getName());
 
 		}
-	
-
 	}
 }

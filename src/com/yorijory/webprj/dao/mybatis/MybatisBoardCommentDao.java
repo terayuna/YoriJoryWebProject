@@ -11,7 +11,7 @@ import com.yorijory.webprj.vo.BoardComment;
 
 
 public class MybatisBoardCommentDao implements BoardCommentDao{
-	SqlSessionFactory ssf = SqlYojoSessionFactoryBuilder.getSqlSessionFactory();
+	SqlSessionFactory ssf = YojoSqlSessionFactoryBuilder.getSqlSessionFactory();
 	
 	@Override
 	public List<BoardComment> getBoardComments() throws SQLException {

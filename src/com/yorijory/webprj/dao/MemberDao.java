@@ -6,6 +6,7 @@ import java.util.List;
 import com.yorijory.webprj.vo.Member;
 
 public interface MemberDao {
+
    public List<Member> getMembers() throws SQLException;
    public List<Member> getMembers(int page) throws SQLException;
    public List<Member> getMembers(int page, String field, String query) throws SQLException;

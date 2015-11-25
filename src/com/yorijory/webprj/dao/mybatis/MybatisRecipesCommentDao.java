@@ -12,7 +12,7 @@ import com.yorijory.webprj.vo.RecipesComment;
 
 public class MybatisRecipesCommentDao implements RecipesCommentDao {
 	
-	SqlSessionFactory ssf = SqlYojoSessionFactoryBuilder.getSqlSessionFactory();
+	SqlSessionFactory ssf = YojoSqlSessionFactoryBuilder.getSqlSessionFactory();
 
 	@Override
 	public List<RecipesComment> getRecipesComment() throws SQLException {

@@ -12,7 +12,7 @@ import com.yorijory.webprj.vo.Board;
 
 
 public class MybatisBoardDao implements BoardDao{
-	SqlSessionFactory ssf = SqlYojoSessionFactoryBuilder.getSqlSessionFactory();
+	SqlSessionFactory ssf = YojoSqlSessionFactoryBuilder.getSqlSessionFactory();
 	
 	@Override
 	public List<Board> getBoards() throws SQLException {

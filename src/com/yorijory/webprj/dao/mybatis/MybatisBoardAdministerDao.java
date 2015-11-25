@@ -14,7 +14,7 @@ import com.yorijory.webprj.vo.BoardAdminister;
 
 
 public class MybatisBoardAdministerDao implements BoardAdministerDao{
-	SqlSessionFactory ssf = SqlYojoSessionFactoryBuilder.getSqlSessionFactory();
+	SqlSessionFactory ssf = YojoSqlSessionFactoryBuilder.getSqlSessionFactory();
 	
 	@Override
 	public List<BoardAdminister> getBoardAdministers() throws SQLException {

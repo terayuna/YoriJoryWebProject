@@ -10,7 +10,8 @@ import com.yorijory.webprj.dao.MemberDao;
 import com.yorijory.webprj.vo.Member;
 
 public class MybatisMemberDao implements MemberDao{
-   SqlSessionFactory ssf = SqlYojoSessionFactoryBuilder.getSqlSessionFactory();
+
+   SqlSessionFactory ssf = YojoSqlSessionFactoryBuilder.getSqlSessionFactory();
    
    @Override
    public List<Member> getMembers() throws SQLException {
