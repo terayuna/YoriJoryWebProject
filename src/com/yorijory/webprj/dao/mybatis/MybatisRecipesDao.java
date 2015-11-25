@@ -16,13 +16,13 @@ public class MybatisRecipesDao implements RecipesDao {
 	@Override
 	public List<Recipes> getRecipes() throws SQLException {
 		// TODO Auto-generated method stub
-		return getRecipes(1, "WRITER", "");
+		return getRecipes(1, "Member_Mid", "");
 	}
 
 	@Override
 	public List<Recipes> getRecipes(int page) throws SQLException {
 		// TODO Auto-generated method stub
-		return getRecipes(page, "WRITER", "");
+		return getRecipes(page, "Member_Mid", "");
 	}
 
 	@Override
@@ -46,11 +46,11 @@ public class MybatisRecipesDao implements RecipesDao {
 	}
 
 	@Override
-	public int delete(String writer) throws SQLException {
+	public int delete(String members_mid) throws SQLException {
 		// TODO Auto-generated method stub
 		SqlSession session = ssf.openSession();
 		RecipesDao dao = session.getMapper(RecipesDao.class); 
-		int count = dao.delete(writer);
+		int count = dao.delete(members_mid);
 		session.commit();
 		session.close(); 
 		return count;

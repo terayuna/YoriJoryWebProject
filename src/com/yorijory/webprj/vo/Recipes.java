@@ -3,18 +3,18 @@ package com.yorijory.webprj.vo;
 import java.util.Date;
 
 public class Recipes {
-	private String code;
+	private int code;
 	private String title;
-	private String writer;
+	private String Member_Mid;
 	private String content;
 	private Date regDate;
 	private String type;
 	private int hit;
-	
-	public String getCode() {
+
+	public int getCode() {
 		return code;
 	}
-	public void setCode(String code) {
+	public void setCode(int code) {
 		this.code = code;
 	}
 	public String getTitle() {
@@ -23,11 +23,12 @@ public class Recipes {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public String getWriter() {
-		return writer;
+	
+	public String getMember_Mid() {
+		return Member_Mid;
 	}
-	public void setWriter(String writer) {
-		this.writer = writer;
+	public void setMember_Mid(String member_Mid) {
+		Member_Mid = member_Mid;
 	}
 	public String getContent() {
 		return content;

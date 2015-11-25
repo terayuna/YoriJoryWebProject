@@ -2,24 +2,18 @@ package com.yorijory.webprj.vo;
 
 import java.util.Date;
 
-public class Notice {
+public class RecipesReport {
 	private String mid;
-	private String title;
 	private String content;
-	private String code;
 	private Date regDate;
-	private int hit;
+	private int code;
+	private int recipes_code;
+	
 	public String getMid() {
 		return mid;
 	}
 	public void setMid(String mid) {
 		this.mid = mid;
-	}
-	public String getTitle() {
-		return title;
-	}
-	public void setTitle(String title) {
-		this.title = title;
 	}
 	public String getContent() {
 		return content;
@@ -27,25 +21,24 @@ public class Notice {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public String getCode() {
-		return code;
-	}
-	public void setCode(String code) {
-		this.code = code;
-	}
 	public Date getRegDate() {
 		return regDate;
 	}
 	public void setRegDate(Date regDate) {
 		this.regDate = regDate;
 	}
-	public int getHit() {
-		return hit;
+	public int getCode() {
+		return code;
 	}
-	public void setHit(int hit) {
-		this.hit = hit;
+	public void setCode(int code) {
+		this.code = code;
 	}
-	
-	
-	
+	public int getRecipes_code() {
+		return recipes_code;
+	}
+	public void setRecipes_code(int recipes_code) {
+		this.recipes_code = recipes_code;
+	}
+
+
 }

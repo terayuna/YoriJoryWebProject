@@ -1,50 +1,37 @@
+
 import java.sql.SQLException;
 import java.util.List;
 
-import com.yorijory.webprj.dao.BoardsDao;
+import com.yorijory.webprj.dao.RecipesAdministerDao;
+import com.yorijory.webprj.dao.RecipesCommentDao;
 import com.yorijory.webprj.dao.RecipesDao;
-import com.yorijory.webprj.dao.mybatis.MybatisBoardsDao;
+import com.yorijory.webprj.dao.RecipesRecommandDao;
+import com.yorijory.webprj.dao.RecipesReportDao;
+import com.yorijory.webprj.dao.mybatis.MybatisRecipesAdministerDao;
+import com.yorijory.webprj.dao.mybatis.MybatisRecipesCommentDao;
 import com.yorijory.webprj.dao.mybatis.MybatisRecipesDao;
-import com.yorijory.webprj.vo.Boards;
+import com.yorijory.webprj.dao.mybatis.MybatisRecipesRecommandDao;
+import com.yorijory.webprj.dao.mybatis.MybatisRecipesReportDao;
 import com.yorijory.webprj.vo.Recipes;
-
-<<<<<<< HEAD
-=======
-import com.yorijory.webprj.dao.AdminDao;
-
-import com.yorijory.webprj.dao.mybatis.MybatisAdminDao;
-
-import com.yorijory.webprj.dao.CommentDao;
-import com.yorijory.webprj.dao.JdbcMemberDao;
-import com.yorijory.webprj.dao.MemberDao;
-import com.yorijory.webprj.dao.MessageDao;
-import com.yorijory.webprj.dao.mybatis.MybatisCommentDao;
-import com.yorijory.webprj.dao.NoticeDao;
-import com.yorijory.webprj.dao.QuestionDao;
-import com.yorijory.webprj.dao.mybatis.MybatisMemberDao;
-import com.yorijory.webprj.dao.mybatis.MybatisMessageDao;
-import com.yorijory.webprj.dao.mybatis.MybatisNoticeDao;
-
-import com.yorijory.webprj.dao.mybatis.MybatisQuestionDao;
-
-import com.yorijory.webprj.dao.mybatis.SqlYojoSessionFactoryBuilder;
-
-import com.yorijory.webprj.vo.Admin;
-
-import com.yorijory.webprj.vo.Comment;
-import com.yorijory.webprj.vo.Member;
-import com.yorijory.webprj.vo.Message;
-import com.yorijory.webprj.vo.Notice;
-
-
-import com.yorijory.webprj.vo.Question;
+import com.yorijory.webprj.vo.RecipesAdminister;
+import com.yorijory.webprj.vo.RecipesComment;
+import com.yorijory.webprj.vo.RecipesRecommand;
+import com.yorijory.webprj.vo.RecipesReport;
 
 public class TestProgram {
 
 
 	public static void main(String[] args) throws SQLException {
-	
 		
-
+		RecipesDao dao = new MybatisRecipesDao();
+		List<Recipes> list = dao.getRecipes();
+		Recipes report = new Recipes();
+		
+		for(Recipes r : list)
+		{
+			System.out.printf("mid = %s" ,r.getMember_Mid());
+		}	
+	
+	
 	}
 }
