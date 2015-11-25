@@ -14,6 +14,7 @@
       </dataSource>
     </environment>
   </environments>
+
   <mappers>
     <mapper resource="com/yorijory/webprj/dao/mybatis/mapper/MemberDao.xml"/>
     <mapper resource="com/yorijory/webprj/dao/mybatis/mapper/CommentDao.xml"/>
@@ -23,5 +24,10 @@
     <mapper resource="com/yorijory/webprj/dao/mybatis/mapper/ScrapDao.xml"/>
     <mapper resource="com/yorijory/webprj/dao/mybatis/mapper/AdminMessageDao.xml"/>
     <mapper resource="com/yorijory/webprj/dao/mybatis/mapper/QuestionDao.xml"/>
+    <mapper resource="com/yorijory/webprj/dao/mybatis/mapper/RecipesDao.xml"/>
+    <mapper resource="com/yorijory/webprj/dao/mybatis/mapper/RecipesReportDao.xml"/>
+    <mapper resource="com/yorijory/webprj/dao/mybatis/mapper/RecipesRecommandDao.xml"/>
+    <mapper resource="com/yorijory/webprj/dao/mybatis/mapper/RecipesCommentDao.xml"/>
+    <mapper resource="com/yorijory/webprj/dao/mybatis/mapper/RecipesAdministerDao.xml"/>   
   </mappers>
 </configuration>

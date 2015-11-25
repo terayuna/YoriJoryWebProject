@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yorijory.webprj.dao.RecipesCommentDao">
+	<select id="getRecipesComment" resultType="com.yorijory.webprj.vo.RecipesComment">
+	
+		SELECT * FROM(
+         SELECT 
+            ROW_NUMBER() OVER (ORDER BY REGDATE DESC) NUM, 
+            ReciepsComment. * FROM ReciepsComment
+            WHERE ${param2} LIKE '%${param3}%'
+            ) A 
+            WHERE NUM BETWEEN 1+(#{param1}-1)*10 AND #{param1}*10
+		 
+	 </select>
+	 
+	
+	
+</mapper>

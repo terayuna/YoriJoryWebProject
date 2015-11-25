@@ -7,9 +7,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import com.yorijory.webprj.dao.AdminMessageDao;
-import com.yorijory.webprj.dao.CommentDao;
 import com.yorijory.webprj.vo.AdminMessage;
-import com.yorijory.webprj.vo.Comment;
 
 public class MybatisAdminMessageDao implements AdminMessageDao{
 	SqlSessionFactory ssf = YojoSqlSessionFactoryBuilder.getSqlSessionFactory();

@@ -5,11 +5,11 @@ import java.util.Date;
 public class Member {
 	private String mid;
 	private String name;
-	private String password;
-	private Date regDate;
+	private String pwd;
 	private String phone;
 	private String profilePic;
-	private String Email;
+	private String email;
+	private Date regDate;
 	
 	public String getMid() {
 		return mid;
@@ -23,17 +23,11 @@ public class Member {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getPassword() {
-		return password;
+	public String getPwd() {
+		return pwd;
 	}
-	public void setPassword(String password) {
-		this.password = password;
-	}
-	public Date getRegDate() {
-		return regDate;
-	}
-	public void setRegDate(Date regDate) {
-		this.regDate = regDate;
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
 	}
 	public String getPhone() {
 		return phone;
@@ -48,11 +42,16 @@ public class Member {
 		this.profilePic = profilePic;
 	}
 	public String getEmail() {
-		return Email;
+		return email;
 	}
 	public void setEmail(String email) {
-		Email = email;
+		this.email = email;
 	}
-	
+	public Date getRegDate() {
+		return regDate;
+	}
+	public void setRegDate(Date regDate) {
+		this.regDate = regDate;
+	}
 	
 }
