@@ -9,7 +9,7 @@ public interface QuestionAdministerDao {
 	public List<QuestionAdminister> getQuestionsAdminister() throws SQLException;
 	public List<QuestionAdminister> getQuestionsAdminister(int page) throws SQLException;
 	public List<QuestionAdminister> getQuestionsAdminister(int page, String field, String query) throws SQLException;
-	public int update(QuestionAdminister questionsadminister) throws SQLException; 
+	public int update(QuestionAdminister questionsAdminister) throws SQLException; 
 	public int delete(String mid) throws SQLException; 
-	public int insert(QuestionAdminister questionsadminister) throws SQLException;
+	public int insert(QuestionAdminister questionsAdminister) throws SQLException;
 }

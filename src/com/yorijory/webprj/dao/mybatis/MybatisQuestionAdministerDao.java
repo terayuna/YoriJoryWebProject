@@ -55,10 +55,10 @@ public class MybatisQuestionAdministerDao implements QuestionAdministerDao {
 	}
 
 	@Override
-	public int insert(QuestionAdminister questionsadminister) throws SQLException {
+	public int insert(QuestionAdminister questionsAdminister) throws SQLException {
 		SqlSession session = ssf.openSession();
 		QuestionAdministerDao dao = session.getMapper(QuestionAdministerDao.class); 
-		int count = dao.insert(questionsadminister);
+		int count = dao.insert(questionsAdminister);
 		session.commit();
 		session.close(); 
 		return count;
