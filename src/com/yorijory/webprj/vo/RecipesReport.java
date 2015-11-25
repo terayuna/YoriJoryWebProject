@@ -2,11 +2,12 @@ package com.yorijory.webprj.vo;
 
 import java.util.Date;
 
-public class Comment {
+public class RecipesReport {
 	private String mid;
-	private String Content;
+	private String content;
 	private Date regDate;
 	private int code;
+	private int recipes_code;
 	
 	public String getMid() {
 		return mid;
@@ -15,10 +16,10 @@ public class Comment {
 		this.mid = mid;
 	}
 	public String getContent() {
-		return Content;
+		return content;
 	}
 	public void setContent(String content) {
-		Content = content;
+		this.content = content;
 	}
 	public Date getRegDate() {
 		return regDate;
@@ -32,5 +33,12 @@ public class Comment {
 	public void setCode(int code) {
 		this.code = code;
 	}
-	
+	public int getRecipes_code() {
+		return recipes_code;
+	}
+	public void setRecipes_code(int recipes_code) {
+		this.recipes_code = recipes_code;
+	}
+
+
 }

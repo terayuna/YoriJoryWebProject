@@ -6,9 +6,7 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
-import com.yorijory.webprj.dao.CommentDao;
 import com.yorijory.webprj.dao.ScrapDao;
-import com.yorijory.webprj.vo.Comment;
 import com.yorijory.webprj.vo.Scrap;
 
 public class MybatisScrapDao implements ScrapDao{
