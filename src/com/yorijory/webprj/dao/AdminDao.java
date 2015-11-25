@@ -12,4 +12,5 @@ public interface AdminDao {
 	public int update(Admin admin) throws SQLException;
 	public int delete(String mid);
 	public int insert(Admin admin);
+	
 }
