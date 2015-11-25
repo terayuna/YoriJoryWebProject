@@ -6,10 +6,10 @@ public class Member {
 	private String mid;
 	private String name;
 	private String pwd;
+	private Date regDate;
 	private String phone;
 	private String profilePic;
-	private String email;
-	private Date regDate;
+	private String Email;
 	
 	public String getMid() {
 		return mid;
@@ -23,11 +23,11 @@ public class Member {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getPwd() {
-		return pwd;
+	public Date getRegDate() {
+		return regDate;
 	}
-	public void setPwd(String pwd) {
-		this.pwd = pwd;
+	public void setRegDate(Date regDate) {
+		this.regDate = regDate;
 	}
 	public String getPhone() {
 		return phone;
@@ -42,16 +42,17 @@ public class Member {
 		this.profilePic = profilePic;
 	}
 	public String getEmail() {
-		return email;
+		return Email;
 	}
 	public void setEmail(String email) {
-		this.email = email;
+		Email = email;
 	}
-	public Date getRegDate() {
-		return regDate;
+	public String getPwd() {
+		return pwd;
 	}
-	public void setRegDate(Date regDate) {
-		this.regDate = regDate;
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
 	}
 	
+
 }

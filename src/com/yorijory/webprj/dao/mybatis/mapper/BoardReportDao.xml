@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yorijory.webprj.dao.BoardReportDao">
+	<select id="getBoardReports" resultType="com.yorijory.webprj.vo.BoardReport">
+	
+		SELECT * FROM(
+         SELECT 
+            ROW_NUMBER() OVER (ORDER BY REGDATE DESC) NUM, 
+            BOARDSREPORT. * FROM BOARDSREPORT 
+            WHERE ${param2} LIKE '%${param3}%'
+            ) A 
+            WHERE NUM BETWEEN 1+(#{param1}-1)*10 AND #{param1}*10
+		 
+	 </select>
+	 
+	<update id="update">      
+        <!-- UPDATE MEMBERS SET NAME = #{param1.name},WHERE MID = #{param1.mid}-->
+        UPDATE BOARDSREPORT SET MID = #{mid} WHERE CONTENT= #{content}                     
+   </update>
+   <delete id="delete">
+  		DELETE FROM BOARDSREPORT WHERE MID = #{mid}
+	</delete>
+	<insert id="insert">
+  		INSERT INTO BOARDSREPORT(MID, CODE, CONTENT) VALUES(#{mid},#{code},#{content})
+  	</insert> 
+	 
+	
+</mapper>
