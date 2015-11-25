@@ -2,13 +2,13 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.yorijory.webprj.dao.MemberDao">
-	<select id="getMembers" resultType="com.yorijory.webprj.vo.Member">
+<mapper namespace="com.yorijory.webprj.dao.BoardDao">
+	<select id="getBoards" resultType="com.yorijory.webprj.vo.Board">
 	
 		SELECT * FROM(
          SELECT 
             ROW_NUMBER() OVER (ORDER BY REGDATE DESC) NUM, 
-            MEMBERS. * FROM MEMBERS 
+            BOARDS. * FROM BOARDS 
             WHERE ${param2} LIKE '%${param3}%'
             ) A 
             WHERE NUM BETWEEN 1+(#{param1}-1)*10 AND #{param1}*10
@@ -17,13 +17,13 @@
 	 
 	<update id="update">      
         <!-- UPDATE MEMBERS SET NAME = #{param1.name},WHERE MID = #{param1.mid}-->
-        UPDATE MEMBERS SET NAME = #{name} WHERE MID= #{mid}                     
+        UPDATE BOARDS SET TITLE = #{title} WHERE CONTENT= #{content}                     
    </update>
    <delete id="delete">
-  		DELETE FROM MEMBERS WHERE MID = #{mid}
+  		DELETE FROM BOARDS WHERE MEMBERS_MID = #{members_Mid}
 	</delete>
 	<insert id="insert">
-  		INSERT INTO MEMBERS(MID, NAME, PWD) VALUES(#{mid},#{name},#{pwd})
+  		INSERT INTO BOARDS(MEMBERS_MID, TITLE, CONTENT) VALUES(#{members_Mid},#{title},#{content})
   	</insert> 
 	 
 	

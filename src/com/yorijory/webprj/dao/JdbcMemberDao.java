@@ -54,7 +54,7 @@ public class JdbcMemberDao implements MemberDao{
 			member = new Member();
 			
 			member.setMid(rs.getString("mid"));
-			member.setPassword(rs.getString("pwd"));
+			member.setPwd(rs.getString("pwd"));
 			member.setName(rs.getString("name"));
 		
 			
@@ -77,7 +77,7 @@ public class JdbcMemberDao implements MemberDao{
 		Connection con = DriverManager.getConnection(url, "yojo", "yjoriy1511");
 		PreparedStatement st = con.prepareStatement(sql);
 		st.setString(1, member.getName());
-		st.setString(2, member.getPassword());
+		st.setString(2, member.getPwd());
 		st.setString(3, member.getMid());
 		
 		int count = st.executeUpdate();
@@ -114,7 +114,7 @@ public class JdbcMemberDao implements MemberDao{
 		PreparedStatement st = con.prepareStatement(sql);
 		st.setString(1, member.getMid());
 		st.setString(2, member.getName());
-		st.setString(3, member.getPassword());
+		st.setString(3, member.getPwd());
 
 		int count = st.executeUpdate();
 		

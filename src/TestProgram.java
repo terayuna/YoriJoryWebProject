@@ -4,33 +4,33 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
-import com.yorijory.webprj.dao.AdminDao;
-import com.yorijory.webprj.dao.AdministerDao;
-import com.yorijory.webprj.dao.mybatis.MybatisAdminDao;
-import com.yorijory.webprj.dao.mybatis.MybatisAdministerDao;
-import com.yorijory.webprj.dao.CommentDao;
+
+import com.yorijory.webprj.dao.BoardAdministerDao;
+import com.yorijory.webprj.dao.BoardCommentDao;
+import com.yorijory.webprj.dao.BoardDao;
+import com.yorijory.webprj.dao.BoardReportDao;
+
+import com.yorijory.webprj.dao.mybatis.MybatisBoardAdministerDao;
+import com.yorijory.webprj.dao.mybatis.MybatisBoardCommentDao;
+import com.yorijory.webprj.dao.mybatis.MybatisBoardDao;
+import com.yorijory.webprj.dao.mybatis.MybatisBoardReportDao;
+
 import com.yorijory.webprj.dao.JdbcMemberDao;
 import com.yorijory.webprj.dao.MemberDao;
-import com.yorijory.webprj.dao.MessageDao;
-import com.yorijory.webprj.dao.mybatis.MybatisCommentDao;
-import com.yorijory.webprj.dao.NoticeDao;
-import com.yorijory.webprj.dao.QuestionDao;
-import com.yorijory.webprj.dao.mybatis.MybatisMemberDao;
-import com.yorijory.webprj.dao.mybatis.MybatisMessageDao;
-import com.yorijory.webprj.dao.mybatis.MybatisNoticeDao;
 
-import com.yorijory.webprj.dao.mybatis.MybatisQuestionDao;
+import com.yorijory.webprj.dao.mybatis.MybatisMemberDao;
+
 
 import com.yorijory.webprj.dao.mybatis.SqlYojoSessionFactoryBuilder;
 
-import com.yorijory.webprj.vo.Admin;
-import com.yorijory.webprj.vo.Administer;
-import com.yorijory.webprj.vo.Comment;
-import com.yorijory.webprj.vo.Member;
-import com.yorijory.webprj.vo.Message;
-import com.yorijory.webprj.vo.Notice;
 
-import com.yorijory.webprj.vo.Question;
+import com.yorijory.webprj.vo.Board;
+import com.yorijory.webprj.vo.BoardAdminister;
+import com.yorijory.webprj.vo.BoardComment;
+import com.yorijory.webprj.vo.BoardReport;
+
+import com.yorijory.webprj.vo.Member;
+
 
 public class TestProgram {
 
@@ -47,34 +47,16 @@ public class TestProgram {
 		// MemberDao dao = session.getMapper(MemberDao.class); //인터페이스 구현한 클래스
 		// 얻어옴
 
-		/*
-		 * MemberDao dao = new MybatisMemberDao(); List<Member> list =
-		 * dao.getMembers(1, "MID", "");
-		 */
-		/*NoticeDao dao2 = new MybatisNoticeDao();
-		List<Notice> list2 = dao2.getNotices(1, "MID", "");*/
 		
-		AdministerDao dao2 = new MybatisAdministerDao();
-		List<Administer> list2 = dao2.getAdministers(1, "MEMBERID", "");
-		/*
-		 * AdminDao dao2 = new MybatisAdminDao(); List<Admin> list2 =
-		 * dao2.getAdmins(1, "MID", "");
-		 */
-		/*
-		 * Member upM = new Member(); upM.setMid("GOD"); upM.setName("크크크");
-		 * upM.setPassword("333"); dao.update(upM);
-		 */
-		/*
-		 * Member inM = new Member(); inM.setMid("hayun"); inM.setName("캬캬");
-		 * inM.setPassword("1234"); dao.insert(inM);
-		 * 
-		 * dao.delete("GOD");
-		 */
+		 /*MemberDao dao = new MybatisMemberDao(); 
+		  * List<Member> list = dao.getMembers(1, "MID", "");*/
+		BoardAdministerDao dao = new MybatisBoardAdministerDao();
+		List<BoardAdminister> list = dao.getBoardAdministers(1, "MEMBERS_MID", "");
 
-		System.out.println("검색결과 : " + list2.size());
+		System.out.println("검색결과 : " + list.size());
 
-		for (Administer m : list2) {
-			System.out.printf("mid : %s, password : %s \n", m.getMemberId(), m.getAdminId());
+		for (BoardAdminister m : list) {
+			System.out.printf("mid : %s, title : %s \n", m.getMembers_Mid(), m.getBoards_Code());
 
 		}
 

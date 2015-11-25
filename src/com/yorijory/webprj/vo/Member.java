@@ -5,7 +5,7 @@ import java.util.Date;
 public class Member {
 	private String mid;
 	private String name;
-	private String password;
+	private String pwd;
 	private Date regDate;
 	private String phone;
 	private String profilePic;
@@ -22,12 +22,6 @@ public class Member {
 	}
 	public void setName(String name) {
 		this.name = name;
-	}
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
 	}
 	public Date getRegDate() {
 		return regDate;
@@ -52,6 +46,12 @@ public class Member {
 	}
 	public void setEmail(String email) {
 		Email = email;
+	}
+	public String getPwd() {
+		return pwd;
+	}
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
 	}
 	
 	
