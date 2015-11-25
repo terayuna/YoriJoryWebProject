@@ -28,7 +28,7 @@ import com.yorijory.webprj.vo.RecipesComment;
 import com.yorijory.webprj.vo.RecipesRecommand;
 import com.yorijory.webprj.vo.RecipesReport;
 
-public class TestProgram {
+public class TestProgram2 {
 
 	public static void main(String[] args) throws SQLException {
 		
