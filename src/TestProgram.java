@@ -1,5 +1,7 @@
+
 import java.sql.SQLException;
 import java.util.List;
+
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -31,10 +33,28 @@ import com.yorijory.webprj.vo.BoardReport;
 
 import com.yorijory.webprj.vo.Member;
 
+import com.yorijory.webprj.dao.RecipesAdministerDao;
+import com.yorijory.webprj.dao.RecipesCommentDao;
+import com.yorijory.webprj.dao.RecipesDao;
+import com.yorijory.webprj.dao.RecipesRecommandDao;
+import com.yorijory.webprj.dao.RecipesReportDao;
+import com.yorijory.webprj.dao.mybatis.MybatisRecipesAdministerDao;
+import com.yorijory.webprj.dao.mybatis.MybatisRecipesCommentDao;
+import com.yorijory.webprj.dao.mybatis.MybatisRecipesDao;
+import com.yorijory.webprj.dao.mybatis.MybatisRecipesRecommandDao;
+import com.yorijory.webprj.dao.mybatis.MybatisRecipesReportDao;
+import com.yorijory.webprj.vo.Recipes;
+import com.yorijory.webprj.vo.RecipesAdminister;
+import com.yorijory.webprj.vo.RecipesComment;
+import com.yorijory.webprj.vo.RecipesRecommand;
+import com.yorijory.webprj.vo.RecipesReport;
+
 
 public class TestProgram {
 
+
 	public static void main(String[] args) throws SQLException {
+
 		/*
 		 * JdbcMemberDao dao = new JdbcMemberDao(); List<Member> list =
 		 * dao.getMembers(2);
@@ -50,15 +70,16 @@ public class TestProgram {
 		
 		 /*MemberDao dao = new MybatisMemberDao(); 
 		  * List<Member> list = dao.getMembers(1, "MID", "");*/
-		BoardAdministerDao dao = new MybatisBoardAdministerDao();
-		List<BoardAdminister> list = dao.getBoardAdministers(1, "MEMBERS_MID", "");
+		MemberDao dao = new MybatisMemberDao();
+		List<Member> list = dao.getMembers(1, "MID", "");
 
 		System.out.println("검색결과 : " + list.size());
 
-		for (BoardAdminister m : list) {
-			System.out.printf("mid : %s, title : %s \n", m.getMembers_Mid(), m.getBoards_Code());
+		for (Member m : list) {
+			System.out.printf("mid : %s, title : %s \n", m.getMid(), m.getName());
 
 		}
+	
 
 	}
 }
