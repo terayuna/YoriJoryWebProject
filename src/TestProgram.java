@@ -29,7 +29,6 @@ public class TestProgram {
 
 		for (Member m : list) {
 			System.out.printf("mid : %s, title : %s \n", m.getMid(), m.getName());
-
 		}
 	}
 }
