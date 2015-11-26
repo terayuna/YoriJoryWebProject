@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yorijory.webprj.dao.QuestionCommentDao">
+	<select id="getQuestionsComment" resultType="com.yorijory.webprj.vo.QuestionComment">
+	
+		SELECT * FROM(
+         SELECT 
+            ROW_NUMBER() OVER (ORDER BY REGDATE DESC) NUM, 
+            QuestionsComment. * FROM QuestionsComment 
+            WHERE ${param2} LIKE '%${param3}%'
+            ) A 
+            WHERE NUM BETWEEN 1+(#{param1}-1)*10 AND #{param1}*10
+		 
+	 </select>
+	<update id="update">
+		UPDATE QuestionsComment SET TITLE=#{title}, CONTENT=#{content} WHERE Members_Mid=#{members_mid}
+	 </update> 
+	 
+	 <insert id="insert">
+	 	INSERT INTO QuestionsComment(Members_Mid, TITLE, CONTENT) VALUES(#{members_mid},#{title},#{content})
+	 </insert>
+	 	
+	 <delete id="delete">
+	 	DELETE QuestionsComment WHERE Members_Mid=#{members_mid}
+	 </delete>
+	
+</mapper>

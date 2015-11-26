@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yorijory.webprj.dao.QuestionAdministerDao">
+	<select id="getQuestionsAdminister" resultType="com.yorijory.webprj.vo.QuestionAdminister">
+	
+		SELECT * FROM QuestionsAdminister WHERE ${param2} LIKE '%${param3}%'
+           
+		 
+	 </select>
+	<update id="update">
+		UPDATE QuestionsAdminister SET TITLE=#{title}, CONTENT=#{content} WHERE Members_Mid=#{members_mid}
+	 </update> 
+	 
+	 <insert id="insert">
+	 	INSERT INTO QuestionsAdminister(Members_Mid, TITLE, CONTENT) VALUES(#{members_mid},#{title},#{content})
+	 </insert>
+	 	
+	 <delete id="delete">
+	 	DELETE QuestionsAdminister WHERE Members_Mid=#{members_mid}
+	 </delete>
+	
+</mapper>
