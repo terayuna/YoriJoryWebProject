@@ -2,14 +2,12 @@ package com.yorijory.webprj.vo;
 
 import java.util.Date;
 
-public class QuestionComment {
+public class QuestionReport {
 	private String members_mid;
 	private String content;
 	private Date regDate;
 	private String code;
 	private String questions_code;
-	
-	
 	public String getMembers_mid() {
 		return members_mid;
 	}
@@ -43,5 +41,4 @@ public class QuestionComment {
 	
 	
 	
-
 }

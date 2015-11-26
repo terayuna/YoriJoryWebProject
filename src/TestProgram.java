@@ -21,12 +21,12 @@ import org.apache.ibatis.session.SqlSessionFactory;
 public class TestProgram {
 	public static void main(String[] args) throws SQLException {
 
-		QuestionCommentDao dao = new MybatisQuestionCommentDao();
-		List<QuestionComment> list = dao.getQuestionsComment(1, "MEMBERS_MID", "");
+		QuestionReportDao dao = new MybatisQuestionReportDao();
+		List<QuestionReport> list = dao.getQuestionsReport(1, "MEMBERS_MID", "");
 
 		System.out.println("검색결과 : " + list.size());
 
-		for (QuestionComment m : list) {
+		for (QuestionReport m : list) {
 			System.out.printf("mid : %s, title : %d \n", m.getMembers_mid(), m.getContent());
 		}
 	}
