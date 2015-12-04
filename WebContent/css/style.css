@@ -92,7 +92,7 @@ body {
 	color: blue;
 }
 
-#lecture-search {
+#total-search {
 	position: relative;
 	left: 10px;
 	top: 21px;
@@ -105,14 +105,15 @@ body {
 	  top : 21px;*/
 }
 
-#lecture-search fieldset>label, #lecture-search fieldset>input {
+#total-search fieldset>label, 
+#total-search fieldset>input {
 	/* #lecture-search fieldset > * : hidden내용도 출력되므로 특정 범위 지정 */
 	/* inline은 크기를 맞춰줄 수 없으므로 block 사용 */
 	display: inline-block;
 	float: left;
 }
 
-#lecture-search label {
+#total-search label {
 	line-height: 25px; /* 줄높이 : 줄간 수직정렬 */
 	text-indent: 5px; /* 들여쓰기 */
 	font-weight: bold;
@@ -121,20 +122,20 @@ body {
 	height: 25px;
 }
 
-#lecture-search input[type='text'] {
+#total-search input[type='text'] {
 	width: calc(100% - 86px); /* 222px; */
 	height: 25px;
 	border: 0px;
 }
 
-#lecture-search input[type='submit'] {
+#total-search input[type='submit'] {
 	width: 31px;
 	height: 25px;
 	/* border-right:0px;
   border-top:0px;
   border-bottom:0px; */
 	border: 0px;
-	border-left: 1px solid #8CBA34;
+	border-left: 1px solid #FE6739;
 	text-indent: -999px;
 	cursor: pointer;
 	background: url("../images/btn-zoom.png") no-repeat center;
@@ -190,6 +191,7 @@ body {
 
 /* -- #viusal ----------------------------------------------------------- */
 #visual {
+	background : yellow;
 	height: 50px;
 	width : 980px;
 	/* background: #313131 url("../images/bg-visual.png") no-repeat center; */
@@ -210,6 +212,7 @@ body {
 	margin-top: 1px;
 	margin-left: auto; /* 왼쪽에 margin, 즉 오른쪽정렬 */
 	margin-right: auto;
+	background : green;
 }
 
 #body .content-container {
@@ -275,6 +278,7 @@ body {
 	width: 720px;
 	padding-left: 25px;
 	padding-top: 35px;
+	background : pink;
 
 
 	/* -ms-grid-row:1;
@@ -360,6 +364,7 @@ body {
 	margin-left: auto; /* 왼쪽에 margin, 즉 오른쪽정렬 */
 	margin-right: auto;
 	width : 980px;
+	background : skyblue;
 }
 
 #test {

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="../css/reset.css" type="text/css" rel="stylesheet" />
+<link href="../css/style2.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+   <!-- <a href="../index.html">Home Index</a> -->
+
+   <header id="header">
+      <div class="content-container">     
+         <h1 id = "logo">
+         	<img src = "../images/logo.png" alt="newlecture"/>
+         </h1>
+      
+      <section>
+         <h1 class="hidden">머리글</h1>
+         
+         <nav id="main-menu">
+            <h1 class="hidden">메인메뉴</h1>
+            <ul class="clearfix">
+               <li><a href ="">학습가이드</a></li>
+               <li><a href ="">뉴렉과정</a></li>
+               <li><a href ="">강좌선택</a></li>
+            </ul>
+         </nav>
+         
+         <section id="lecture-search">         
+            <h1 class="hidden">강좌검색</h1>
+            <form>
+               <fieldset>
+                  <legend class="hidden">강좌 검색 필드</legend>
+                  <label>강좌명</label>
+                  <input type="text"/>
+                  <input type="submit" value="검색"/>
+               </fieldset>
+            </form>
+         </section>
+         
+         <nav id="joinus-menu">
+            <h1 class="hidden">회원메뉴</h1>
+            <ul class="clearfix">
+               <li><a href ="">HOME</a></li>
+               <li><a href ="">로그인</a></li>
+               <li><a href ="">회원가입</a></li>
+            </ul>
+           </nav>
+           
+           <nav id="member-menu">
+              <h1 class="hidden">마이메뉴</h1>
+            <ul class="clearfix">
+               <li><a href =""><img src = "../images/txt-mypage.png" alt="마이페이지"/></a></li>
+               <li><a href =""><img src = "../images/txt-customer.png" alt="고객센터"/></a></li>   
+            </ul>
+         </nav>
+      </section>
+      </div>
+   </header>
+
+   <div id="visual">
+      <div class="content-container">
+      </div>
+   </div>
+
+   <div id="body">
+      <div class="content-container clearfix">
+         <div id="aside">
+            <aside>
+               <h1>고객센터</h1>
+
+               <nav>
+                  <h1 class="hidden">고객센터 메뉴</h1>
+                  <ul id="aside-menu">
+                     <li><a href="">공지사항</a></li>
+                     <li><a href="">1:1고객문의</a></li>
+                     <li><a href="">학습안내</a></li>
+                  </ul>
+               </nav>
+
+               <nav>
+                  <h1>추천사이트</h1>
+                  <ul>
+                     <li><a href=""><img src = "../images/answeris.png" alt="answeris"/></a></li>
+                     <li><a href=""><img src = "../images/w3c.png" alt="w3c"/></a></li>
+                     <li><a href=""><img src = "../images/microsoft.png" alt="microsoft"/></a></li>
+                  </ul>
+               </nav>
+            </aside>
+         </div>
+         <div id="main">
+
+            <main class="h1">
+            <h2>공지사항</h2>
+            <div id="menu-area">
+            	<ul>
+            		<li>home</li>
+            		<li>고객센터</li>
+            		<li>공지사항</li>
+            	</ul>
+            </div>
+			
+			<div class="align-container">
+	            <h3 class="hidden">공지사항 검색</h3>
+	            <form id="notice-search">
+	               <fieldset>
+	                  <legend class="hidden">공지사항 검색 필드</legend>
+	                  <label class="hidden">분류</label> 
+	                  <select id="select-menu">
+	                     <option>분류선택</option>
+	                     <option selected>제목</option>
+	                     <option>작성자</option>
+	                  </select> 
+	                  <label class="hidden">검색어</label>
+	                  <input type="text" /> 
+	                  <input type="submit" value="검색" />
+	               </fieldset>
+	            </form>
+			</div>
+            <h3 class="hidden">공지사항 목록</h3>
+            <table id = "notices">
+               <thead>
+                  <tr>
+                     <th>번호</th>
+                     <th>제목</th>
+                     <th>작성자</th>
+                     <th>작성일</th>
+                     <th>조회수</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td>1</td>
+                     <td>하하하하호호호히히커져라글자야 더더욱더욱더욱더욱 켜져라 넘었냐 아직 안넘었네 넘어라 뭐죠뭐죠뭐죠 쩜쩜쩜나오나</td>
+                     <td>한성준</td>
+                     <td>2011-09-11</td>
+                     <td>50</td>
+                  </tr>
+                  <tr>
+                     <td>2</td>
+                     <td>우렐레레</td>
+                     <td>이상호</td>
+                     <td>2011-10-22</td>
+                     <td>78</td>
+                  </tr>
+               </tbody>
+            </table>
+
+			<div class="align-container">
+	            <h3 class="hidden">전체페이지와 현재페이지</h3>
+	            <p>1/1page</p>
+	
+	            <h3 class="hidden">페이지 번호</h3>
+	            <p>1</p>
+            </div>
+            <!-- <div id="test">검색결과</div> -->
+
+            </main>
+         </div>
+         <!-- <div style="background:purple; width:100px; height:100px; clear:left;"> 
+     
+      </div>  -->
+      </div>
+   </div>
+   <footer id="footer">
+      <div class="content-container">
+         <!-- <section>
+         <h2>회사</h2>
+         
+         <section>
+         <h3>회사정보</h3>
+            <dl>
+               <dt>주소 :</dt><dd>경기도</dd>
+               <dt>이메일 :</dt><dd>cjh120@naver.com</dd>
+               <dt>전화번호 :</dt><dd>010-5555-1111</dd>
+            </dl>
+         </section>
+         
+         <section>
+            <h3>카피라이트</h3>
+            <p>   Copyright ⓒ estreller.com 2012-2014 All Right Reserved. Contact admin@estreller.com for more information</p>
+         </section>
+      </section> -->
+      </div>
+   </footer>
+   
+</body>
+</html>
