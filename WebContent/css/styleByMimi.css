@@ -1,0 +1,115 @@
+@CHARSET "UTF-8";
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	height: 0px;
+	visibilty: hidden;
+}
+
+.hidden {
+	display: none;
+	visibility: hidden;
+}
+
+.content-container {
+	position: relative;
+	height: inherit;
+	margin-left: 100px;
+	margin-right: 100px;
+
+	/* opacity:0.5; */
+}
+
+body {
+	font-family: 돋움, Arial, sans-serif;
+	font-size: 11px;
+	color: #979797;
+}
+
+/* -----#header---------------------------------------------------- */
+#header {
+	min-height: 100px;
+}
+
+#logo {
+	position: absolute;
+	width: 200px;
+	top: 15px;
+}
+
+#recipe-search {
+	width: 253px;
+	height: 25px;
+	border: 1px solid #FE6739;
+	border-radius: 3px;
+	position: absolute;
+	top: 30px;
+	left: 268px;
+}
+
+/* #recipe-search fieldset>input {
+	display: block;
+	float: left;
+} */
+#recipe-search fieldset>input {
+	display: block;
+	float: left;
+}
+
+#recipe-search input[type='text'] {
+	width: 222px;
+	height: 25px;
+	border: 0px solid #fff;
+}
+
+#recipe-search input[type='submit'] {
+	text-indent: -999px;
+	cursor: pointer;
+	border: 0px;
+	width: 31px;
+	height: 25px;
+	background: url("../images/btn-zoom.png") no-repeat center;
+	border-left: 1px solid #FE6739;
+}
+
+#joinus-menu {
+	display: inline-block;
+	position: absolute;
+	top: 35px;
+	right: 0px;
+}
+
+#joinus-menu>ul>li {
+	float: left;
+	padding-left: 9px;
+	background: url("../images/bg-member-menu-vsp.png") no-repeat 5px center;
+}
+
+#joinus-menu>ul>li:FIRST-CHILD {
+	padding-left: 0px;
+	background: none;
+}
+
+#joinus-menu>ul>li a {
+	color: inherit;
+	font-family: "맑은 고딕", sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#joinus-menu>ul>li a:HOVER {
+	text-decoration: underline;
+}
+
+
+/* -- #main-visual ----------------------------------------------------------- */
+#main-visual {
+	width: 1920px;
+	height: 700px;
+	background: url("../images/dessert.jpg");
+	background-attachment: auto;
+
+}
