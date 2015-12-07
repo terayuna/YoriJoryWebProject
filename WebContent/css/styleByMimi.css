@@ -108,9 +108,11 @@ body {
 /* -- #main-visual ----------------------------------------------------------- */
 #main-visual {
 	display: block;
+	width:100%; 
 	/* width: 1920px; */
-	max-height: 500px;
-	background: url("../images/dessert.jpg");
+	min-height: 450px;
+	background: url("../images/dessert.jpg") no-repeat;
 	background-attachment: auto;
+	background-size: cover;
 
 }
