@@ -42,7 +42,7 @@ body {
 #recipe-search {
 	width: 253px;
 	height: 25px;
-	border: 1px solid #FE6739;
+	border: 1px solid #FD6E47;
 	border-radius: 3px;
 	position: absolute;
 	top: 30px;
@@ -70,8 +70,8 @@ body {
 	border: 0px;
 	width: 31px;
 	height: 25px;
-	background: url("../images/btn-zoom.png") no-repeat center;
-	border-left: 1px solid #FE6739;
+	background: url("../images/btn-search-yojo.png") no-repeat center;
+	border-left: 1px solid #FD6E47;
 }
 
 #joinus-menu {
@@ -107,8 +107,9 @@ body {
 
 /* -- #main-visual ----------------------------------------------------------- */
 #main-visual {
-	width: 1920px;
-	height: 700px;
+	display: block;
+	/* width: 1920px; */
+	max-height: 500px;
 	background: url("../images/dessert.jpg");
 	background-attachment: auto;
 
