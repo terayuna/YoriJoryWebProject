@@ -280,7 +280,27 @@ body
 {
    width : 215px;
    float: left;
-   background: black;
+   background: white;
+}
+
+#aside > ul > li
+	{
+		color: #000000;
+		font-family: "맑은 고딕", sans-serif;
+		font-size: 15px;
+		font-weight: bold;
+		text-decoration: none;
+		padding-left: 9px;
+	}
+
+#aside > ul > ul > li
+{
+	color: #000000;
+		font-family: "맑은 고딕", sans-serif;
+		font-size: 10px;
+		font-weight: bold;
+		text-decoration: none;
+		padding-left: 16px;
 }
 	
 /* -----#footer---------------------------------------------------- */

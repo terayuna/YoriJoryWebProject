@@ -1,6 +1,6 @@
 @CHARSET "UTF-8";
 
-.clearfix:after {
+.clearfixs:after {
 	content: ".";
 	display: block;
 	clear: both;
@@ -8,12 +8,12 @@
 	visibilty: hidden;
 }
 
-.hidden {
+.hiddens{
 	display: none;
 	visibility: hidden;
 }
 
-.content-container {
+.content-containers {
 	position: relative;
 	height: inherit;
 	margin-left: 100px;
@@ -29,17 +29,22 @@ body {
 }
 
 /* -----#header---------------------------------------------------- */
-#header {
+#headers {
 	min-height: 100px;
 }
 
-#logo {
+#color-line {
+	min-height: 40px;
+	background: red;
+}
+
+#logos {
 	position: absolute;
 	width: 200px;
 	top: 15px;
 }
 
-#recipe-search {
+#recipe-searchs {
 	width: 253px;
 	height: 25px;
 	border: 1px solid #FD6E47;
@@ -53,18 +58,18 @@ body {
 	display: block;
 	float: left;
 } */
-#recipe-search fieldset>input {
+#recipe-searchs fieldset>input {
 	display: block;
 	float: left;
 }
 
-#recipe-search input[type='text'] {
+#recipe-searchs input[type='text'] {
 	width: 222px;
 	height: 25px;
 	border: 0px solid #fff;
 }
 
-#recipe-search input[type='submit'] {
+#recipe-searchs input[type='submit'] {
 	text-indent: -999px;
 	cursor: pointer;
 	border: 0px;
@@ -74,25 +79,25 @@ body {
 	border-left: 1px solid #FD6E47;
 }
 
-#joinus-menu {
+#joinus-menus {
 	display: inline-block;
 	position: absolute;
 	top: 35px;
 	right: 0px;
 }
 
-#joinus-menu>ul>li {
+#joinus-menus>ul>li {
 	float: left;
 	padding-left: 9px;
 	background: url("../images/bg-member-menu-vsp.png") no-repeat 5px center;
 }
 
-#joinus-menu>ul>li:FIRST-CHILD {
+#joinus-menus>ul>li:FIRST-CHILD {
 	padding-left: 0px;
 	background: none;
 }
 
-#joinus-menu>ul>li a {
+#joinus-menus>ul>li a {
 	color: inherit;
 	font-family: "맑은 고딕", sans-serif;
 	font-size: 10px;
@@ -100,7 +105,7 @@ body {
 	text-decoration: none;
 }
 
-#joinus-menu>ul>li a:HOVER {
+#joinus-menus>ul>li a:HOVER {
 	text-decoration: underline;
 }
 
@@ -108,11 +113,27 @@ body {
 /* -- #main-visual ----------------------------------------------------------- */
 #main-visual {
 	display: block;
-	width:100%; 
-	/* width: 1920px; */
-	min-height: 450px;
-	background: url("../images/dessert.jpg") no-repeat;
+	/* width:1920px; */
+	/* height:700px; */
+	width:100%;
+	min-height:700px;
+	
+	background: pink url("../images/dessert.jpg") no-repeat;
 	background-attachment: auto;
-	background-size: cover;
+	background-size: contain;
+	margin:0 auto;
 
+}
+
+#categories {
+	margin-left: 1500px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+#categories>ul>li>a {
+	font-family: 맑은 고딕, sans-serif;
+	font-size: 50px;
+	font-weight: bold;
+	color: #FE6739;
+	
 }
