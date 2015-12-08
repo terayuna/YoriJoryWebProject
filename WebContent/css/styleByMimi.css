@@ -29,11 +29,16 @@ body {
 }
 
 /* -----#header---------------------------------------------------- */
-#header {
+#headers {
 	min-height: 100px;
 }
 
-#logo {
+#color-line {
+	min-height: 40px;
+	background: red;
+}
+
+#logos {
 	position: absolute;
 	width: 200px;
 	top: 15px;
@@ -108,11 +113,27 @@ body {
 /* -- #main-visual ----------------------------------------------------------- */
 #main-visual {
 	display: block;
-	width:100%; 
-	/* width: 1920px; */
-	min-height: 450px;
-	background: url("../images/dessert.jpg") no-repeat;
+	/* width:1920px; */
+	/* height:700px; */
+	width:100%;
+	min-height:700px;
+	
+	background: pink url("../images/dessert.jpg") no-repeat;
 	background-attachment: auto;
-	background-size: cover;
+	background-size: contain;
+	margin:0 auto;
 
+}
+
+#categories {
+	margin-left: 1500px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+#categories>ul>li>a {
+	font-family: 맑은 고딕, sans-serif;
+	font-size: 50px;
+	font-weight: bold;
+	color: #FE6739;
+	
 }
