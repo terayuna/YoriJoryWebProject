@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>yorijory</title>
+<link href="../css/reset.css" type="text/css" rel="stylesheet" />
+<link href="../css/admin.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+	<header id="header">
+		<div class="content-container">
+			<h1 id="logo">
+				<img src="../images/yorijory.png" alt="yorijory" />
+			</h1>
+
+			<section>
+				<h1 class="hidden">헤더</h1>
+				<p id="header-msg">관리자페이지</p>
+			</section>
+		</div>
+	</header>
+
+	<div id="body">
+		<div class="content-container clearfix">
+		
+			<aside id="aside">
+				<h1 class="hidden">관리메뉴</h1>
+
+				<nav id="aside-customer">
+					<h1>관리메뉴</h1>
+					<ul>
+						<li><a href="">회원관리</a></li>
+						<li><a href="">게시판관리</a></li>
+						<li><a href="">신고관리</a></li>
+					</ul>
+				</nav>
+				<br>
+				<br>
+			</aside>
+
+			<main id="main">
+			<h2>게시글 목록</h2>
+			<div class="align-container">
+				<h3 class="hidden">게시글 검색</h3>
+				<form id="notice-search">
+					<fieldset>
+						<legend class="hidden">게시글 검색 필드</legend>
+						<label class="hidden">분류</label> <select>
+							<option>분류선택</option>
+							<option>코드</option>
+							<option selected>제목</option>
+							<option>작성자</option>
+						</select> <label class="hidden">검색어</label> <input type="text" /> <input
+							type="submit" value="검색" />
+					</fieldset>
+				</form>
+			</div>
+			<h3 class="hidden">공지사항 테이블</h3>
+
+			<table id="notices">
+				<thead>
+					<tr>
+						<th>코드</th>
+						<th>작성자</th>
+						<th>타입</th>
+						<th>제목</th>
+						<th>등록일</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>염기훈</td>
+						<td>26</td>
+						<td>2011-11-22</td>
+						<td>2</td>
+					</tr>
+
+					<tr>
+						<td>2</td>
+						<td>권창훈</td>
+						<td>22</td>
+						<td>2012-11-23</td>
+						<td>3</td>
+					</tr>
+
+					<tr>
+						<td>3</td>
+						<td>정성룡</td>
+						<td>1</td>
+						<td>2011-11-22</td>
+						<td>2</td>
+					</tr>
+
+					<tr>
+						<td>4</td>
+						<td>오범석</td>
+						<td>3</td>
+						<td>2011-11-22</td>
+						<td>2</td>
+					</tr>
+				</tbody>
+			</table>
+			<br>
+			<h3>목록의 현재 위치</h3>
+			<p>1/1page</p>
+
+			<h3>페이지 번호</h3>
+			<p>1</p> 
+			</main>
+
+			<!-- <div style= "background:green; width:100px; height:100px; clear:left" >
+   test   
+   </div> -->
+
+		</div>
+	</div>
+</body>
+
+<!-- <footer id="footer">
+	<div class="content-container">
+		<section>
+   <h1>사이트 정보</h1>
+
+   <section>
+    <h1>회사 정보</h1>
+    <dl>
+     <dt>주소:</dt>
+     <dd>서울시 동대문구</dd>
+     <dt>관리자 메일:</dt>
+     <dd>admin@naver.com</dd>
+     <dt>사업자 등록번호:</dt>
+     <dd>1234</dd>
+    </dl>
+   </section>
+
+   <section>
+    <h1>저작권 정보</h1>
+    <p>Copyright ⓒ newlecture.com</p>
+   </section>
+  </section>
+	</div>
+</footer>
+ -->
+
+
+
+</html>
