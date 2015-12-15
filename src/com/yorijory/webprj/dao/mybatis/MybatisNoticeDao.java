@@ -56,6 +56,17 @@ public class MybatisNoticeDao implements NoticeDao{
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
+	@Override
+	public String getLastCode() {
+		SqlSession session = ssf.openSession();
+		NoticeDao dao = session.getMapper(NoticeDao.class);
+		String code = dao.getLastCode();
+		
+		session.close();
+		
+		return code;
+	}
 	
 
 }
