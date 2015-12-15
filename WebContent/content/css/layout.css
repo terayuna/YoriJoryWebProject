@@ -1,7 +1,7 @@
 
 /*----------------------------*/
 /*
- * 레이아웃을 위한 공통 스타일
+ * �젅�씠�븘�썐�쓣 �쐞�븳 怨듯넻 �뒪���씪
  */
 
 .top-wrapper {
@@ -13,27 +13,100 @@
 }
 
 /*-------------------------------------------
- * 헤더 레이아웃 스타일
+ * �뿤�뜑 �젅�씠�븘�썐 �뒪���씪
  * */
 
 #header {
 	height: 70px;	
 }
 
+#headers {
+	min-height: 100px;
+}
+
+
 #header > .top-wrapper > *
 {
 	position: absolute;
 }
 
-#logo{
-	left:0px;
-	top:23px;
+#logos{
+	position: absolute;
+	width: 200px;
+	top: 10px;
+}
+
+#color-line {
+	min-height: 40px;
+	background: red;
 }
 
 #mainmenu{
 	left:200px;
 	top:27px;
 }
+
+#recipe-searchs {
+	width: 253px;
+	height: 25px;
+	border: 1px solid #FD6E47;
+	border-radius: 3px;
+	position: absolute;
+	top: 30px;
+	left: 268px;
+}
+
+#recipe-searchs fieldset>input {
+	display: block;
+	float: left;
+}
+
+#recipe-searchs input[type='text'] {
+	width: 222px;
+	height: 25px;
+	border: 0px solid #fff;
+}
+
+#recipe-searchs input[type='submit'] {
+	text-indent: -999px;
+	cursor: pointer;
+	border: 0px;
+	width: 31px;
+	height: 25px;
+	background: url("../images/btn-search-yojo.png") no-repeat center;
+	border-left: 1px solid #FD6E47;
+}
+
+#joinus-menus {
+	display: inline-block;
+	position: absolute;
+	top: 35px;
+	right: 0px;
+}
+
+#joinus-menus>ul>li {
+	float: left;
+	padding-left: 9px;
+	background: url("../images/bg-member-menu-vsp.png") no-repeat 5px center;
+}
+
+#joinus-menus>ul>li:FIRST-CHILD {
+	padding-left: 0px;
+	background: none;
+}
+
+#joinus-menus>ul>li a {
+	color: inherit;
+	font-family: "맑은 고딕", sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#joinus-menus>ul>li a:HOVER {
+	text-decoration: underline;
+}
+
 
 #searchform{
 	left:468px;
@@ -79,6 +152,20 @@
 	border-top: 5px solid #8CBA34;
 }
 
+#main-visual {
+	display: block;
+	/* width:1920px; */
+	/* height:700px; */
+	width:100%;
+	min-height:700px;
+	
+	background: url("../images/dessert.jpg") no-repeat;
+	background-attachment: auto;
+	background-size: contain;
+	margin:0 auto;
+
+}
+
 #main  .top-wrapper
 {
 	background: #0ff url("../images/bgContent.png") repeat-y 0px 0px;
@@ -119,6 +206,17 @@
 	text-align: center;
 }
 
+#categories {
+	margin-left: 1000px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+#categories>ul>li>a {
+	font-family: 맑은 고딕, sans-serif;
+	font-size: 50px;
+	font-weight: bold;
+	color: #FE6739;
+	
 /*----------------------------------------
   	Navigation layout
  * */
