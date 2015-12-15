@@ -12,15 +12,15 @@
     	<property name="password" value="yjoriy1511"/>
     </bean>
     
-    <bean name="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+    <!-- <bean name="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
     	<property name="dataSource" ref="dataSource"/>
     	<property name="mapperLocation" ref="classpath:com/newlec/webprj/dao/mybatis/mapper/*.xml"/>
     </bean>   
     
     <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
     	<constructor-arg index="0" ref="sqlSessionFactory"></constructor-arg>
-    </bean>
+    </bean> -->
     
-	<bean name="noticeDao" class="com.newlec.webprj.dao.mybatis.MyBatisNoticeDao"/>
-	<bean name="memberDao" class="com.newlec.webprj.dao.mybatis.MyBatisMemberDao"/>
+	<bean name="noticeDao" class="com.yorijory.webprj.dao.mybatis.MybatisNoticeDao"/>
+	<bean name="memberDao" class="com.yorijory.webprj.dao.mybatis.MybatisMemberDao"/>
 </beans>
