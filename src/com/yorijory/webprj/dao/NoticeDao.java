@@ -12,4 +12,5 @@ public interface NoticeDao {
 	public int update(Notice notice) throws SQLException;
 	public int delete(int code);
 	public int insert(Notice notice);
+	public String getLastCode();
 }
