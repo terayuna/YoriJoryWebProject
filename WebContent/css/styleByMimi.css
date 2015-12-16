@@ -116,7 +116,9 @@ body {
 	/* width:1920px; */
 	/* height:700px; */
 	width:100%;
-	min-height:700px;
+	height:100%;
+	position: absolute;
+	z-index: 400;
 	
 	background: url("../images/dessert.jpg") no-repeat;
 	background-attachment: auto;
