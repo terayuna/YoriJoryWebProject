@@ -5,15 +5,15 @@
 <head>
 <meta charset="UTF-8">
 <title>요리조리</title>
-<link href="../css/reset.css" type="text/css" rel="stylesheet" />
-<link href="../css/styleByMimi.css" type="text/css" rel="stylesheet" />
+<link href="../content/css/reset.css" type="text/css" rel="stylesheet" />
+<link href="../content/css/styleByMimi.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
 	<header id="headers">
 		<div id="color-line"></div>
 		<div class="content-containers">
 			<h1 id="logos">
-				<a href="MainByMimi.html"><img src="../images/yorijory.png"
+				<a href="MainByMimi.html"><img src="../content/images/yorijory.png"
 					alt="yorijory" /></a>
 
 			</h1>
