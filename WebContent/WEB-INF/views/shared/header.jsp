@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-				<h1 id="logos"><a href="../index.jsp"><img src=${pageContext.request.contextPath}/content/images/yorijory.png alt="logo" /></a></h1>
+				<h1 id="logos"><a href="../index.jsp"><img src=${pageContext.request.contextPath}/content/images/yorijory.png alt="logos" /></a></h1>
 
 			<div id="recipe-searchs">
 				<h1 class="hiddens">레시피검색</h1>
