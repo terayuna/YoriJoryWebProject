@@ -19,7 +19,7 @@
 					</li>
 					<li>
 						<c:if test="${pageContext.request.userPrincipal == null }">
-						<a href="/JSPPrj/joinus/login">로그인</a>
+						<a href="/JSPProjectYun/joinus/login">로그인</a>
 						</c:if>
 						<c:if test="${pageContext.request.userPrincipal != null }">
 						<c:url var ="logout" value="/j_spring_security_logout"/>
