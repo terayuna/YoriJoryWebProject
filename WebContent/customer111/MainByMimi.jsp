@@ -53,8 +53,10 @@
 
 	<div id="recipes-list">
 		<div class="content-container">
-			<div id="금주의 레시피"></div>
-			<div id="New 레시피"></div>
+			<div id="Weekly recipes"></div>
+				<span> 금주의 레시피 </span>
+			<div id="New recipes"></div>
+				<span> New 레시피 </span>
 		</div>
 	</div>
 </body>

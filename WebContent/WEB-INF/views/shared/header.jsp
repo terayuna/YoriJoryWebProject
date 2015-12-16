@@ -12,7 +12,7 @@
 					</fieldset>
 				</form>
 			</div>
-				<h3 class="hidden">로그인메뉴</h3>
+				<h3 class="hiddens">로그인메뉴</h3>
 				<ul id="loginmenu" class="block_hlist">
 					<li>
 						<a href="../index.jsp">HOME</a>
