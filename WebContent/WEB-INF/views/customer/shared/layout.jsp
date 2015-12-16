@@ -32,11 +32,7 @@
 				<tiles:insertAttribute name="header"/>
 			</div>
 		</div>
-		<div id="visual" class="customer">
-			<div class="top-wrapper">
 
-			</div>
-		</div>
 		<div id="main">
 			<div class="top-wrapper clear">
 				<div id="content">
