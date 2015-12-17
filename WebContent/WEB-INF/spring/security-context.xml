@@ -23,6 +23,7 @@
     			<user name="dragon" password="111" authorities="ROLE_TEACHER"/>
     			<user name="newlec" password="111" authorities="ROLE_TEACHER"/>
     			<user name="sangho" password="111" authorities="ROLE_TEACHER, ROLE_ADMIN"/>
+    			<user name="admin" password="111" authorities="ROLE_TEACHER, ROLE_ADMIN"/>
     		</user-service>
     	</authentication-provider>
     </authentication-manager>

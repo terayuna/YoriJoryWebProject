@@ -17,9 +17,14 @@
 	 <update id="update">
 		UPDATE NOTICES SET NAME=#{name}, PWD=#{password} WHERE MID=#{mid}
 		</update>
-	 <insert id="insert">
-	 	INSERT INTO NOTICES(MID, NAME, PWD) VALUES(#{mid},#{name},#{password})
-	 </insert>
+		
+	 <insert id="insert" parameterType="com.yorijory.webprj.vo.Notice">
+		<selectKey keyProperty="code" order="BEFORE" resultType="String">
+			SELECT MAX(CAST(CODE AS INT)) CODE FROM NOTICES
+		</selectKey>	 
+		INSERT INTO NOTICES(code, title, content, admin_mid) Values(#{code}+1,#{title},#{content},#{admin_Mid})
+	</insert>
+	
 	 <delete id="delete">
 	 	DELETE NOTICES WHERE MID=#{mid}
 	 </delete>
