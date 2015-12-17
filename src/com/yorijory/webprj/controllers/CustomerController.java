@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.yorijory.webprj.dao.NoticeDao;
 import com.yorijory.webprj.vo.Notice;
 
-
 @Controller
 @RequestMapping("/customer/")
 public class CustomerController {
@@ -56,12 +55,13 @@ public class CustomerController {
 	@RequestMapping(value="noticeReg", method=RequestMethod.POST)
 	public String noticeReg(Notice n) throws SQLException
 	{
-		
-		
+		n.setAdmin_Mid("admin");
 		noticeDao.insert(n);
+		
 		
 		System.out.println("title : "+n.getTitle());
 		System.out.println("content : "+n.getContent());
+		System.out.println("writer : "+n.getAdmin_Mid());
 		
 		return "redirect:notice"; // 다른 Controller로 가야 한다
 	}

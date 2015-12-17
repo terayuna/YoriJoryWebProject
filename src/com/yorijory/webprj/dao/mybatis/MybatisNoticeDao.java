@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import com.yorijory.webprj.dao.AdminDao;
 import com.yorijory.webprj.dao.NoticeDao;
@@ -12,8 +13,14 @@ import com.yorijory.webprj.vo.Admin;
 import com.yorijory.webprj.vo.Notice;
 
 public class MybatisNoticeDao implements NoticeDao{	
-	SqlSessionFactory ssf = YojoSqlSessionFactoryBuilder.getSqlSessionFactory();
+	//SqlSessionFactory ssf = YojoSqlSessionFactoryBuilder.getSqlSessionFactory();
 
+	@Autowired
+	private SqlSession sqlSession;
+
+	public void setSqlSession(SqlSession sqlSession) {
+		this.sqlSession = sqlSession;
+	}
 
 	@Override
 	public List<Notice> getNotices() throws SQLException {
@@ -30,11 +37,11 @@ public class MybatisNoticeDao implements NoticeDao{
 	@Override
 	public List<Notice> getNotices(int page, String field, String query) throws SQLException {
 		// TODO Auto-generated method stub
-		SqlSession session = ssf.openSession();
-		NoticeDao dao = session.getMapper(NoticeDao.class);
+		//SqlSession session = ssf.openSession();
+		NoticeDao dao = sqlSession.getMapper(NoticeDao.class);
 		List<Notice> list = dao.getNotices(page, field, query);
 
-		session.close();
+		//sqlSession.close();
 		return list;
 	}
 
@@ -54,16 +61,20 @@ public class MybatisNoticeDao implements NoticeDao{
 	@Override
 	public int insert(Notice notice) {
 		// TODO Auto-generated method stub
-		return 0;
+		NoticeDao dao = sqlSession.getMapper(NoticeDao.class);
+		int result = 0;
+		result = dao.insert(notice);
+		
+		return result;
 	}
 
 	@Override
 	public String getLastCode() {
-		SqlSession session = ssf.openSession();
-		NoticeDao dao = session.getMapper(NoticeDao.class);
+		//SqlSession session = ssf.openSession();
+		NoticeDao dao = sqlSession.getMapper(NoticeDao.class);
 		String code = dao.getLastCode();
 		
-		session.close();
+		//session.close();
 		
 		return code;
 	}

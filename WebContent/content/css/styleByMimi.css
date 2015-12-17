@@ -128,9 +128,10 @@ body {
 }
 
 #categories {
-	margin-left: 1000px;
-	margin-top: auto;
-	margin-bottom: auto;
+	display: inline-block;
+	position: absolute;
+	top: 100px;
+	right: 30px;
 }
 #categories>ul>li>a {
 	font-family: 맑은 고딕, sans-serif;
