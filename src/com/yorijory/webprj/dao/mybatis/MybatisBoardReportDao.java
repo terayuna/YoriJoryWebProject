@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
-
+import org.springframework.beans.factory.annotation.Autowired;
 
 import com.yorijory.webprj.dao.BoardReportDao;
 
@@ -13,8 +13,14 @@ import com.yorijory.webprj.vo.BoardReport;
 
 
 public class MybatisBoardReportDao implements BoardReportDao{
-	SqlSessionFactory ssf = YojoSqlSessionFactoryBuilder.getSqlSessionFactory();
+	//SqlSessionFactory ssf = YojoSqlSessionFactoryBuilder.getSqlSessionFactory();
+	@Autowired //
+	private SqlSession sqlSession;
+
 	
+	public void setSqlSession(SqlSession sqlSession) {
+		this.sqlSession = sqlSession;
+	}
 	
 	public List<BoardReport> getBoardReports() throws SQLException {
 		// TODO Auto-generated method stub
@@ -28,10 +34,10 @@ public class MybatisBoardReportDao implements BoardReportDao{
 	}
 
 	public List<BoardReport> getBoardReports(int page, String field, String query) throws SQLException {
-		SqlSession session = ssf.openSession();
-		BoardReportDao dao = session.getMapper(BoardReportDao.class); 
+		//SqlSession session = ssf.openSession();
+		BoardReportDao dao = sqlSession.getMapper(BoardReportDao.class); 
 		List<BoardReport> list = dao.getBoardReports(page, field, query);
-		session.close();
+		//session.close();
 		return list;
 	}
 

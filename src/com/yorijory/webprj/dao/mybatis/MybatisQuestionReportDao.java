@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import com.yorijory.webprj.dao.QuestionCommentDao;
 import com.yorijory.webprj.dao.QuestionReportDao;
@@ -12,7 +13,15 @@ import com.yorijory.webprj.vo.QuestionComment;
 import com.yorijory.webprj.vo.QuestionReport;
 
 public class MybatisQuestionReportDao implements QuestionReportDao{
-	SqlSessionFactory ssf = YojoSqlSessionFactoryBuilder.getSqlSessionFactory();
+	//SqlSessionFactory ssf = YojoSqlSessionFactoryBuilder.getSqlSessionFactory();
+	
+	@Autowired //
+	private SqlSession sqlSession;
+
+	
+	public void setSqlSession(SqlSession sqlSession) {
+		this.sqlSession = sqlSession;
+	}
 
 	@Override
 	public List<QuestionReport> getQuestionsReport() throws SQLException {
@@ -28,10 +37,10 @@ public class MybatisQuestionReportDao implements QuestionReportDao{
 
 	@Override
 	public List<QuestionReport> getQuestionsReport(int page, String field, String query) throws SQLException {
-		SqlSession session = ssf.openSession();
-		QuestionReportDao dao = session.getMapper(QuestionReportDao.class); 
+		//SqlSession session = ssf.openSession();
+		QuestionReportDao dao = sqlSession.getMapper(QuestionReportDao.class); 
 		List<QuestionReport> list = dao.getQuestionsReport(page, field, query);
-		session.close();
+		//session.close();
 		return list;
 	}
 

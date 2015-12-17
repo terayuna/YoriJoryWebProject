@@ -26,6 +26,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<insert id="insert">
   		INSERT INTO MEMBERS(MID, NAME, PWD) VALUES(#{mid},#{name},#{pwd})
   	</insert> 
+  	<select id="getMember" resultType="com.yorijory.webprj.vo.Member">
+    	SELECT * FROM Members WHERE MID = #{mid}
+  	</select>
 	 
 	
 </mapper>

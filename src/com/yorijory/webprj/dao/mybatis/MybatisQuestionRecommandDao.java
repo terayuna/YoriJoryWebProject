@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import com.yorijory.webprj.dao.QuestionCommentDao;
 import com.yorijory.webprj.dao.QuestionRecommandDao;
@@ -12,7 +13,14 @@ import com.yorijory.webprj.vo.QuestionComment;
 import com.yorijory.webprj.vo.QuestionRecommand;
 
 public class MybatisQuestionRecommandDao implements QuestionRecommandDao{
-	SqlSessionFactory ssf = YojoSqlSessionFactoryBuilder.getSqlSessionFactory();
+	//SqlSessionFactory ssf = YojoSqlSessionFactoryBuilder.getSqlSessionFactory();
+	@Autowired //
+	private SqlSession sqlSession;
+
+	
+	public void setSqlSession(SqlSession sqlSession) {
+		this.sqlSession = sqlSession;
+	}
 
 	@Override
 	public List<QuestionRecommand> getQuestionsRecommand() throws SQLException {
@@ -28,10 +36,10 @@ public class MybatisQuestionRecommandDao implements QuestionRecommandDao{
 
 	@Override
 	public List<QuestionRecommand> getQuestionsRecommand(int page, String field, String query) throws SQLException {
-		SqlSession session = ssf.openSession();
-		QuestionRecommandDao dao = session.getMapper(QuestionRecommandDao.class); 
+		//SqlSession session = ssf.openSession();
+		QuestionRecommandDao dao = sqlSession.getMapper(QuestionRecommandDao.class); 
 		List<QuestionRecommand> list = dao.getQuestionsRecommand(page, field, query);
-		session.close();
+		//session.close();
 		return list;
 	}
 

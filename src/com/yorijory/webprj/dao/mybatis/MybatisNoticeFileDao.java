@@ -15,31 +15,36 @@ import com.yorijory.webprj.vo.NoticeFile;
 
 public class MybatisNoticeFileDao implements NoticeFileDao {
 
-	SqlSessionFactory ssf = YojoSqlSessionFactoryBuilder.getSqlSessionFactory();
+	//SqlSessionFactory ssf = YojoSqlSessionFactoryBuilder.getSqlSessionFactory();
 
-	@Autowired
-	private SqlSession session;
+	@Autowired //
+	private SqlSession sqlSession;
+
+	
+	public void setSqlSession(SqlSession sqlSession) {
+		this.sqlSession = sqlSession;
+	}
 	
 	@Override
 	public List<NoticeFile> getNoticeFiles(String noticeCode) {
-		SqlSession session = ssf.openSession();
-		NoticeFileDao dao = session.getMapper(NoticeFileDao.class); // mapper按眉 积己
+		//SqlSession session = ssf.openSession();
+		NoticeFileDao dao = sqlSession.getMapper(NoticeFileDao.class); // mapper按眉 积己
 		
 		List<NoticeFile> list = dao.getNoticeFiles(noticeCode);
 		
-		session.close(); // 技记 辆丰.
+		//session.close(); // 技记 辆丰.
 
 		return list;
 	}
 
 	@Override
 	public int insert(NoticeFile file) throws SQLException {
-		SqlSession session = ssf.openSession();
-	      NoticeFileDao dao = session.getMapper(NoticeFileDao.class);
+		//SqlSession session = ssf.openSession();
+	      NoticeFileDao dao = sqlSession.getMapper(NoticeFileDao.class);
 	      int result=0;
-	      
-	      try{
-	    	  result = dao.insert(file);
+	      result = dao.insert(file);
+	      /*try{
+	    	  
 	      }
 	      catch(Exception e)
 	      {
@@ -48,7 +53,7 @@ public class MybatisNoticeFileDao implements NoticeFileDao {
 	      }
 	      
 	      session.commit();      
-	      session.close();
+	      session.close();*/
 	      
 	      return result;
 	}

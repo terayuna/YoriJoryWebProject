@@ -24,16 +24,12 @@
 			<legend class="hidden">로그인 폼</legend>
 
 			<ul>
-				<li><label for="uid">&nbsp;아이디
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input name="j_username"
-					class="text" /> <label for="pwd">&nbsp;비밀번호&nbsp;&nbsp;&nbsp;</label><input
-					type="password" name="j_password" class="text" /></li>
+				<li><label for="uid">&nbsp;아이디&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input name="j_username"class="text" /> 
+				<label for="pwd">&nbsp;비밀번호&nbsp;&nbsp;&nbsp;</label><input type="password" name="j_password" class="text" /></li>
 
-				<div style="color: red;">
-					<c:if test="${error!=null}">${error}</c:if>
-				</div>
-				<li><input type="submit" id="btnLogin" value="로그인" /> <input
-					type="submit" id="btnFind" value="아이디/비밀번호 찾기" /></li>
+				<c:if test="${error!=null}">${error}</c:if>
+				
+				<li><input type="submit" id="btnLogin" value="로그인" /></li>
 			</ul>
 
 		</fieldset>
