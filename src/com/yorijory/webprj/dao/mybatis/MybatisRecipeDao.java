@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import com.yorijory.webprj.dao.RecipeDao;
 import com.yorijory.webprj.vo.Recipe;
@@ -12,7 +13,8 @@ import com.yorijory.webprj.vo.Recipe;
 public class MybatisRecipeDao implements RecipeDao {
 
 	SqlSessionFactory ssf = YojoSqlSessionFactoryBuilder.getSqlSessionFactory();
-
+	@Autowired //
+	private SqlSession sqlSession;
 	@Override
 	public List<Recipe> getRecipes() throws SQLException {
 		// TODO Auto-generated method stub
@@ -28,42 +30,42 @@ public class MybatisRecipeDao implements RecipeDao {
 	@Override
 	public List<Recipe> getRecipes(int page, String field, String query) throws SQLException {
 		// TODO Auto-generated method stub
-		SqlSession session = ssf.openSession();
-		RecipeDao dao = session.getMapper(RecipeDao.class); 
+		//SqlSession session = ssf.openSession();
+		RecipeDao dao = sqlSession.getMapper(RecipeDao.class); 
 		List<Recipe> list = dao.getRecipes(page, field, query);
-		session.close();
+		//session.close();
 		return list;	}
 
 	@Override
 	public int update(Recipe recipes) throws SQLException {
 		// TODO Auto-generated method stub
-		SqlSession session = ssf.openSession();
-		RecipeDao dao = session.getMapper(RecipeDao.class); 
+		//SqlSession session = ssf.openSession();
+		RecipeDao dao = sqlSession.getMapper(RecipeDao.class); 
 		int count = dao.update(recipes);
-		session.commit();
-		session.close(); 
+		//session.commit();
+		//session.close(); 
 		return count;
 	}
 
 	@Override
 	public int delete(String members_mid) throws SQLException {
 		// TODO Auto-generated method stub
-		SqlSession session = ssf.openSession();
-		RecipeDao dao = session.getMapper(RecipeDao.class); 
+		//SqlSession session = ssf.openSession();
+		RecipeDao dao = sqlSession.getMapper(RecipeDao.class); 
 		int count = dao.delete(members_mid);
-		session.commit();
-		session.close(); 
+		//session.commit();
+		//session.close(); 
 		return count;
 	}
 
 	@Override
 	public int insert(Recipe recipes) throws SQLException {
 		// TODO Auto-generated method stub
-		SqlSession session = ssf.openSession();
-		RecipeDao dao = session.getMapper(RecipeDao.class); 
+		//SqlSession session = ssf.openSession();
+		RecipeDao dao = sqlSession.getMapper(RecipeDao.class); 
 		int count = dao.insert(recipes);
-		session.commit();
-		session.close(); 
+		//session.commit();
+		//session.close(); 
 		return count;
 	}
 

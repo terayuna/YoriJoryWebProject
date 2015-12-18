@@ -5,12 +5,20 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import com.yorijory.webprj.dao.MessageDao;
 import com.yorijory.webprj.vo.Message;
 
 public class MybatisMessageDao implements MessageDao{
-	SqlSessionFactory ssf = YojoSqlSessionFactoryBuilder.getSqlSessionFactory();
+	//SqlSessionFactory ssf = YojoSqlSessionFactoryBuilder.getSqlSessionFactory();
+	@Autowired //
+	private SqlSession sqlSession;
+
+	
+	public void setSqlSession(SqlSession sqlSession) {
+		this.sqlSession = sqlSession;
+	}
 
 	@Override
 	public List<Message> getMessages() throws SQLException {
@@ -27,11 +35,11 @@ public class MybatisMessageDao implements MessageDao{
 	@Override
 	public List<Message> getMessages(int page, String field, String query) throws SQLException {
 		// TODO Auto-generated method stub
-		SqlSession session = ssf.openSession();
-		MessageDao dao = session.getMapper(MessageDao.class);
+		//SqlSession session = ssf.openSession();
+		MessageDao dao = sqlSession.getMapper(MessageDao.class);
 		List<Message> list = dao.getMessages(page, field, query);
 
-		session.close();
+		//session.close();
 		return list;
 	}
 

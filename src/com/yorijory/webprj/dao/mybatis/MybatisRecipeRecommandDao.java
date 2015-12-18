@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import com.yorijory.webprj.dao.RecipeRecommandDao;
 import com.yorijory.webprj.dao.RecipeReportDao;
@@ -12,7 +13,8 @@ import com.yorijory.webprj.vo.RecipeRecommand;
 
 public class MybatisRecipeRecommandDao implements RecipeRecommandDao {
 	SqlSessionFactory ssf = YojoSqlSessionFactoryBuilder.getSqlSessionFactory();
-
+	@Autowired //
+	private SqlSession sqlSession;
 	@Override
 	public List<RecipeRecommand> getRecipeRecommands() throws SQLException {
 		// TODO Auto-generated method stub
@@ -28,21 +30,21 @@ public class MybatisRecipeRecommandDao implements RecipeRecommandDao {
 	@Override
 	public List<RecipeRecommand> getRecipeRecommands(int page, String field, String query) throws SQLException {
 		// TODO Auto-generated method stub
-		SqlSession session = ssf.openSession();
-		RecipeRecommandDao dao = session.getMapper(RecipeRecommandDao.class); 
+		//SqlSession session = ssf.openSession();
+		RecipeRecommandDao dao = sqlSession.getMapper(RecipeRecommandDao.class); 
 		List<RecipeRecommand> list = dao.getRecipeRecommands(page, field, query);
-		session.close();
+		//session.close();
 		return list;
 	}
 
 	@Override
 	public int update(RecipeRecommand reciperecommands) throws SQLException {
 		// TODO Auto-generated method stub
-		SqlSession session = ssf.openSession();
-		RecipeRecommandDao dao = session.getMapper(RecipeRecommandDao.class); 
+		//SqlSession session = ssf.openSession();
+		RecipeRecommandDao dao = sqlSession.getMapper(RecipeRecommandDao.class); 
 		int count = dao.update(reciperecommands);
-		session.commit();
-		session.close(); 
+		//session.commit();
+		//session.close(); 
 		return count;
 	}
 

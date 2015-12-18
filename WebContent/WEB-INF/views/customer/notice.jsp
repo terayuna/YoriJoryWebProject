@@ -1,8 +1,8 @@
-﻿
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
 
     				<h2>공지사항</h2>
 					<h3 class="hidden">방문페이지 로그</h3>
@@ -50,7 +50,7 @@
 						<c:forEach var="n" items="${list}">
 							<tr>
 								<td class="seq">${n.code}</td>
-								<td class="title"><a href="noticeDetail">${n.title}</a></td>
+								<td class="title"><a href="noticeDetail?c=${n.code}">${n.title}</a></td>
 								<td class="writer">${n.writer}</td>
 								<td class="regdate"><fmt:formatDate pattern="yyyy-MM-dd" value='${n.regDate}'/></td>
 								<td class="hit">${n.hit}</td>
@@ -60,7 +60,10 @@
 					</table>
 					<p class="article-comment margin-small">
 						<a class="btn-write button" href="noticeReg">글쓰기</a>
-					</p>
+						<security:authorize ifAnyGranted="ROLE_ADMIN">
+  						 <a class="btn-write button" href="noticeReg">글쓰기</a>
+   						</security:authorize>
+						</p>					
 					<p id="cur-page" class="margin-small">
 						<span class="strong">1</span> /
 						10	page

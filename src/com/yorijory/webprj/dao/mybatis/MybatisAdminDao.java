@@ -5,13 +5,21 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import com.yorijory.webprj.dao.AdminDao;
 import com.yorijory.webprj.vo.Admin;
 
 public class MybatisAdminDao implements AdminDao{
-	SqlSessionFactory ssf = YojoSqlSessionFactoryBuilder.getSqlSessionFactory();
-
+	//SqlSessionFactory ssf = YojoSqlSessionFactoryBuilder.getSqlSessionFactory();
+	
+	@Autowired 
+	private SqlSession sqlSession;
+	
+	public void setSqlSession(SqlSession sqlSession) {
+		this.sqlSession = sqlSession;
+	}
+	
 	@Override
 	public List<Admin> getAdmin() throws SQLException {
 		// TODO Auto-generated method stub
@@ -27,11 +35,11 @@ public class MybatisAdminDao implements AdminDao{
 	@Override
 	public List<Admin> getAdmin(int page, String field, String query) throws SQLException {
 		// TODO Auto-generated method stub
-		SqlSession session = ssf.openSession();
-		AdminDao dao = session.getMapper(AdminDao.class);
+		//SqlSession session = ssf.openSession();
+		AdminDao dao = sqlSession.getMapper(AdminDao.class);
 		List<Admin> list = dao.getAdmin(page, field, query);
 
-		session.close();
+		//session.close();
 		return list;
 	}
 

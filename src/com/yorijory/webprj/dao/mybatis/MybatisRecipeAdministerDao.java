@@ -5,14 +5,16 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import com.yorijory.webprj.dao.RecipeAdministerDao;
 import com.yorijory.webprj.dao.RecipeCommentDao;
 import com.yorijory.webprj.vo.RecipeAdminister;
 
 public class MybatisRecipeAdministerDao implements RecipeAdministerDao{
-	SqlSessionFactory ssf = YojoSqlSessionFactoryBuilder.getSqlSessionFactory();
-
+	//SqlSessionFactory ssf = YojoSqlSessionFactoryBuilder.getSqlSessionFactory();
+	@Autowired //
+	private SqlSession sqlSession;
 	@Override
 	public List<RecipeAdminister> getRecipeAdminister() throws SQLException {
 		// TODO Auto-generated method stub
@@ -29,21 +31,21 @@ public class MybatisRecipeAdministerDao implements RecipeAdministerDao{
 	@Override
 	public List<RecipeAdminister> getRecipeAdminister(int page, String field, String query) throws SQLException {
 		// TODO Auto-generated method stub
-		SqlSession session = ssf.openSession();
-		RecipeAdministerDao dao = session.getMapper(RecipeAdministerDao.class); 
+		//SqlSession session = ssf.openSession();
+		RecipeAdministerDao dao = sqlSession.getMapper(RecipeAdministerDao.class); 
 		List<RecipeAdminister> list = dao.getRecipeAdminister(page, field, query);
-		session.close();
+		//session.close();
 		return list;
 	}
 
 	@Override
 	public int update(RecipeAdminister recipeadminister) throws SQLException {
 		// TODO Auto-generated method stub
-		SqlSession session = ssf.openSession();
-		RecipeAdministerDao dao = session.getMapper(RecipeAdministerDao.class); 
+		//SqlSession session = ssf.openSession();
+		RecipeAdministerDao dao = sqlSession.getMapper(RecipeAdministerDao.class); 
 		int count = dao.update(recipeadminister);
-		session.commit();
-		session.close(); 
+		//session.commit();
+		//session.close(); 
 		return count;
 	}
 

@@ -5,13 +5,21 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import com.yorijory.webprj.dao.BoardCommentDao;
 import com.yorijory.webprj.vo.BoardComment;
 
 
 public class MybatisBoardCommentDao implements BoardCommentDao{
-	SqlSessionFactory ssf = YojoSqlSessionFactoryBuilder.getSqlSessionFactory();
+	//SqlSessionFactory ssf = YojoSqlSessionFactoryBuilder.getSqlSessionFactory();
+	@Autowired //
+	private SqlSession sqlSession;
+
+	
+	public void setSqlSession(SqlSession sqlSession) {
+		this.sqlSession = sqlSession;
+	}
 	
 	@Override
 	public List<BoardComment> getBoardComments() throws SQLException {
@@ -27,40 +35,40 @@ public class MybatisBoardCommentDao implements BoardCommentDao{
 
 	@Override
 	public List<BoardComment> getBoardComments(int page, String field, String query) throws SQLException {
-		SqlSession session = ssf.openSession();
-		BoardCommentDao dao = session.getMapper(BoardCommentDao.class); 
+		//SqlSession session = ssf.openSession();
+		BoardCommentDao dao = sqlSession.getMapper(BoardCommentDao.class); 
 		List<BoardComment> list = dao.getBoardComments(page, field, query);
-		session.close();
+		//session.close();
 		return list;
 	}
 
 	@Override
 	public int update(BoardComment boardComment) throws SQLException {
-		SqlSession session = ssf.openSession();
-		BoardCommentDao dao = session.getMapper(BoardCommentDao.class); 
+		//SqlSession session = ssf.openSession();
+		BoardCommentDao dao = sqlSession.getMapper(BoardCommentDao.class); 
 		int count = dao.update(boardComment);
-		session.commit();
-		session.close(); 
+		//session.commit();
+		//session.close(); 
 		return count;
 	}
 
 	@Override
 	public int delete(String mid) throws SQLException {
-		SqlSession session = ssf.openSession();
-		BoardCommentDao dao = session.getMapper(BoardCommentDao.class); 
+		//SqlSession session = ssf.openSession();
+		BoardCommentDao dao = sqlSession.getMapper(BoardCommentDao.class); 
 		int count = dao.delete(mid);
-		session.commit();
-		session.close(); 
+		//session.commit();
+		//session.close(); 
 		return count;
 	}
 
 	@Override
 	public int insert(BoardComment boardComment) throws SQLException {
-		SqlSession session = ssf.openSession();
-		BoardCommentDao dao = session.getMapper(BoardCommentDao.class); 
+		//SqlSession session = ssf.openSession();
+		BoardCommentDao dao = sqlSession.getMapper(BoardCommentDao.class); 
 		int count = dao.insert(boardComment);
-		session.commit();
-		session.close(); 
+		//session.commit();
+		//session.close(); 
 		return count;
 	}
 	

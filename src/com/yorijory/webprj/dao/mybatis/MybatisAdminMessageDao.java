@@ -5,12 +5,20 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import com.yorijory.webprj.dao.AdminMessageDao;
 import com.yorijory.webprj.vo.AdminMessage;
 
-public class MybatisAdminMessageDao implements AdminMessageDao{
-	SqlSessionFactory ssf = YojoSqlSessionFactoryBuilder.getSqlSessionFactory();
+public class MybatisAdminMessageDao implements AdminMessageDao {
+	// SqlSessionFactory ssf =
+	// YojoSqlSessionFactoryBuilder.getSqlSessionFactory();
+	@Autowired
+	private SqlSession sqlSession;
+
+	public void setSqlSession(SqlSession sqlSession) {
+		this.sqlSession = sqlSession;
+	}
 
 	@Override
 	public List<AdminMessage> getAdminMessage() throws SQLException {
@@ -27,11 +35,11 @@ public class MybatisAdminMessageDao implements AdminMessageDao{
 	@Override
 	public List<AdminMessage> getAdminMessage(int page, String field, String query) throws SQLException {
 		// TODO Auto-generated method stub
-		SqlSession session = ssf.openSession();
-		AdminMessageDao dao = session.getMapper(AdminMessageDao.class);
+		//SqlSession session = ssf.openSession();
+		AdminMessageDao dao = sqlSession.getMapper(AdminMessageDao.class);
 		List<AdminMessage> list = dao.getAdminMessage(page, field, query);
 
-		session.close();
+		//session.close();
 		return list;
 	}
 
