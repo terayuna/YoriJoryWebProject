@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	var notice = {code:"1", title:"hello javascript", writer:"newlec"};
+	var notices=[
+	             {code:"1", title:"hello javascript", writer:"newlec"},
+	             {code:"2", title:"what javascript is..", writer:"newlec"},
+	             {code:"3", title:"ok...", writer:"newlec"}
+	             ];
+	
+	
+	var keys = ["code", "title", "writer"];
+	
+	/* for(var i=0; i<3; i++)
+		alert(notice[keys[i]]); */
+	var ar = ["철수", "영희", "맹구", "동천"];
+		/* for(var i=0; i<4; i++) */
+	/* for(var i in notice)
+		alert(notice[i]); */
+	function add(x, y)
+	{
+		return x+y;
+	};
+		alert(add(5,6));
+		
+	var f1 = function add(x, y)
+	{
+		return x+y;
+	}(1,2);
+		alert(f1);
+		
+		var obj = {x:3, y:4, callback:function(){alert("hello");}};
+		obj.callback();
+</script>
+</head>
+<body>
+
+</body>
+</html>

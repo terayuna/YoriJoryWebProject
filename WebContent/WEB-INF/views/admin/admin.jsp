@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -22,51 +24,29 @@
 							</fieldset>
 						</form>
 					</div>
-					<h3 class="hidden">공지사항 테이블</h3>
+					<h3 class="hidden">회원 테이블</h3>
 		
 					<table id="notices">
 						<thead>
 							<tr>
-								<th>아이디</th>
-								<th>이름</th>
-								<th>폰번호</th>
-								<th>이메일</th>
-								<th>가입일</th>
+								<th class="mid">아이디</th>
+								<th class="name">이름</th>
+								<th class="phone">폰번호</th>
+								<th class="email">이메일</th>
+								<th class="regdate">가입일</th>
 							</tr>
 						</thead>
 		
 						<tbody>
+							<c:forEach var="n" items="${mlist}">
 							<tr>
-								<td>1</td>
-								<td>염기훈</td>
-								<td>26</td>
-								<td>2011-11-22</td>
-								<td>2</td>
+								<td class="mid">${n.mid}</td>
+								<td class="name"><a href="">${n.name}</a></td>
+								<td class="phone">${n.phone}</td>
+								<td class="email">${n.email}</td>
+								<td class="regdate"><fmt:formatDate pattern="yyyy-MM-dd" value='${n.regDate}'/></td>
 							</tr>
-		
-							<tr>
-								<td>2</td>
-								<td>권창훈</td>
-								<td>22</td>
-								<td>2012-11-23</td>
-								<td>3</td>
-							</tr>
-		
-							<tr>
-								<td>3</td>
-								<td>정성룡</td>
-								<td>1</td>
-								<td>2011-11-22</td>
-								<td>2</td>
-							</tr>
-		
-							<tr>
-								<td>4</td>
-								<td>오범석</td>
-								<td>3</td>
-								<td>2011-11-22</td>
-								<td>2</td>
-							</tr>
+							</c:forEach>
 						</tbody>
 					</table>
 					<br>

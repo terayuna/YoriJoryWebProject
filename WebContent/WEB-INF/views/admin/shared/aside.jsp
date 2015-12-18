@@ -13,7 +13,11 @@
 					<h1>관리메뉴</h1>
 					<ul>
 						<li><a href="admin">회원관리</a></li>
-						<li><a href="adminBoard">게시판관리</a></li>
+						<li><a href="">게시판관리</a></li>
+						<li><a href="adminNotices">ㄴ공지사항</a></li>
+						<li><a href="adminBoards">ㄴ자유게시판</a></li>
+						<li><a href="adminQA">ㄴQ&A</a></li>
+						<li><a href="adminRecipes">ㄴ레시피</a></li>
 						<li><a href="adminReport">신고관리</a></li>
 					</ul>
 				</nav>

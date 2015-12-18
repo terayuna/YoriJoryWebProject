@@ -5,20 +5,26 @@
 <mapper namespace="com.yorijory.webprj.dao.QuestionAdministerDao">
 	<select id="getQuestionsAdminister" resultType="com.yorijory.webprj.vo.QuestionAdminister">
 	
-		SELECT * FROM QuestionsAdminister WHERE ${param2} LIKE '%${param3}%'
+		SELECT * FROM(
+         SELECT 
+            ROW_NUMBER() OVER (ORDER BY REGDATE DESC) NUM, 
+            MEMBERS. * FROM MEMBERS 
+            WHERE ${param2} LIKE '%${param3}%'
+            ) A 
+            WHERE NUM BETWEEN 1+(#{param1}-1)*10 AND #{param1}*10
            
 		 
 	 </select>
 	<update id="update">
-		UPDATE QuestionsAdminister SET TITLE=#{title}, CONTENT=#{content} WHERE Members_Mid=#{members_mid}
+		UPDATE QuestionsAdminister SET TITLE=#{title}, CONTENT=#{content} WHERE Members_Mid=#{members_Mid}
 	 </update> 
 	 
 	 <insert id="insert">
-	 	INSERT INTO QuestionsAdminister(Members_Mid, TITLE, CONTENT) VALUES(#{members_mid},#{title},#{content})
+	 	INSERT INTO QuestionsAdminister(Members_Mid, TITLE, CONTENT) VALUES(#{members_Mid},#{title},#{content})
 	 </insert>
 	 	
 	 <delete id="delete">
-	 	DELETE QuestionsAdminister WHERE Members_Mid=#{members_mid}
+	 	DELETE QuestionsAdminister WHERE Members_Mid=#{members_Mid}
 	 </delete>
 	
 </mapper>

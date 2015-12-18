@@ -5,7 +5,7 @@ import java.util.Date;
 public class Question {
 	private String code;
 	private String title;
-	private String members_mid;
+	private String members_Mid;
 	private String content;
 	private Date regDate;
 	private int hit;
@@ -26,11 +26,11 @@ public class Question {
 		this.title = title;
 	}
 	
-	public String getMembers_mid() {
-		return members_mid;
+	public String getMembers_Mid() {
+		return members_Mid;
 	}
-	public void setMembers_mid(String members_mid) {
-		this.members_mid = members_mid;
+	public void setMembers_Mid(String members_mid) {
+		this.members_Mid = members_mid;
 	}
 	public String getContent() {
 		return content;

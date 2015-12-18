@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -7,12 +9,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h2>게시글 목록</h2>
+	<h2>공지사항 목록</h2>
 			<div class="align-container">
-				<h3 class="hidden">게시글 검색</h3>
+				<h3 class="hidden">공지사항 검색</h3>
 				<form id="notice-search">
 					<fieldset>
-						<legend class="hidden">게시글 검색 필드</legend>
+						<legend class="hidden">공지사항 검색 필드</legend>
 						<label class="hidden">분류</label> <select>
 							<option>분류선택</option>
 							<option>코드</option>
@@ -28,46 +30,22 @@
 			<table id="notices">
 				<thead>
 					<tr>
-						<th>코드</th>
-						<th>작성자</th>
-						<th>타입</th>
-						<th>제목</th>
-						<th>등록일</th>
+						<th class="code">코드</th>
+						<th class="title">제목</th>
+						<th class="writer">작성자</th>
+						<th class="regdate">등록일</th>
 					</tr>
 				</thead>
 
 				<tbody>
-					<tr>
-						<td>1</td>
-						<td>염기훈</td>
-						<td>26</td>
-						<td>2011-11-22</td>
-						<td>2</td>
-					</tr>
-
-					<tr>
-						<td>2</td>
-						<td>권창훈</td>
-						<td>22</td>
-						<td>2012-11-23</td>
-						<td>3</td>
-					</tr>
-
-					<tr>
-						<td>3</td>
-						<td>정성룡</td>
-						<td>1</td>
-						<td>2011-11-22</td>
-						<td>2</td>
-					</tr>
-
-					<tr>
-						<td>4</td>
-						<td>오범석</td>
-						<td>3</td>
-						<td>2011-11-22</td>
-						<td>2</td>
-					</tr>
+					<c:forEach var="n" items="${nlist}">
+						<tr>
+							<td class="code">${n.code}</td>
+							<td class="title"><a href="">${n.title}</a></td>
+							<td class="writer">${n.admin_Mid}</td>
+							<td class="regdate"><fmt:formatDate pattern="yyyy-MM-dd" value='${n.regDate}'/></td>
+						</tr>
+					</c:forEach>
 				</tbody>
 			</table>
 			<br>

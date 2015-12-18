@@ -26,8 +26,8 @@ public class TestProgram {
 
 		System.out.println("검색결과 : " + list.size());
 
-		for (QuestionRecommand m : list) {
+		/*for (QuestionRecommand m : list) {
 			System.out.printf("mid : %s, title : %d \n", m.getMembers_mid(), m.getQuestions_code());
-		}
+		}*/
 	}
 }

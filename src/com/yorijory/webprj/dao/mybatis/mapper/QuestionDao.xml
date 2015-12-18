@@ -15,15 +15,15 @@
 		 
 	 </select>
 	<update id="update">
-		UPDATE Questions SET TITLE=#{title}, CONTENT=#{content} WHERE Members_Mid=#{members_mid}
+		UPDATE Questions SET TITLE=#{title}, CONTENT=#{content} WHERE Members_Mid=#{members_Mid}
 	 </update> 
 	 
 	 <insert id="insert">
-	 	INSERT INTO Questions(Members_Mid, TITLE, CONTENT) VALUES(#{members_mid},#{title},#{content})
+	 	INSERT INTO Questions(Members_Mid, TITLE, CONTENT) VALUES(#{members_Mid},#{title},#{content})
 	 </insert>
 	 	
 	 <delete id="delete">
-	 	DELETE Questions WHERE Members_Mid=#{members_mid}
+	 	DELETE Questions WHERE Members_Mid=#{members_Mid}
 	 </delete>
 	
 </mapper>

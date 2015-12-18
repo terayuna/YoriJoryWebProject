@@ -8,7 +8,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 
 import com.yorijory.webprj.dao.QuestionAdministerDao;
 import com.yorijory.webprj.dao.QuestionDao;
-import com.yorijory.webprj.dao.RecipesAdministerDao;
+import com.yorijory.webprj.dao.RecipeAdministerDao;
 import com.yorijory.webprj.vo.QuestionAdminister;
 
 public class MybatisQuestionAdministerDao implements QuestionAdministerDao {

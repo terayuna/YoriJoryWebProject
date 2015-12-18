@@ -1,21 +1,23 @@
 package com.yorijory.webprj.vo;
 
-public class QuestionRecommand {
+import java.util.Date;
+
+public class RecipeRecommand {
 	private String members_Mid;	
-	private int questions_Code;
+	private int recipes_Code;
 	public String getMembers_Mid() {
 		return members_Mid;
 	}
 	public void setMembers_Mid(String members_Mid) {
 		this.members_Mid = members_Mid;
 	}
-	public int getQuestions_Code() {
-		return questions_Code;
+	public int getRecipes_Code() {
+		return recipes_Code;
 	}
-	public void setQuestions_Code(int questions_Code) {
-		this.questions_Code = questions_Code;
+	public void setRecipes_Code(int recipes_Code) {
+		this.recipes_Code = recipes_Code;
 	}
+	
 	
 
-	
 }

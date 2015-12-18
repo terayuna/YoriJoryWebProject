@@ -2,8 +2,8 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.yorijory.webprj.dao.RecipesCommentDao">
-	<select id="getRecipesComment" resultType="com.yorijory.webprj.vo.RecipesComment">
+<mapper namespace="com.yorijory.webprj.dao.RecipeCommentDao">
+	<select id="getRecipeComments" resultType="com.yorijory.webprj.vo.RecipeComment">
 	
 		SELECT * FROM(
          SELECT 

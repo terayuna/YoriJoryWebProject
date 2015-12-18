@@ -2,10 +2,10 @@ package com.yorijory.webprj.vo;
 
 import java.util.Date;
 
-public class Recipes {
+public class Recipe {
 	private int code;
 	private String title;
-	private String Member_Mid;
+	private String members_Mid;
 	private String content;
 	private Date regDate;
 	private String type;
@@ -24,11 +24,11 @@ public class Recipes {
 		this.title = title;
 	}
 	
-	public String getMember_Mid() {
-		return Member_Mid;
+	public String getMembers_Mid() {
+		return members_Mid;
 	}
-	public void setMember_Mid(String member_Mid) {
-		Member_Mid = member_Mid;
+	public void setMembers_Mid(String members_Mid) {
+		this.members_Mid = members_Mid;
 	}
 	public String getContent() {
 		return content;

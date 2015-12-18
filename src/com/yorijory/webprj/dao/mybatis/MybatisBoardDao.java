@@ -17,13 +17,13 @@ public class MybatisBoardDao implements BoardDao{
 	@Override
 	public List<Board> getBoards() throws SQLException {
 		// TODO Auto-generated method stub
-		return getBoards(1, "MID", "");
+		return getBoards(1, "TITLE", "");
 	}
 
 	@Override
 	public List<Board> getBoards(int page) throws SQLException {
 		// TODO Auto-generated method stub
-		return getBoards(page, "MID", "");
+		return getBoards(page, "TITLE", "");
 	}
 
 	@Override

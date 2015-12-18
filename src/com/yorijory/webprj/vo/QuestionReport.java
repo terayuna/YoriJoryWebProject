@@ -3,16 +3,16 @@ package com.yorijory.webprj.vo;
 import java.util.Date;
 
 public class QuestionReport {
-	private String members_mid;
+	private String members_Mid;
 	private String content;
 	private Date regDate;
 	private String code;
-	private String questions_code;
-	public String getMembers_mid() {
-		return members_mid;
+	private String questions_Code;
+	public String getMembers_Mid() {
+		return members_Mid;
 	}
-	public void setMembers_mid(String members_mid) {
-		this.members_mid = members_mid;
+	public void setMembers_Mid(String members_Mid) {
+		this.members_Mid = members_Mid;
 	}
 	public String getContent() {
 		return content;
@@ -32,13 +32,13 @@ public class QuestionReport {
 	public void setCode(String code) {
 		this.code = code;
 	}
-	public String getQuestions_code() {
-		return questions_code;
+	public String getQuestions_Code() {
+		return questions_Code;
 	}
-	public void setQuestions_code(String questions_code) {
-		this.questions_code = questions_code;
+	public void setQuestions_Code(String questions_Code) {
+		this.questions_Code = questions_Code;
 	}
-	
+
 	
 	
 }

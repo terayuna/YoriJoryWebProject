@@ -32,10 +32,10 @@
     <mapper resource="com/yorijory/webprj/dao/mybatis/mapper/BoardReportDao.xml"/>
     <mapper resource="com/yorijory/webprj/dao/mybatis/mapper/BoardCommentDao.xml"/>
     <mapper resource="com/yorijory/webprj/dao/mybatis/mapper/BoardAdministerDao.xml"/>
-    <mapper resource="com/yorijory/webprj/dao/mybatis/mapper/RecipesDao.xml"/>
-    <mapper resource="com/yorijory/webprj/dao/mybatis/mapper/RecipesReportDao.xml"/>
-    <mapper resource="com/yorijory/webprj/dao/mybatis/mapper/RecipesRecommandDao.xml"/>
-    <mapper resource="com/yorijory/webprj/dao/mybatis/mapper/RecipesCommentDao.xml"/>
-    <mapper resource="com/yorijory/webprj/dao/mybatis/mapper/RecipesAdministerDao.xml"/>
+    <mapper resource="com/yorijory/webprj/dao/mybatis/mapper/RecipeDao.xml"/>
+    <mapper resource="com/yorijory/webprj/dao/mybatis/mapper/RecipeReportDao.xml"/>
+    <mapper resource="com/yorijory/webprj/dao/mybatis/mapper/RecipeRecommandDao.xml"/>
+    <mapper resource="com/yorijory/webprj/dao/mybatis/mapper/RecipeCommentDao.xml"/>
+    <mapper resource="com/yorijory/webprj/dao/mybatis/mapper/RecipeAdministerDao.xml"/>
   </mappers>
 </configuration>

@@ -2,12 +2,12 @@ package com.yorijory.webprj.vo;
 
 import java.util.Date;
 
-public class RecipesComment {
+public class RecipeReport {
 	private String mid;
 	private String content;
 	private Date regDate;
 	private int code;
-	private int recipes_code;
+	private int recipes_Code;
 	
 	public String getMid() {
 		return mid;
@@ -33,12 +33,12 @@ public class RecipesComment {
 	public void setCode(int code) {
 		this.code = code;
 	}
-	public int getRecipes_code() {
-		return recipes_code;
+	public int getRecipes_Code() {
+		return recipes_Code;
 	}
-	public void setRecipes_code(int recipes_code) {
-		this.recipes_code = recipes_code;
+	public void setRecipes_Code(int recipes_code) {
+		this.recipes_Code = recipes_code;
 	}
-	
-	
+
+
 }
