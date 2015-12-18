@@ -4,7 +4,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
 
-    				<h2>공지사항</h2>
+    				<h2>자유게시판</h2>
 					<h3 class="hidden">방문페이지 로그</h3>
 					<ul id="breadscrumb" class="block_hlist clear">
 						<li>HOME</li>
@@ -15,7 +15,7 @@
 							공지사항목록
 						</li>
 					</ul>
-					<h3 class="hidden">공지사항 목록</h3>
+					<h3 class="hidden">게시판 목록</h3>
 					<form id="content-searchform" class="article-search-form" action="notice.jsp" method="get">
 						<fieldset>
 							<legend class="hidden">
@@ -35,23 +35,23 @@
 					</form>
 					<table class="article-list margin-small">
 						<caption class="hidden">
-							공지사항
+							게시판
 						</caption>
 						<thead>
 							<tr>
-								<th class="seq">번호</th>
-								<th class="title">조회수</th>
-								<th class="writer">작성자</th>
+								<th class="code">코드</th>
+								<th class="title">제목</th>
+								<th class="mid">작성자</th>
 								<th class="regdate">등록일</th>
 								<th class="hit">조회수</th>
 							</tr>
 						</thead>
 						<tbody>
-						<c:forEach var="n" items="${list}">
+						<c:forEach var="n" items="${blist}">
 							<tr>
-								<td class="seq">${n.code}</td>
-								<td class="title"><a href="noticeDetail?c=${n.code}">${n.title}</a></td>
-								<td class="writer">${n.writer}</td>
+								<td class="code">${n.code}</td>
+								<td class="title"><a href="">${n.title}</a></td>
+								<td class="writer">${n.members_Mid}</td>
 								<td class="regdate"><fmt:formatDate pattern="yyyy-MM-dd" value='${n.regDate}'/></td>
 								<td class="hit">${n.hit}</td>
 							</tr>
@@ -60,8 +60,8 @@
 					</table>
 					<p class="article-comment margin-small">
 						<security:authorize ifAnyGranted="ROLE_ADMIN">
-							<a class="btn-write button" href="noticeReg">글쓰기</a>
-						</security:authorize>
+  							<a class="btn-write button" href="noticeReg">글쓰기</a>
+   						</security:authorize>
 					</p>					
 					<p id="cur-page" class="margin-small">
 						<span class="strong">1</span> /

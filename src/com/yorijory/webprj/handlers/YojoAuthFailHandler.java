@@ -17,7 +17,7 @@ public class YojoAuthFailHandler extends SimpleUrlAuthenticationFailureHandler {
 		// TODO Auto-generated method stub
 		
 		System.out.println("틀려먹음");
-		response.sendRedirect("/JSPProjectYun/joinus/login");
+		response.sendRedirect("/YojoProject/joinus/login");
 
 		/*request.setAttribute("error", "너는 틀려먹었음");
 		request.getRequestDispatcher("/joinus/login").forward(request, response);*/

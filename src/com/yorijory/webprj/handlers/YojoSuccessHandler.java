@@ -17,7 +17,7 @@ public class YojoSuccessHandler implements AuthenticationSuccessHandler{
          Authentication authentication)
          throws IOException, ServletException {
       System.out.println("±Â¶ß");
-      response.sendRedirect("/JSPProjectYun/customer/notice");
+      response.sendRedirect("/YojoProject/customer/notice");
    }
    
 }

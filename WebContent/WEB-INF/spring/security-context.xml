@@ -18,9 +18,8 @@
            authentication-failure-url="/joinus/login?error=1"
            authentication-failure-handler-ref="failHandler"
            authentication-success-handler-ref="successHandler"/>
-           <logout logout-success-url="/customer/notice"/>
-           
-           <intercept-url pattern="/customer/noticeReg" access="ROLE_ADMIN"/>
+		<logout logout-success-url="/customer/notice"/>
+		<intercept-url pattern="/customer/noticeReg" access="ROLE_ADMIN"/>
     </http>
     <authentication-manager>
     	<authentication-provider>
