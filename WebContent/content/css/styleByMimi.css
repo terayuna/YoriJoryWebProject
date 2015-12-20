@@ -1,6 +1,6 @@
 @CHARSET "UTF-8";
 
-.clearfixs:after {
+.clearfix:after {
 	content: ".";
 	display: block;
 	clear: both;
@@ -8,12 +8,13 @@
 	visibilty: hidden;
 }
 
-.hiddens{
+
+.hidden{
 	display: none;
 	visibility: hidden;
 }
 
-.content-containers {
+.content-container {
 	position: relative;
 	height: inherit;
 	margin-left: 100px;
@@ -28,23 +29,25 @@ body {
 	color: #979797;
 }
 
+
+
 /* -----#header---------------------------------------------------- */
-#headers {
-	min-height: 100px;
+#header {
+	min-height: 90px;
 }
 
 #color-line {
-	min-height: 40px;
-	background: red;
+	min-height: 60px;
+	background: #fae1d9;
 }
 
-#logos {
+#logo {
 	position: absolute;
 	width: 200px;
 	top: 10px;
 }
 
-#recipe-searchs {
+#recipe-search {
 	width: 253px;
 	height: 25px;
 	border: 1px solid #FD6E47;
@@ -54,22 +57,19 @@ body {
 	left: 268px;
 }
 
-/* #recipe-search fieldset>input {
-	display: block;
-	float: left;
-} */
-#recipe-searchs fieldset>input {
+
+#recipe-search fieldset>input {
 	display: block;
 	float: left;
 }
 
-#recipe-searchs input[type='text'] {
+#recipe-search input[type='text'] {
 	width: 222px;
 	height: 25px;
 	border: 0px solid #fff;
 }
 
-#recipe-searchs input[type='submit'] {
+#recipe-search input[type='submit'] {
 	text-indent: -999px;
 	cursor: pointer;
 	border: 0px;
@@ -79,46 +79,57 @@ body {
 	border-left: 1px solid #FD6E47;
 }
 
-#joinus-menus {
+#joinus-menu {
 	display: inline-block;
 	position: absolute;
 	top: 35px;
 	right: 0px;
+	
 }
 
-#joinus-menus>ul>li {
+#joinus-menu>ul>li {
 	float: left;
 	padding-left: 9px;
 	background: url("../images/bg-member-menu-vsp.png") no-repeat 5px center;
 }
 
-#joinus-menus>ul>li:FIRST-CHILD {
+#joinus-menu>ul>li:FIRST-CHILD {
 	padding-left: 0px;
 	background: none;
 }
 
-#joinus-menus>ul>li a {
-	color: inherit;
+#joinus-menu>ul>li a {
+	color: #ce3002;
 	font-family: "맑은 고딕", sans-serif;
 	font-size: 10px;
 	font-weight: bold;
 	text-decoration: none;
 }
 
-#joinus-menus>ul>li a:HOVER {
+#joinus-menu>ul>li a:HOVER {
 	text-decoration: underline;
 }
 
 
 /* -- #main-visual ----------------------------------------------------------- */
 #main-visual {
-	display: block;
-	/* width:1920px; */
-	/* height:700px; */
+/* 	display: block;
 	width:100%;
 	height:100%;
 	position: absolute;
-	z-index: 400;
+	z-index: 400; */
+	
+	display: block;
+	position: absolute;
+    overflow: hidden;
+    min-height: 650px;
+    max-height: 700px;
+    height: 77%;
+    width: 100%;
+    min-width: 1030px;
+    margin-bottom: -29px;
+    z-index: 400;
+	
 	
 	background: url("../images/dessert.jpg") no-repeat;
 	background-attachment: auto;
@@ -127,16 +138,39 @@ body {
 
 }
 
-#categories {
+#category {
 	display: inline-block;
 	position: absolute;
-	top: 100px;
-	right: 30px;
+	top: 50px;
+	right: 50px;
 }
-#categories>ul>li>a {
+
+#board-menu>li>a {
 	font-family: 맑은 고딕, sans-serif;
-	font-size: 50px;
+	font-size: 30px;
 	font-weight: bold;
 	color: #FE6739;
-	
+}
+
+#recipe-menu>li>a {
+	font-family: 맑은 고딕, sans-serif;
+	font-size: 25px;
+	font-weight: bold;
+	color: #FE6739;
+	margin-left: 20px;
+}
+
+/* ----- 레시피 리스트   ------------------------------------------*/
+#recipe-list {
+	display: block;
+	background: #f6f6f6;
+    margin: 26px 0;
+    padding: 26px 0 60px;
+    border-bottom: 1px solid #bec6d1;
+    position: absolute;
+    z-index: 1;
+    min-width: 1030px;
+    border-bottom: 1px solid #bec6d1;
+    border-top: 1px solid rgba(0, 0, 0, 0.25);
+    overflow-x: hidden;
 }
