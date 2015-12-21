@@ -34,6 +34,7 @@
 								<th class="phone">폰번호</th>
 								<th class="email">이메일</th>
 								<th class="regdate">가입일</th>
+								<th class="etc">비고</th>
 							</tr>
 						</thead>
 		
@@ -45,6 +46,7 @@
 								<td class="phone">${n.phone}</td>
 								<td class="email">${n.email}</td>
 								<td class="regdate"><fmt:formatDate pattern="yyyy-MM-dd" value='${n.regDate}'/></td>
+								<td class="etc">삭제</td>
 							</tr>
 							</c:forEach>
 						</tbody>

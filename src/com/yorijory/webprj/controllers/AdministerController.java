@@ -30,8 +30,8 @@ import com.yorijory.webprj.vo.Recipe;
 
 
 @Controller
-@RequestMapping("/admin/")
-public class AdminController {
+@RequestMapping("/administer/")
+public class AdministerController {
 	
 	@Autowired
 	private MemberDao memberDao;
@@ -54,7 +54,7 @@ public class AdminController {
 		for(Member n : list){
 			out.println("MID : " + n.getMid());
 		}
-		return "admin/admin";
+		return "administer/admin";
 	}
 	
 	@RequestMapping("adminNotices")
@@ -67,7 +67,7 @@ public class AdminController {
 		for(Notice n : list){
 			out.println("TITLE : " + n.getTitle());
 		}
-		return "admin/adminNotices";
+		return "administer/adminNotices";
 	}
 	
 	@RequestMapping("adminBoards")
@@ -80,7 +80,7 @@ public class AdminController {
 		for(Board n : list){
 			out.println("TITLE : " + n.getTitle());
 		}
-		return "admin/adminBoards";
+		return "administer/adminBoards";
 	}
 	
 	@RequestMapping("adminQA")
@@ -93,7 +93,7 @@ public class AdminController {
 		for(Question n : list){
 			out.println("TITLE : " + n.getTitle());
 		}
-		return "admin/adminQA";
+		return "administer/adminQA";
 	}
 	
 	@RequestMapping("adminRecipes")
@@ -106,7 +106,7 @@ public class AdminController {
 		for(Recipe n : list){
 			out.println("TITLE : " + n.getTitle());
 		}
-		return "admin/adminRecipes";
+		return "administer/adminRecipes";
 	}
 	
 }
