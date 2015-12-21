@@ -44,7 +44,7 @@ body {
 #logo {
 	position: absolute;
 	width: 200px;
-	top: 10px;
+	top: 15px;
 }
 
 #recipe-search {
@@ -128,7 +128,7 @@ body {
     width: 100%;
     min-width: 1030px;
     margin-bottom: -29px;
-    z-index: 400;
+ /*    z-index: 400; */
 	
 	
 	background: url("../images/dessert.jpg") no-repeat;
@@ -139,7 +139,7 @@ body {
 }
 
 #category {
-	display: inline-block;
+	display: block;
 	position: absolute;
 	top: 50px;
 	right: 50px;
@@ -162,15 +162,16 @@ body {
 
 /* ----- 레시피 리스트   ------------------------------------------*/
 #recipe-list {
-	display: block;
+	display: inline-block;
 	background: #f6f6f6;
     margin: 26px 0;
     padding: 26px 0 60px;
     border-bottom: 1px solid #bec6d1;
     position: absolute;
-    z-index: 1;
+   /*  z-index: 1; */
     min-width: 1030px;
     border-bottom: 1px solid #bec6d1;
     border-top: 1px solid rgba(0, 0, 0, 0.25);
     overflow-x: hidden;
 }
+
