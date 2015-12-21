@@ -55,6 +55,7 @@
 			<ul class="clearfix">
 				<li><c:if test="${pageContext.request.userPrincipal == null}">
 						<a href="../joinus/login">로그인</a>
+
 					</c:if> <c:if test="${pageContext.request.userPrincipal != null}">
 						<c:url var="logout" value="/j_spring_security_logout" />
 						<a href="${logout}"> <%-- ${pageContext.request.userPrincipal.name} --%>
@@ -66,3 +67,4 @@
 			</nav>
 		</div>
 	</div>
+
