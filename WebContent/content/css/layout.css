@@ -168,7 +168,7 @@
 
 #main  .top-wrapper
 {
-	background: #0ff url("../images/bgContent.png") repeat-y 0px 0px;
+	background:  url("../images/bgContent.png") repeat-y 0px 0px;
 }
 
 #content {	

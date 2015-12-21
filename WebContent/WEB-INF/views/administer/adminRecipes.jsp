@@ -35,6 +35,7 @@
 						<th class="type">타입</th>
 						<th class="writer">작성자</th>
 						<th class="regdate">등록일</th>
+						<th class="etc">비고</th>
 					</tr>
 				</thead>
 
@@ -46,6 +47,7 @@
 							<td class="type">${n.type}</td>
 							<td class="writer">${n.members_Mid}</td>
 							<td class="regdate"><fmt:formatDate pattern="yyyy-MM-dd" value='${n.regDate}'/></td>
+							<td class="etc">삭제</td>
 						</tr>
 					</c:forEach>
 				</tbody>

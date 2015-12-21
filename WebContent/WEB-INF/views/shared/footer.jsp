@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-				<h2><img src="../images/footerLogo.png" alt="뉴렉처"/></h2>
+				<h2><img src="../images/footerLogo.png" alt="요리조리"/></h2>
 				<p>				
 					<address id="ad">
 						사업자등록번호 : 000-00-00000000 통신판매업신고 : 서울 0000-000 관리자 : 홍길동

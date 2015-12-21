@@ -19,15 +19,4 @@
 							<a href="">목록</a>
 						</li>
 					</ul>
-					<h3 id="fav-title">추천사이트</h3>
-					<ul class="margin-small">
-						<li>
-							<a href="http://www.answeris.net"><img src="../images/answeris.png" alt="앤서이즈" /></a>
-						</li>
-						<li>
-							<a href="http://www.microsoft.com"><img src="../images/microsoft.png" alt="마이크로소프트" /></a>
-						</li>
-						<li>
-							<a href="http://www.w3c.org"><img src="../images/w3c.png" alt="W3C" /></a>
-						</li>
-					</ul>
+					
