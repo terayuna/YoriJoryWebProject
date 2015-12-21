@@ -31,7 +31,7 @@
 						</c:if>
 					</li>
 					<li>
-						<a href="">회원가입</a>
+						<a href="../joinus/join">회원가입</a>
 					</li>
 				</ul>
 				
