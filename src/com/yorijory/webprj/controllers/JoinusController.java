@@ -1,11 +1,18 @@
 package com.yorijory.webprj.controllers;
 
+import java.sql.SQLException;
+
+import javax.servlet.http.HttpSession;
+
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.yorijory.webprj.dao.MemberDao;
+import com.yorijory.webprj.vo.Member;
 
 
 
@@ -22,8 +29,14 @@ public class JoinusController {
 		return "joinus/login";
 	}
 	
-	/*@RequestMapping(value="login", method=RequestMethod.POST)
-	public String login(@Param("user-name") String userName, String password, Model model, HttpSession session)
+	@RequestMapping(value="join", method=RequestMethod.GET)
+	public String join()
+	{
+		return "joinus/join";
+	}
+	
+	@RequestMapping(value="login", method=RequestMethod.POST)
+	public String login(@Param("user-name") String userName, String password, Model model, HttpSession session) throws SQLException
 	{
 		Member m = memberDao.getMember(userName);
 		
@@ -44,5 +57,5 @@ public class JoinusController {
 		// 인증 정보를 저장 어디에???(session? cookie?)
 		session.setAttribute("mid", userName);
 		return "redirect:customer/notice";
-	}*/
+	}
 }

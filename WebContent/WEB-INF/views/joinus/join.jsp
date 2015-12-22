@@ -1,40 +1,47 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
+<%-- <%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%> --%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+
+	pageEncoding="UTF-8"%>
+
  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
  <html>
  <head>
  <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
- <title>È¸¿ø°¡ÀÔ ÆäÀÌÁö</title>
+ <title>íšŒì›ê°€ìž… íŽ˜ì´ì§€</title>
  </head>
 
  <body>
      <center>
      
-     <a href="MainByMimi.html"> <img
-	src="${pageContext.request.contextPath}/content/images/yorijorybig.png"
-	alt="yorijory" /></a>
+     <a href="MainByMimi.html"> 
+     <img src="${pageContext.request.contextPath}/content/images/yorijorybig.png"alt="yorijory" /></a>
 
      <div>
      <table border="1" >
          <tr>
-             <td width="100">¾ÆÀÌµð</td>
+             <td width="100">ì•„ì´ë””</td>
              <td width="450">
-             <form action="idcheck.jsp" method="get" > 
+             <form action="" method="get" > 
              
                      <input type="text" name="id" autofocus required></input>
-                     <input type="submit" value="¾ÆÀÌµð Áßº¹È®ÀÎ"> </input>
+                     <input type="submit" value="ì•„ì´ë”” ì¤‘ë³µí™•ì¸"> </input>
                  </form>           
              </td>
          </tr>
         
          <tr>
-             <td>ºñ¹Ð¹øÈ£</td>
+             <td>ë¹„ë°€ë²ˆí˜¸</td>
              <td>
          
                   <form action="passwordcheck.jsp" method="post" > 
-                     <font>ºñ¹Ð¹øÈ£ ÀÔ·Â</font>
+                     <font>ë¹„ë°€ë²ˆí˜¸ ìž…ë ¥</font>
                      <input type="password" name="password"></input>
                      <br />
-                     <font>ºñ¹Ð¹øÈ£ È®ÀÎ</font>
+                     <font>ë¹„ë°€ë²ˆí˜¸ í™•ì¸</font>
                      <input type="password" name="password_comf"></input>
                      <br />
                     
@@ -43,70 +50,70 @@
          </tr>
                 
          <tr>
-             <td>ÀÌ¸§</td>
+             <td>ì´ë¦„</td>
              <td>
                  <input type="text" name="name"></input>
              </td>
          </tr>
         
          <tr>
-             <td>»ý³â¿ùÀÏ</td>
+             <td>ìƒë…„ì›”ì¼</td>
              <td>
-                    <input type="text" name="year" value="¿¹)2015³â»ý  >> 2015"></input>
+                    <input type="text" name="year" value="ì˜ˆ)2015ë…„ìƒ  >> 2015"></input>
                  <select>
-                     <option>1¿ù</option>
-                     <option>2¿ù</option>
-                     <option>3¿ù</option>
-                     <option>4¿ù</option>
-                     <option>5¿ù</option>
-                     <option>6¿ù</option>
-                     <option>7¿ù</option>
-                     <option>8¿ù</option>
-                     <option>9¿ù</option>
-                     <option>10¿ù</option>
-                     <option>11¿ù</option>
-                     <option>12¿ù</option>
+                     <option>1ì›”</option>
+                     <option>2ì›”</option>
+                     <option>3ì›”</option>
+                     <option>4ì›”</option>
+                     <option>5ì›”</option>
+                     <option>6ì›”</option>
+                     <option>7ì›”</option>
+                     <option>8ì›”</option>
+                     <option>9ì›”</option>
+                     <option>10ì›”</option>
+                     <option>11ì›”</option>
+                     <option>12ì›”</option>
                  </select>
                  <select>
-                     <option>1ÀÏ</option>
-                     <option>2ÀÏ</option>
-                     <option>3ÀÏ</option>
-                     <option>4ÀÏ</option>
-                     <option>5ÀÏ</option>
-                     <option>6ÀÏ</option>
-                     <option>7ÀÏ</option>
-                     <option>8ÀÏ</option>
-                     <option>9ÀÏ</option>
-                     <option>10ÀÏ</option>
-                     <option>11ÀÏ</option>
-                     <option>12ÀÏ</option>
-                     <option>13ÀÏ</option>
-                     <option>14ÀÏ</option>
-                     <option>15ÀÏ</option>
-                     <option>16ÀÏ</option>
-                     <option>17ÀÏ</option>
-                     <option>18ÀÏ</option>
-                     <option>19ÀÏ</option>
-                     <option>20ÀÏ</option>
-                     <option>21ÀÏ</option>
-                     <option>22ÀÏ</option>
-                     <option>23ÀÏ</option>
-                     <option>24ÀÏ</option>
-                     <option>25ÀÏ</option>
-                     <option>26ÀÏ</option>
-                     <option>27ÀÏ</option>
-                     <option>28ÀÏ</option>
-                     <option>29ÀÏ</option>
-                     <option>30ÀÏ</option>
-                     <option>31ÀÏ</option>
+                     <option>1ì¼</option>
+                     <option>2ì¼</option>
+                     <option>3ì¼</option>
+                     <option>4ì¼</option>
+                     <option>5ì¼</option>
+                     <option>6ì¼</option>
+                     <option>7ì¼</option>
+                     <option>8ì¼</option>
+                     <option>9ì¼</option>
+                     <option>10ì¼</option>
+                     <option>11ì¼</option>
+                     <option>12ì¼</option>
+                     <option>13ì¼</option>
+                     <option>14ì¼</option>
+                     <option>15ì¼</option>
+                     <option>16ì¼</option>
+                     <option>17ì¼</option>
+                     <option>18ì¼</option>
+                     <option>19ì¼</option>
+                     <option>20ì¼</option>
+                     <option>21ì¼</option>
+                     <option>22ì¼</option>
+                     <option>23ì¼</option>
+                     <option>24ì¼</option>
+                     <option>25ì¼</option>
+                     <option>26ì¼</option>
+                     <option>27ì¼</option>
+                     <option>28ì¼</option>
+                     <option>29ì¼</option>
+                     <option>30ì¼</option>
+                     <option>31ì¼</option>
                  </select>
-                 <input type="radio" name="day_type"/> ¾ç·Â
-                <input type="radio" name="day_type"/> À½·Â
+                 <input type="radio" name="day_type"/> ì–‘ë ¥
+                <input type="radio" name="day_type"/> ìŒë ¥
             </td> 
          </tr>
         
          <tr>
-             <td>ÀüÈ­¹øÈ£</td>
+             <td>ì „í™”ë²ˆí˜¸</td>
              <td>
                  <input type="text" name="telephoneNo"></input>
              </td> 
@@ -118,25 +125,12 @@
                  <input type="text" name="email"></input>
              </td> 
          </tr>
-
-         <tr>
-             <td>ÁÖ¼Ò</td>
-             <td>
-                 <input type="text" name="address"></input>
-             </td> 
-         </tr>
-  
         
-         <tr>
-             <td>ÀÚ±â¼Ò°³</td>
-             <td>
-                 <textarea cols="30" rows="3">+</textarea>
-             </td>
-         </tr>
+   
      </table>
     
-     <form action="submit.jsp" method="get">
-         <input type="submit" value="È¸¿ø°¡ÀÔ"> </input>
+     <form action="" method="get">
+         <input type="submit" value="íšŒì›ê°€ìž…"> </input>
         
      </form> 
      
