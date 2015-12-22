@@ -3,8 +3,8 @@ package com.yorijory.webprj.vo;
 public class QuestionAdminister {
 	private String members_Mid;	
 	private String admin_Mid;	
-	private int questions_Code;
-	private int questions_Administer_Code;
+	private String questions_Code;
+	private String questions_Administer_Code;
 	public String getMembers_Mid() {
 		return members_Mid;
 	}
@@ -17,18 +17,19 @@ public class QuestionAdminister {
 	public void setAdmin_Mid(String admin_Mid) {
 		this.admin_Mid = admin_Mid;
 	}
-	public int getQuestions_Code() {
+	public String getQuestions_Code() {
 		return questions_Code;
 	}
-	public void setQuestions_Code(int questions_Code) {
+	public void setQuestions_Code(String questions_Code) {
 		this.questions_Code = questions_Code;
 	}
-	public int getQuestions_Administer_Code() {
+	public String getQuestions_Administer_Code() {
 		return questions_Administer_Code;
 	}
-	public void setQuestions_Administer_Code(int questions_Administer_Code) {
+	public void setQuestions_Administer_Code(String questions_Administer_Code) {
 		this.questions_Administer_Code = questions_Administer_Code;
 	}
+
 	
 	
 	

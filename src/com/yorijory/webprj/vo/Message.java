@@ -8,7 +8,7 @@ public class Message {
 	private String send_Mid;
 	private String receive_Mid;
 	private Date regDate;
-	private int code;
+	private String code;
 	
 	public String getTitle() {
 		return title;
@@ -40,11 +40,12 @@ public class Message {
 	public void setRegDate(Date regDate) {
 		this.regDate = regDate;
 	}
-	public int getCode() {
+	public String getCode() {
 		return code;
 	}
-	public void setCode(int code) {
+	public void setCode(String code) {
 		this.code = code;
 	}
+	
 	
 }

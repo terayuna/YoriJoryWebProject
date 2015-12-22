@@ -60,7 +60,7 @@
 					</table>
 					<p class="article-comment margin-small">
 						<%-- <security:authorize ifAnyGranted="ROLE_ADMIN"> --%>
-  							<a class="btn-write button" href="noticeReg">글쓰기</a>
+  							<a class="btn-write button" href="boardReg">글쓰기</a>
    						<%-- </security:authorize> --%>
 					</p>					
 					<p id="cur-page" class="margin-small">
