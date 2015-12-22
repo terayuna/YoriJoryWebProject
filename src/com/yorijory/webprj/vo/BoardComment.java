@@ -6,8 +6,9 @@ public class BoardComment {
 	private String members_Mid;
 	private String content;
 	private Date regDate;
-	private int code;
-	private int boards_Code;
+	private String code;
+	private String boards_Code;
+	
 	public String getMembers_Mid() {
 		return members_Mid;
 	}
@@ -26,18 +27,19 @@ public class BoardComment {
 	public void setRegDate(Date regDate) {
 		this.regDate = regDate;
 	}
-	public int getCode() {
+	public String getCode() {
 		return code;
 	}
-	public void setCode(int code) {
+	public void setCode(String code) {
 		this.code = code;
 	}
-	public int getBoards_Code() {
+	public String getBoards_Code() {
 		return boards_Code;
 	}
-	public void setBoards_Code(int boards_Code) {
+	public void setBoards_Code(String boards_Code) {
 		this.boards_Code = boards_Code;
 	}
+	
 	
 	
 }

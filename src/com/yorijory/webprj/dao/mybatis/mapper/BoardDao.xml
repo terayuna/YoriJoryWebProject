@@ -22,9 +22,13 @@
    <delete id="delete">
   		DELETE FROM BOARDS WHERE MEMBERS_MID = #{members_Mid}
 	</delete>
-	<insert id="insert">
-  		INSERT INTO BOARDS(MEMBERS_MID, TITLE, CONTENT) VALUES(#{members_Mid},#{title},#{content})
-  	</insert> 
+	
+	<insert id="insert" parameterType="com.yorijory.webprj.vo.Board">
+		<selectKey keyProperty="code" order="BEFORE" resultType="String">
+			SELECT MAX(CAST(CODE AS INT)) CODE FROM BOARDS
+		</selectKey>	 
+		INSERT INTO BOARDS(code, title, content, members_mid) Values(#{code}+1,#{title},#{content},#{members_Mid})
+	</insert>
 	 
 	
 </mapper>

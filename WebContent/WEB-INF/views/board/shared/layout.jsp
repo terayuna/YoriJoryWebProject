@@ -22,7 +22,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 		<title>index</title>
 		<link href="${ctx}/content/customer/css/customer.css" type="text/css" rel="stylesheet" />
-		<link href="${ctx}/content/customer/css/<tiles:getAsString name="css"/>" type="text/css" rel="stylesheet" />
+		<link href="${ctx}/content/board/css/<tiles:getAsString name="css"/>" type="text/css" rel="stylesheet" />
 	</head>
 	<body>
 		<div id="header">

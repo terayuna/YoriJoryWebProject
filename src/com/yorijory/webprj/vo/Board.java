@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Board {
 	private String title;
-	private int code;
+	private String code;
 	private String content;
 	private String members_Mid;
 	private Date regDate;
@@ -13,15 +13,16 @@ public class Board {
 	public String getTitle() {
 		return title;
 	}
+	public String getCode() {
+		return code;
+	}
+	public void setCode(String code) {
+		this.code = code;
+	}
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public int getCode() {
-		return code;
-	}
-	public void setCode(int code) {
-		this.code = code;
-	}
+	
 	public String getContent() {
 		return content;
 	}
