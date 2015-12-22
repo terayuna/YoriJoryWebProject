@@ -39,7 +39,7 @@
 						</caption>
 						<thead>
 							<tr>
-								<th class="code">코드</th>
+								<th class="code">번호</th>
 								<th class="title">제목</th>
 								<th class="mid">작성자</th>
 								<th class="regdate">등록일</th>
@@ -50,7 +50,7 @@
 						<c:forEach var="n" items="${blist}">
 							<tr>
 								<td class="code">${n.code}</td>
-								<td class="title"><a href="">${n.title}</a></td>
+								<td class="title"><a href="boardDetail?c=${n.code}">${n.title}</a></td>
 								<td class="writer">${n.members_Mid}</td>
 								<td class="regdate"><fmt:formatDate pattern="yyyy-MM-dd" value='${n.regDate}'/></td>
 								<td class="hit">${n.hit}</td>

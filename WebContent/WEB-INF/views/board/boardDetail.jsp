@@ -4,7 +4,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
-					<h2>공지사항</h2>
+					<h2>게시판</h2>
 					<h3 class="hidden">방문페이지위치</h3>
 					<ul id="breadscrumb" class="block_hlist">
 						<li id="home">
@@ -25,7 +25,7 @@
 							<dd class="article-detail-data">
 								<%-- <%=n.getTitle() %>
 								${n.title} --%>
-								${notice.title}
+								${board.title}
 							</dd>
 						</dl>
 						<dl class="article-detail-row">
@@ -35,7 +35,7 @@
 							<dd class="article-detail-data">
 								<%-- <%=n.getRegDate() %> --%>
 								<%-- ${notice.regDate} --%>
-								<fmt:formatDate pattern="yyyy-MM-dd" value='${notice.regDate}'/>
+								<fmt:formatDate pattern="yyyy-MM-dd" value='${board.regDate}'/>
 							</dd>
 						</dl>
 						<dl class="article-detail-row half-row">
@@ -44,7 +44,7 @@
 							</dt>
 							<dd class="article-detail-data half-data" >
 								<%-- <%=n.getWriter() %> --%>
-								${notice.admin_Mid}
+								${board.members_Mid}
 							</dd>
 						</dl>
 						<dl class="article-detail-row half-row">
@@ -53,7 +53,7 @@
 							</dt>
 							<dd class="article-detail-data half-data">
 								<%-- <%=n.getHit() %> --%>
-								${notice.hit}
+								${board.hit}
 							</dd>
 						</dl>
 						<dl class="article-detail-row">
@@ -69,13 +69,13 @@
 
 						<div class="article-content" >
 							<%-- <%=n.getContent()%> --%>
-							${notice.content}
+							${board.content}
 						</div>
 					</div>
 					<p class="article-comment margin-small">
-						<a class="btn-list button" href="notice">목록</a>						
-						<a class="btn-edit button" href="noticeEdit">수정</a>
-						<a class="btn-del button" href="noticeDel">삭제</a>
+						<a class="btn-list button" href="board">목록</a>						
+						<a class="btn-edit button" href="boardEdit">수정</a>
+						<a class="btn-del button" href="boardDel">삭제</a>
 					</p>
 					<div class="margin-small" style="border-top: 1px solid #dfdfdf;">
 						<dl class="article-detail-row">
@@ -87,7 +87,7 @@
 								<span>다음글이 없습니다.</span>
 								</c:if>
 								<c:if test="${next!=null}">
-								<a href="noticeDetail?c=${next.code}">${next.title}</a>
+								<a href="boardDetail?c=${next.code}">${next.title}</a>
 								</c:if>
 							</dd>
 						</dl>
@@ -96,7 +96,7 @@
 								▼ 이전글
 							</dt>
 							<dd class="article-detail-data">
-								<a href="noticeDetail?c=${prev.code}">${prev.title}</a>
+								<a href="boardDetail?c=${prev.code}">${prev.title}</a>
 							</dd>
 						</dl>
 					</div>

@@ -1,9 +1,11 @@
 package com.yorijory.webprj.controllers;
 
 import java.io.PrintWriter;
+import java.security.Principal;
 import java.sql.SQLException;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,7 +41,16 @@ public class CustomerController {
 	}
 	
 	@RequestMapping("noticeDetail")
-	public String bb(PrintWriter out) {
+	public String noticeDetail(String c, Model model) {
+		
+		Notice notice = noticeDao.getNotice(c);
+		Notice prev = noticeDao.getPrevNotice(c);
+		Notice next = noticeDao.getNextNotice(c);
+		
+		model.addAttribute("notice", notice);
+		model.addAttribute("prev", prev);
+		model.addAttribute("next", next);
+		
 		return "customer/noticeDetail";
 	}
 	
@@ -53,9 +64,11 @@ public class CustomerController {
 	}
 	
 	@RequestMapping(value="noticeReg", method=RequestMethod.POST)
-	public String noticeReg(Notice n) throws SQLException
+	public String noticeReg(HttpServletRequest request, Notice n) throws SQLException
 	{
-		n.setAdmin_Mid("admin");
+		Principal principal = request.getUserPrincipal();
+		String userName = principal.getName();
+		n.setAdmin_Mid(userName);
 		noticeDao.insert(n);
 		
 		

@@ -50,6 +50,19 @@ public class MybatisBoardDao implements BoardDao{
 		Board board = dao.getBoard(code);
 		return board;
 	}
+	
+	@Override
+	public Board getPrevBoard(String code) {
+		// TODO Auto-generated method stub
+		BoardDao dao = sqlSession.getMapper(BoardDao.class);
+		return dao.getPrevBoard(code);
+	}
+	@Override
+	public Board getNextBoard(String code) {
+		// TODO Auto-generated method stub
+		BoardDao dao = sqlSession.getMapper(BoardDao.class);
+		return dao.getNextBoard(code);
+	}
 
 	@Override
 	public int update(Board board) throws SQLException {
@@ -86,7 +99,6 @@ public class MybatisBoardDao implements BoardDao{
 		BoardDao dao = sqlSession.getMapper(BoardDao.class);
 		String code = dao.getLastCode();
 		return code;
-	}
-	
+	}	
 	
 }

@@ -44,6 +44,31 @@ public class MybatisNoticeDao implements NoticeDao{
 		//sqlSession.close();
 		return list;
 	}
+	
+	@Override
+	public Notice getNotice(String code) {
+		// TODO Auto-generated method stub
+		NoticeDao dao = sqlSession.getMapper(NoticeDao.class);
+		Notice notice = dao.getNotice(code);
+		
+		return notice;
+	}
+	
+	@Override
+	public Notice getPrevNotice(String code) {
+		// TODO Auto-generated method stub
+		NoticeDao dao = sqlSession.getMapper(NoticeDao.class);
+		
+		return dao.getPrevNotice(code);
+	}
+
+	@Override
+	public Notice getNextNotice(String code) {
+		// TODO Auto-generated method stub
+		NoticeDao dao = sqlSession.getMapper(NoticeDao.class);
+		
+		return dao.getNextNotice(code);
+	}
 
 	@Override
 	public int update(Notice notice) throws SQLException {
@@ -78,6 +103,4 @@ public class MybatisNoticeDao implements NoticeDao{
 		
 		return code;
 	}
-	
-
 }
