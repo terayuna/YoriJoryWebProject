@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 
 
-			<form action="noticeReg" method="post" >
+			<form action="boardReg" method="post" >
                   <h2>공지사항</h2>
                   <h3 class="hidden">방문페이지위치</h3>
                   <ul id="breadscrumb" class="block_hlist">

@@ -6,8 +6,8 @@ public class RecipeComment {
 	private String mid;
 	private String content;
 	private Date regDate;
-	private int code;
-	private int recipes_Code;
+	private String code;
+	private String recipes_Code;
 	
 	public String getMid() {
 		return mid;
@@ -27,18 +27,19 @@ public class RecipeComment {
 	public void setRegDate(Date regDate) {
 		this.regDate = regDate;
 	}
-	public int getCode() {
+	public String getCode() {
 		return code;
 	}
-	public void setCode(int code) {
+	public void setCode(String code) {
 		this.code = code;
 	}
-	public int getRecipes_Code() {
+	public String getRecipes_Code() {
 		return recipes_Code;
 	}
-	public void setRecipes_Code(int recipes_code) {
-		this.recipes_Code = recipes_code;
+	public void setRecipes_Code(String recipes_Code) {
+		this.recipes_Code = recipes_Code;
 	}
+	
 	
 	
 }

@@ -3,7 +3,7 @@ package com.yorijory.webprj.vo;
 import java.util.Date;
 
 public class Recipe {
-	private int code;
+	private String code;
 	private String title;
 	private String members_Mid;
 	private String content;
@@ -11,10 +11,11 @@ public class Recipe {
 	private String type;
 	private int hit;
 
-	public int getCode() {
+	
+	public String getCode() {
 		return code;
 	}
-	public void setCode(int code) {
+	public void setCode(String code) {
 		this.code = code;
 	}
 	public String getTitle() {

@@ -7,7 +7,7 @@ public class AdminMessage {
 	private String member_Mid;
 	private String title;
 	private String content;
-	private int code;
+	private String code;
 	private Date regDate;
 	
 	public String getAdmin_Mid() {
@@ -34,10 +34,11 @@ public class AdminMessage {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public int getCode() {
+	
+	public String getCode() {
 		return code;
 	}
-	public void setCode(int code) {
+	public void setCode(String code) {
 		this.code = code;
 	}
 	public Date getRegDate() {
