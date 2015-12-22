@@ -19,7 +19,7 @@
 	height: inherit;
 	margin-left: 100px;
 	margin-right: 100px;
-
+	border: 2px red;
 	/* opacity:0.5; */
 }
 
@@ -113,24 +113,19 @@ body {
 
 /* -- #main-visual ----------------------------------------------------------- */
 #main-visual {
-/* 	display: block;
+/*  display: block;
 	width:100%;
 	height:100%;
-	position: absolute;
-	z-index: 400; */
+	position: absolute; */
 	
-	display: block;
-	position: absolute;
+	display:block;
     overflow: hidden;
-    min-height: 650px;
+    min-height: 500px;
     max-height: 700px;
-    height: 77%;
     width: 100%;
     min-width: 1030px;
     margin-bottom: -29px;
- /*    z-index: 400; */
-	
-	
+
 	background: url("../images/dessert.jpg") no-repeat;
 	background-attachment: auto;
 	background-size: contain;
@@ -140,10 +135,10 @@ body {
 
 #category {
 	display: block;
-	position: absolute;
-	top: 50px;
-	right: 50px;
+	margin-left: 75%;
+	margin-top: 3%;
 }
+
 
 #board-menu>li>a {
 	font-family: 맑은 고딕, sans-serif;
@@ -151,6 +146,7 @@ body {
 	font-weight: bold;
 	color: #FE6739;
 }
+
 
 #recipe-menu>li>a {
 	font-family: 맑은 고딕, sans-serif;
@@ -160,17 +156,14 @@ body {
 	margin-left: 20px;
 }
 
+
 /* ----- 레시피 리스트   ------------------------------------------*/
-#recipe-list {
-	display: inline-block;
+#recipes-list {
 	background: #f6f6f6;
     margin: 26px 0;
     padding: 26px 0 60px;
     border-bottom: 1px solid #bec6d1;
-    position: absolute;
-   /*  z-index: 1; */
     min-width: 1030px;
-    border-bottom: 1px solid #bec6d1;
     border-top: 1px solid rgba(0, 0, 0, 0.25);
     overflow-x: hidden;
 }

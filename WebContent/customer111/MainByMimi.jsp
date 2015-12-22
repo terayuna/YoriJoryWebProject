@@ -17,9 +17,9 @@
 	<div id="color-line">
 		<div class="content-container">
 			<h1 id="logo">
-				<a href="MainByMimi.html"><img
-					src="../content/images/yorijory.png" alt="yorijory" /></a>
-
+				<a href="../index.jsp"> <img
+					src=${pageContext.request.contextPath}/content/images/yorijory.png
+					alt="logos" /></a>
 			</h1>
 
 			<div id="recipe-search">
@@ -34,8 +34,15 @@
 
 			<nav id="joinus-menu">
 			<ul class="clearfix">
-				<li><a href="login.html">로그인</a></li>
-				<li><a href="signin.html">회원가입</a></li>
+				<li><c:if test="${pageContext.request.userPrincipal == null}">
+						<a href="../joinus/login">로그인</a>
+					</c:if> <c:if test="${pageContext.request.userPrincipal != null}">
+						<c:url var="logout" value="/j_spring_security_logout" />
+						<a href="${logout}"> <%-- ${pageContext.request.userPrincipal.name} --%>
+							<security:authentication property="name" /> 로그아웃
+						</a>
+					</c:if></li>
+				<li><a href="">회원가입</a></li>
 			</ul>
 			</nav>
 		</div>
@@ -43,8 +50,8 @@
 	</header>
 
 
-	<div id="main-visual" class="clearfix">
-		<div id="category" class="clearfix">
+	<div id="main-visual">
+		<div id="category">
 			<ul id="board-menu" class="clearfix">
 				<li><a href="">공지사항</a></li>
 				<li><a href="">자유게시판</a></li>
@@ -63,9 +70,7 @@
 	</div>
 
 
-
-
-	<div id="recipes-list" class="clearfix">
+	<div id="recipes-list">
 		<div class="content-container">
 			<div id="Weekly recipes"></div>
 			<h1>금주의 레시피</h1>
@@ -84,7 +89,6 @@
 		사업자등록번호 : 000-00-00000000 통신판매업신고 : 서울 0000-000 관리자 : 한성준 <br /> 주소 :
 		서울시 000구 001동 000-0 00빌딩 0층 전화 : 02-000-0000 팩스 : 02-000-0000
 	</address>
-	"C:/Users/mimi/Videos/Backup/yorijory.png"
 	</p>
 	<p>Copyright ⓒ yorijory.com 2015-2016 All Right Reserved. Contact
 		master@yorijory.com for more information</p>

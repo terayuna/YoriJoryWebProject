@@ -11,18 +11,16 @@
 	href="${pageContext.request.contextPath}/content/customer/css/normalize.css"
 	type="text/css" rel="stylesheet" />
 
-
+<center>
 <a href="MainByMimi.html"> <img
 	src="${pageContext.request.contextPath}/content/images/yorijorybig.png"
 	alt="yorijory" /></a>
+</center>
 
-<h2>로그인</h2>
 <div id="join-form" class="loginform cf">
 	<form name="login" action="<c:url value="/j_spring_security_check"/>"
 		method="post">
 		<fieldset>
-			<legend class="hidden">로그인 폼</legend>
-
 			<ul>
 				<li><label for="uid">&nbsp;아이디&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input name="j_username"class="text" /> 
 				<label for="pwd">&nbsp;비밀번호&nbsp;&nbsp;&nbsp;</label><input type="password" name="j_password" class="text" /></li>
