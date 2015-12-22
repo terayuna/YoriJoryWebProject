@@ -1,6 +1,7 @@
+=\=\=\=\=\=\=
+<<<<<<<=HEAD
+>>>>>>>=branch 'master' of https\://github.com/terayuna/YoriJoryWebProject.git
 eclipse.preferences.version=1
-<<<<<<< HEAD
+encoding//WebContent/WEB-INF/views/home/index.jsp=UTF-8
 encoding//WebContent/content/css/base.css=UTF-8
-=======
->>>>>>> branch 'master' of https://github.com/terayuna/YoriJoryWebProject.git
 encoding//WebContent/content/css/layout.css=UTF-8
