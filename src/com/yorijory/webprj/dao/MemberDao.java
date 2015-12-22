@@ -12,6 +12,7 @@ public interface MemberDao {
    public List<Member> getMembers(int page, String field, String query) throws SQLException;
    public int update(Member member) throws SQLException; 
    public int delete(String mid) throws SQLException; 
-   public int insert(Member member) throws SQLException; 
+   public int insert(Member member) throws SQLException;
+   public Member getMember(String mid) throws SQLException; 
 
 }

@@ -62,7 +62,7 @@
 							<security:authentication property="name" /> 로그아웃
 						</a>
 					</c:if></li>
-				<li><a href="">회원가입</a></li>
+				<li><a href="../joinus/join">회원가입</a></li>
 			</ul>
 			</nav>
 		</div>
