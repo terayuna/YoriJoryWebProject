@@ -14,6 +14,19 @@
             WHERE NUM BETWEEN 1+(#{param1}-1)*10 AND #{param1}*10
 		 
 	 </select>
+	 
+	 <select id="getNotice" resultType="com.yorijory.webprj.vo.Notice">
+	 	SELECT * FROM NOTICES WHERE CODE=#{code}
+	 </select>
+	 
+	 <select id="getPrevNotice" resultType="com.yorijory.webprj.vo.Notice">
+		select top 1 * from notices where REGDATE &lt; (select regdate from notices where code=#{code}) order by regdate desc
+	</select>
+	
+	<select id="getNextNotice" resultType="com.yorijory.webprj.vo.Notice">
+		select top 1 * from notices where REGDATE &gt; (select regdate from notices where code=#{code}) order by regdate asc
+	</select>
+	 
 	 <update id="update">
 		UPDATE NOTICES SET NAME=#{name}, PWD=#{password} WHERE MID=#{mid}
 		</update>
