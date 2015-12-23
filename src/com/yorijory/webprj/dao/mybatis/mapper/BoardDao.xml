@@ -15,6 +15,18 @@
 		 
 	 </select>
 	 
+	 <select id="getBoard" resultType="com.yorijory.webprj.vo.Board">
+	 	SELECT * FROM BOARDS WHERE CODE=#{code}
+	 </select>
+	 
+	 <select id="getPrevBoard" resultType="com.yorijory.webprj.vo.Board">
+		select top 1 * from BOARDS where REGDATE &lt; (select regdate from BOARDS where code=#{code}) order by regdate desc
+	</select>
+	
+	<select id="getNextBoard" resultType="com.yorijory.webprj.vo.Board">
+		select top 1 * from BOARDS where REGDATE &gt; (select regdate from BOARDS where code=#{code}) order by regdate asc
+	</select>
+	 
 	<update id="update">      
         <!-- UPDATE MEMBERS SET NAME = #{param1.name},WHERE MID = #{param1.mid}-->
         UPDATE BOARDS SET TITLE = #{title} WHERE CONTENT= #{content}                     

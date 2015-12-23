@@ -29,19 +29,19 @@ public class BoardController {
 	
 	@RequestMapping("board")
 	private String adminBoard(PrintWriter out, Model model) throws SQLException {
-		BoardDao dao = new MybatisBoardDao();
+		//BoardDao dao = new MybatisBoardDao();
 		List<Board> list = boardDao.getBoards(1, "TITLE", "");
 		
 		model.addAttribute("blist", list);
 		
-		for(Board n : list){
+		/*for(Board n : list){
 			out.println("TITLE : " + n.getTitle());
-		}
+		}*/
 		return "board/board";
 	}
 	
 	@RequestMapping(value="boardReg", method=RequestMethod.GET)
-	public String BoardReg(HttpSession session)
+	public String boardReg(HttpSession session)
 	{
 		/*if(session.getAttribute("mid") == null)
 			return "redirect:../joinus/login?returnUrl=/customer/noticeReg";*/
@@ -50,7 +50,7 @@ public class BoardController {
 	}
 	
 	@RequestMapping(value="boardReg", method=RequestMethod.POST)
-	public String BoardReg(HttpServletRequest request, Board n) throws SQLException
+	public String boardReg(HttpServletRequest request, Board n) throws SQLException
 	{
 		Principal principal = request.getUserPrincipal();
 		String userName = principal.getName();
@@ -63,6 +63,20 @@ public class BoardController {
 		System.out.println("writer : "+n.getMembers_Mid());
 		
 		return "redirect:board"; // 다른 Controller로 가야 한다
+	}
+	
+	@RequestMapping("boardDetail")
+	public String boardDetail(String c, Model model) {
+		
+		Board board = boardDao.getBoard(c);
+		Board prev = boardDao.getPrevBoard(c);
+		Board next = boardDao.getNextBoard(c);
+		
+		model.addAttribute("board", board);
+		model.addAttribute("prev", prev);
+		model.addAttribute("next", next);
+		
+		return "board/boardDetail";
 	}
 	
 }

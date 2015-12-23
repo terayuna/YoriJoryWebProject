@@ -51,7 +51,7 @@
 							<tr>
 								<td class="seq">${n.code}</td>
 								<td class="title"><a href="noticeDetail?c=${n.code}">${n.title}</a></td>
-								<td class="writer">${n.writer}</td>
+								<td class="writer">${n.admin_Mid}</td>
 								<td class="regdate"><fmt:formatDate pattern="yyyy-MM-dd" value='${n.regDate}'/></td>
 								<td class="hit">${n.hit}</td>
 							</tr>
