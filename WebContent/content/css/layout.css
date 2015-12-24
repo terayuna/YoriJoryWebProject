@@ -381,9 +381,36 @@ body {
 	text-decoration: underline;
 }
 
+/* -----#footer---------------------------------------------------- */
 
+#footer {
+	padding: 20px;
+	background: #ececec;
+	height: 100px;
+	clear: both;
+}
 
+#footer h2{
+	float:left;
+}
 
+#footer h2 + p
+{
+	font-weight:bold;
+	float: left; 
+	margin-left: 50px; 
+	height: 100px;
+	margin-bottom: 10px;
+}
+
+#footer h2 + p + p
+{
+	clear:left;
+    display: block;
+	color:#969696;
+	font-weight: bold;
+	font-size: 11px;
+}
  
  
  

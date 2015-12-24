@@ -36,26 +36,43 @@
 	font-family: ¸¼Àº °íµñ, sans-serif;
 	font-size: 30px;
 	font-weight: bold;
-	color: #FE6739;
+	color: white;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 
 #recipe-menu>li>a {
-	font-family: ¸¼Àº °íµñ, sans-serif;
+	font-family: "¸¼Àº °íµñ", sans-serif;
 	font-size: 25px;
 	font-weight: bold;
-	color: #FE6739;
+	color: white;
 	margin-left: 20px;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 
 /* ----- ·¹½ÃÇÇ ¸®½ºÆ®   ------------------------------------------*/
 #recipes-list {
-	background: #f6f6f6;
+/* 	background: #f6f6f6; */
     margin: 26px 0;
     padding: 26px 0 60px;
-    border-bottom: 1px solid #bec6d1;
-    min-width: 1030px;
-    border-top: 1px solid rgba(0, 0, 0, 0.25);
+    min-width: 1030px;   
     overflow-x: hidden;
 }
+
+h1 {
+	font-family: "¸¼Àº °íµñ", sans-serif;
+	font-size: 25px;
+	font-weight: bold;
+	color: #f0655b;
+	margin-bottom: 10px;
+}
+
+#recipes-list>ul>li>img {
+	display : inline;
+	float : left;
+	width: 200px;
+	margin-right: 30px;
+	margin-bottom: 30px;
+}
+
