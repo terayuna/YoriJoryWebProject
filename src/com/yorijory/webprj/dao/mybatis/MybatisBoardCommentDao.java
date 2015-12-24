@@ -24,20 +24,20 @@ public class MybatisBoardCommentDao implements BoardCommentDao{
 	@Override
 	public List<BoardComment> getBoardComments() throws SQLException {
 		// TODO Auto-generated method stub
-		return getBoardComments(1, "MEMBERS_MID", "");
+		return getBoardComments(1, "");
 	}
 
 	@Override
 	public List<BoardComment> getBoardComments(int page) throws SQLException {
 		// TODO Auto-generated method stub
-		return getBoardComments(page, "MEMBERS_MID", "");
+		return getBoardComments(page, "");
 	}
 
 	@Override
-	public List<BoardComment> getBoardComments(int page, String field, String query) throws SQLException {
+	public List<BoardComment> getBoardComments(int page, String query) throws SQLException {
 		//SqlSession session = ssf.openSession();
 		BoardCommentDao dao = sqlSession.getMapper(BoardCommentDao.class); 
-		List<BoardComment> list = dao.getBoardComments(page, field, query);
+		List<BoardComment> list = dao.getBoardComments(page, query);
 		//session.close();
 		return list;
 	}
@@ -64,12 +64,10 @@ public class MybatisBoardCommentDao implements BoardCommentDao{
 
 	@Override
 	public int insert(BoardComment boardComment) throws SQLException {
-		//SqlSession session = ssf.openSession();
+		// TODO Auto-generated method stub
 		BoardCommentDao dao = sqlSession.getMapper(BoardCommentDao.class); 
 		int count = dao.insert(boardComment);
-		//session.commit();
-		//session.close(); 
-		return count;
+		return 0;
 	}
 	
 }
