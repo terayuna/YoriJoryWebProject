@@ -45,7 +45,7 @@
 			<li><img src="${ctx}/content/home/images/c882f4f46602.jpg" /></li>
 			<li><img src="${ctx}/content/home/images/c890104d8f06.jpg" /></li>
 			<li><img src="${ctx}/content/home/images/f8980d423c01.jpg" /></li>
-			<li><img src="${ctx}/content/home/images/b6477973a414.jpg" /></li>
+			<li><img src="${ctx}/content/home/images/37fbda6187b0.jpg" /></li>
 		</ul>
 	</div>
 </div>
