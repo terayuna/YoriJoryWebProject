@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.yorijory.webprj.dao.MemberDao;
 import com.yorijory.webprj.vo.Member;
+import com.yorijory.webprj.vo.Notice;
 
 
 
@@ -57,5 +58,22 @@ public class JoinusController {
 		// 인증 정보를 저장 어디에???(session? cookie?)
 		session.setAttribute("mid", userName);
 		return "redirect:customer/notice";
+	}
+	
+	@RequestMapping(value="join", method=RequestMethod.POST)
+	public String join(Member n) throws SQLException
+	{
+		
+		
+		/*n.setMid("123123");
+		n.setName("sdfsa");
+		n.setPwd("asdfadsf");
+		n.setPhone("54354");
+		n.setEmail("dsfasdfasf");*/
+		memberDao.insert(n);
+		
+		
+		
+		return "redirect:login"; // 다른 Controller로 가야 한다
 	}
 }

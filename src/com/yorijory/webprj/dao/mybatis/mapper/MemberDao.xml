@@ -23,7 +23,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
    <delete id="delete">
   		DELETE FROM MEMBERS WHERE MID = #{mid}
 	</delete>
-	<insert id="insert">
+	<insert id="insert" parameterType="com.yorijory.webprj.vo.Member">
   		INSERT INTO MEMBERS(MID, NAME, PWD, PHONE, EMAIL) VALUES(#{mid},#{name},#{pwd},#{phone},#{email})
   	</insert> 
   	<select id="getMember" resultType="com.yorijory.webprj.vo.Member">
