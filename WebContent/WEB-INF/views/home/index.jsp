@@ -6,7 +6,7 @@
 	uri="http://www.springframework.org/security/tags"%>
 <c:set var="ctx" value="${pageContext.request.contextPath}" />
 
-<div id="main-visual">
+ <div id="main-visual">
 	<div id="category">
 		<ul id="board-menu" class="clearfix">
 			<li><a href="../customer/notice">공지사항</a></li>
@@ -21,10 +21,10 @@
 			<li><a href="">탕</a></li>
 			<li><a href="">조림</a></li>
 			<li><a href="">디저트</a></li>
-			<!-- <img src = "${ctx}/content/home/images/yojoLogo.png"/> -->
+			<img src = "${ctx}/content/home/images/yojoLogo.png"/>
 		</ul>
 	</div>
-</div>
+</div> 
 
 
 
