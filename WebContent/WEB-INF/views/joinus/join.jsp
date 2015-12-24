@@ -25,10 +25,10 @@
          <tr>
              <td width="100">아이디</td>
              <td width="450">
-             <form action="" method="get" > 
+             <form action="" method="post" > 
              
-                     <input type="text" name="id" autofocus required></input>
-                     <input type="submit" value="아이디 중복확인"> </input>
+                     <input type="text" name="mid" ></input>  <!-- autofocus required -->
+                     <!-- <input type="submit" value="아이디 중복확인"> </input> -->
                  </form>           
              </td>
          </tr>
@@ -37,13 +37,13 @@
              <td>비밀번호</td>
              <td>
          
-                  <form action="passwordcheck.jsp" method="post" > 
+                   <form>  
                      <font>비밀번호 입력</font>
-                     <input type="password" name="password"></input>
+                     <input type="password" name="pwd"></input>
                      <br />
-                     <font>비밀번호 확인</font>
+                     <!-- <font>비밀번호 확인</font>
                      <input type="password" name="password_comf"></input>
-                     <br />
+                     <br /> -->
                     
                  </form>
              </td>
@@ -59,7 +59,7 @@
          <tr>
              <td>생년월일</td>
              <td>
-                    <input type="text" name="year" value="예)2015년생  >> 2015"></input>
+                    <input type="text" name="year" value=""></input>
                  <select>
                      <option>1월</option>
                      <option>2월</option>
@@ -107,15 +107,15 @@
                      <option>30일</option>
                      <option>31일</option>
                  </select>
-                 <input type="radio" name="day_type"/> 양력
-                <input type="radio" name="day_type"/> 음력
+                <!--  <input type="radio" name="day_type"/> 양력
+                <input type="radio" name="day_type"/> 음력 -->
             </td> 
          </tr>
         
          <tr>
              <td>전화번호</td>
              <td>
-                 <input type="text" name="telephoneNo"></input>
+                 <input type="text" name="phone"></input>
              </td> 
          </tr>
 
@@ -129,8 +129,8 @@
    
      </table>
     
-     <form action="" method="get">
-         <input type="submit" value="회원가입"> </input>
+     <form action="" method="post">
+         <input type="submit" value="join"> </input>
         
      </form> 
      
