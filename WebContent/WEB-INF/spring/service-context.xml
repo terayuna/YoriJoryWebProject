@@ -28,6 +28,7 @@
 	<bean name="noticeDao" class="com.yorijory.webprj.dao.mybatis.MybatisNoticeDao"/>
 	<bean name="memberDao" class="com.yorijory.webprj.dao.mybatis.MybatisMemberDao"/>
 	<bean name="boardDao" class="com.yorijory.webprj.dao.mybatis.MybatisBoardDao"/>
+	<bean name="boardCommentDao" class="com.yorijory.webprj.dao.mybatis.MybatisBoardCommentDao"/>
 	<bean name="qustionDao" class="com.yorijory.webprj.dao.mybatis.MybatisQuestionDao"/>
 	<bean name="recipeDao" class="com.yorijory.webprj.dao.mybatis.MybatisRecipeDao"/>
 </beans>

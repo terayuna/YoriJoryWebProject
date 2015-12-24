@@ -3,6 +3,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
 
 					<h2>게시판</h2>
 					<h3 class="hidden">방문페이지위치</h3>
@@ -71,6 +72,22 @@
 							<%-- <%=n.getContent()%> --%>
 							${board.content}
 						</div>
+					</div>
+					<div>
+						<c:forEach var="n" items="${bclist}">
+							<tr>
+								<td class="writer">${n.members_Mid}</td>
+								<td class="content">${n.content}</a></td>
+								<td class="regdate"><fmt:formatDate pattern="yyyy-MM-dd" value='${n.regDate}'/></td>
+								</br>
+							</tr>
+						</c:forEach>
+						<security:authorize ifAnyGranted="ROLE_USER, ROLE_ADMIN">
+							<form action="boardCommentReg?c=${c}" method="post" >
+								<textarea id="txtComment" class="txtComment" name="content"></textarea>
+								<input class="" type="submit" value="저장" />
+							</form>
+						</security:authorize>
 					</div>
 					<p class="article-comment margin-small">
 						<a class="btn-list button" href="board">목록</a>						
