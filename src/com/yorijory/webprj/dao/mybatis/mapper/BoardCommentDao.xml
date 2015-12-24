@@ -9,9 +9,8 @@
          SELECT 
             ROW_NUMBER() OVER (ORDER BY REGDATE DESC) NUM, 
             BOARDSCOMMENT. * FROM BOARDSCOMMENT 
-            WHERE ${param2} LIKE '%${param3}%'
             ) A 
-            WHERE NUM BETWEEN 1+(#{param1}-1)*10 AND #{param1}*10
+            WHERE NUM BETWEEN 1+(#{param1}-1)*10 AND #{param1}*10 and BOARDS_CODE=#{param2}
 		 
 	 </select>
 	 
@@ -22,8 +21,11 @@
    <delete id="delete">
   		DELETE FROM BOARDSCOMMENT WHERE MEMBERS_MID = #{members_Mid}
 	</delete>
-	<insert id="insert">
-  		INSERT INTO BOARDSCOMMENT(MEMBERS_MID, CODE, CONTENT) VALUES(#{members_Mid},#{code},#{content})
+	<insert id="insert" parameterType="com.yorijory.webprj.vo.BoardComment">
+		<selectKey keyProperty="code" order="BEFORE" resultType="String">
+			SELECT MAX(CAST(CODE AS INT)) CODE FROM BOARDSCOMMENT
+		</selectKey>
+  		INSERT INTO BOARDSCOMMENT(MEMBERS_MID, CODE, CONTENT, BOARDS_CODE) VALUES(#{members_Mid},#{code}+1,#{content}, #{boards_Code})
   	</insert> 
 	 
 	

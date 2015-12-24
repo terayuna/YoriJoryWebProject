@@ -14,9 +14,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.yorijory.webprj.dao.BoardCommentDao;
 import com.yorijory.webprj.dao.BoardDao;
 import com.yorijory.webprj.dao.mybatis.MybatisBoardDao;
 import com.yorijory.webprj.vo.Board;
+import com.yorijory.webprj.vo.BoardComment;
 
 
 @Controller
@@ -25,6 +27,8 @@ public class BoardController {
 	
 	@Autowired
 	private BoardDao boardDao;
+	@Autowired
+	private BoardCommentDao boardCommentDao;
 	
 	
 	@RequestMapping("board")
@@ -38,6 +42,24 @@ public class BoardController {
 			out.println("TITLE : " + n.getTitle());
 		}*/
 		return "board/board";
+	}
+	
+	@RequestMapping("boardDetail")
+	public String boardDetail(String c, Model model) throws SQLException {
+		
+		Board board = boardDao.getBoard(c);
+		Board prev = boardDao.getPrevBoard(c);
+		Board next = boardDao.getNextBoard(c);
+		
+		model.addAttribute("board", board);
+		model.addAttribute("prev", prev);
+		model.addAttribute("next", next);
+		model.addAttribute("c", c);
+		
+		List<BoardComment> clist = boardCommentDao.getBoardComments(1, board.getCode());
+		model.addAttribute("bclist", clist);
+		
+		return "board/boardDetail";
 	}
 	
 	@RequestMapping(value="boardReg", method=RequestMethod.GET)
@@ -65,18 +87,23 @@ public class BoardController {
 		return "redirect:board"; // 다른 Controller로 가야 한다
 	}
 	
-	@RequestMapping("boardDetail")
-	public String boardDetail(String c, Model model) {
+	@RequestMapping(value="boardCommentReg", method=RequestMethod.POST)
+	public String boardCommentReg(HttpServletRequest request, BoardComment n, String c) throws SQLException
+	{
+		Principal principal = request.getUserPrincipal();
+		String userName = principal.getName();
 		
-		Board board = boardDao.getBoard(c);
-		Board prev = boardDao.getPrevBoard(c);
-		Board next = boardDao.getNextBoard(c);
+		n.setMembers_Mid(userName);
+		n.setBoards_Code(c);
+		System.out.println(c);
 		
-		model.addAttribute("board", board);
-		model.addAttribute("prev", prev);
-		model.addAttribute("next", next);
+		boardCommentDao.insert(n);
 		
-		return "board/boardDetail";
+		System.out.println("content : "+n.getContent());
+		System.out.println("Boards_Code : "+n.getBoards_Code());
+		System.out.println("Members_Mid : "+n.getMembers_Mid());
+		
+		
+		return "redirect:boardDetail?c="+c; // 다른 Controller로 가야 한다
 	}
-	
 }
