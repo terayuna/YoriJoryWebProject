@@ -30,20 +30,22 @@
 
 <div class="content-container">
 	<div id="recipes-list">
-		<h1>금주의 레시피</h1>
+		<h1>Weekly Recipes</h1>
 		<ul id="Weekly recipes" class="clearfix">
 			<li><img src="${ctx}/content/home/images/17d9541421c6.jpg" /></li>
 			<li><img src="${ctx}/content/home/images/7453911b6913.jpg" /></li>
 			<li><img src="${ctx}/content/home/images/aeaf076daf20.jpg" /></li>
 			<li><img src="${ctx}/content/home/images/b6477973a414.jpg" /></li>
+			<li><img src="${ctx}/content/home/images/e06e2f7341cd.jpg" /></li>
 			
 		</ul>
-		<h1>New 레시피</h1>
-		<ul id="New recipes">
+		<h1>New Recipes</h1>
+		<ul id="New recipes" class="clearfix">
 			<li><img src="${ctx}/content/home/images/bb4bf21b1e5d.jpg" /></li>
 			<li><img src="${ctx}/content/home/images/c882f4f46602.jpg" /></li>
 			<li><img src="${ctx}/content/home/images/c890104d8f06.jpg" /></li>
 			<li><img src="${ctx}/content/home/images/f8980d423c01.jpg" /></li>
+			<li><img src="${ctx}/content/home/images/37fbda6187b0.jpg" /></li>
 		</ul>
 	</div>
 </div>

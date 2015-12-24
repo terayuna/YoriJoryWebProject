@@ -236,38 +236,7 @@
 	margin-top: 35px;
 }
 
-=========== footer =====================================================================================
-
-#footer {
-	padding: 20px;
-	background: pink;
-	height: 265px;
-	clear: both;
-}
-
-#footer h2{
-	float:left;
-}
-
-#footer h2 + p
-{
-	font-weight:bold;
-	float: left; 
-	margin-left: 50px; 
-	height: 100px;
-	margin-bottom: 10px;
-}
-
-#footer h2 + p + p
-{
-	clear:left;
-    display: block;
-	color:#969696;
-	font-weight: bold;
-	font-size: 11px;
-}
-
- */
+*/
  
  @CHARSET "UTF-8";
 
@@ -288,8 +257,8 @@
 .content-container {
 	position: relative;
 	height: inherit;
-	margin-left: 100px;
-	margin-right: 100px;
+	margin-left: 70px;
+	margin-right: 70px;
 	border: 2px red;
 	/* opacity:0.5; */
 }
@@ -394,12 +363,18 @@ body {
 	float:left;
 }
 
+#footer h2 img {
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
 #footer h2 + p
 {
 	font-weight:bold;
 	float: left; 
-	margin-left: 50px; 
+	margin-left: 20px; 
 	height: 100px;
+	margin-top: 10px;
 	margin-bottom: 10px;
 }
 
