@@ -7,10 +7,10 @@
 	
 		SELECT * FROM(
          SELECT 
-            ROW_NUMBER() OVER (ORDER BY REGDATE DESC) NUM, 
-            BOARDSCOMMENT. * FROM BOARDSCOMMENT 
+            ROW_NUMBER() OVER (ORDER BY REGDATE ASC) NUM, 
+            BOARDSCOMMENT. * FROM BOARDSCOMMENT WHERE BOARDS_CODE=#{param2}
             ) A 
-            WHERE NUM BETWEEN 1+(#{param1}-1)*10 AND #{param1}*10 and BOARDS_CODE=#{param2}
+            WHERE NUM BETWEEN 1+(#{param1}-1)*10 AND #{param1}*30
 		 
 	 </select>
 	 
