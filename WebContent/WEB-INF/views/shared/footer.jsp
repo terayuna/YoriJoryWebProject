@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <h2>
-	<img src="../images/footerLogo.png" alt="요리조리" />
+	<img src="${pageContext.request.contextPath}/content//images/yojocharacter.png" alt="요리조리" />
 </h2>
 <p>
 <address id="ad">
