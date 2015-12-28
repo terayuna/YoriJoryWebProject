@@ -56,7 +56,7 @@ public class BoardController {
 		model.addAttribute("next", next);
 		model.addAttribute("c", c);
 		
-		List<BoardComment> clist = boardCommentDao.getBoardComments(1, board.getCode());
+		List<BoardComment> clist = boardCommentDao.getBoardComments(1, c);
 		model.addAttribute("bclist", clist);
 		
 		return "board/boardDetail";
@@ -96,7 +96,6 @@ public class BoardController {
 		n.setMembers_Mid(userName);
 		n.setBoards_Code(c);
 		System.out.println(c);
-		
 		boardCommentDao.insert(n);
 		
 		System.out.println("content : "+n.getContent());
