@@ -12,7 +12,7 @@
 	type="text/css" rel="stylesheet" />
 
 <center>
-<a href="MainByMimi.html"> <img
+<a href="../home/index"> <img
 	src="${pageContext.request.contextPath}/content/images/yorijorybig.png"
 	alt="yorijory" /></a>
 </center>

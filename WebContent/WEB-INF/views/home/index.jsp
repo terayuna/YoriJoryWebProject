@@ -30,11 +30,10 @@
 
 <div class="content-container">
 	<div id="recipes-list">
-<<<<<<< HEAD
-		<h1><a href ="../recipe/weekly">New Recipes</a></h1>
-=======
-		<h1>Weekly Recipes</h1>
->>>>>>> branch 'master' of https://github.com/terayuna/YoriJoryWebProject.git
+
+
+		<h1><a href ="../recipe/weekly">Weekly Recipes</a></h1>
+
 		<ul id="Weekly recipes" class="clearfix">
 			<li><img src="${ctx}/content/home/images/17d9541421c6.jpg" /></li>
 			<li><img src="${ctx}/content/home/images/7453911b6913.jpg" /></li>
