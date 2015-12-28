@@ -7,7 +7,7 @@
 <div id="color-line">
 		<div class="content-container">
 			<h1 id="logo">
-				<a href="../index.jsp"> <img
+				<a href="../home/index"> <img
 					src=${pageContext.request.contextPath}/content/images/yorijory.png
 					alt="logos" /></a>
 			</h1>

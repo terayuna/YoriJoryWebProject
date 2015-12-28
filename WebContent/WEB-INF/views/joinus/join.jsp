@@ -2,9 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-
 	pageEncoding="UTF-8"%>
 
  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -19,17 +17,19 @@
      
      <a href="MainByMimi.html"> 
      <img src="${pageContext.request.contextPath}/content/images/yorijorybig.png"alt="yorijory" /></a>
-
+	
+	
      <div>
+     <form action="join" method="post">
      <table border="1" >
          <tr>
              <td width="100">아이디</td>
              <td width="450">
-             <form action="" method="post" > 
+             <!-- <form action="" method="post" >  -->
              
                      <input type="text" name="mid" ></input>  <!-- autofocus required -->
                      <!-- <input type="submit" value="아이디 중복확인"> </input> -->
-                 </form>           
+                 <!-- </form> -->           
              </td>
          </tr>
         
@@ -37,7 +37,7 @@
              <td>비밀번호</td>
              <td>
          
-                   <form>  
+                   <!-- <form>  --> 
                      <font>비밀번호 입력</font>
                      <input type="password" name="pwd"></input>
                      <br />
@@ -45,7 +45,7 @@
                      <input type="password" name="password_comf"></input>
                      <br /> -->
                     
-                 </form>
+                 <!-- </form> -->
              </td>
          </tr>
                 
@@ -129,13 +129,13 @@
    
      </table>
     
-     <form action="" method="post">
-         <input type="submit" value="join"> </input>
-        
-     </form> 
-     
+    <!--   <form action="" method="post">  -->
+         <input type="submit" value="join"/> 
+      <!-- </form> -->
+     </form>
      </div>
      </center>
+     
 
  </body>
  </html>

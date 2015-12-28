@@ -30,7 +30,7 @@
 
 <div class="content-container">
 	<div id="recipes-list">
-		<h1>New Recipes</h1>
+		<h1><a href ="../recipe/weekly">New Recipes</a></h1>
 		<ul id="Weekly recipes" class="clearfix">
 			<li><img src="${ctx}/content/home/images/17d9541421c6.jpg" /></li>
 			<li><img src="${ctx}/content/home/images/7453911b6913.jpg" /></li>
