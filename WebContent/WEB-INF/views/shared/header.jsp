@@ -28,7 +28,7 @@
 	         
 	         var container = document.createElement("div");
 	  
-	         container.style.backgroundColor = "white";
+	         container.style.backgroundColor = "pink";
 	         container.style.width = "600px";
 	         container.style.height = "400px";
 	         container.style.position  = "fixed";
@@ -46,12 +46,8 @@
 		     request.onreadystatechange = function(){
 		          if(request.readyState==4)
 		          {
-		        	  //tbody의 안쪽 비우기
-		        	
+		        	  
 		        	  container.innerHTML = request.responseText;
-		       
-		        	
-		     		  //alert(request.responseText);
 		          }
 		       };  
 		      

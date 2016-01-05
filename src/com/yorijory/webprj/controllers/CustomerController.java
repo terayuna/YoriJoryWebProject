@@ -25,10 +25,26 @@ public class CustomerController {
 	private NoticeDao noticeDao;
 	
 	@RequestMapping("notice")
-	public String notice(PrintWriter out, Model model) throws SQLException{
+	public String notice(String pg, String f, String q, PrintWriter out, Model model) throws SQLException{
 		out.println("hello!!!!!!!!!!!!!!!!");
 		/*NoticeDao dao = new MyBatisNoticeDao();*/
-		List<Notice> list = noticeDao.getNotices(1, "Title","");
+		int page  = 1;
+		String field = "TITLE";
+		String query = "";
+		
+		  if(pg!=null && !pg.equals("")){
+			  page = Integer.parseInt(pg);
+		  }
+		  
+		  if(f!=null && !f.equals("")){
+			  field = f;
+		  }
+		  
+		  if(q!=null && !q.equals("")){
+			  query = q;
+		  }
+		
+		List<Notice> list = noticeDao.getNotices(page, field,query);
 		
 		model.addAttribute("list", list);
 		//model.addAttribute("n", list.get(0));

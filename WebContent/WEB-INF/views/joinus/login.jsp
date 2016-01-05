@@ -11,6 +11,7 @@
 	href="${pageContext.request.contextPath}/content/customer/css/normalize.css"
 	type="text/css" rel="stylesheet" />
 
+
 <center>
 <a href="../home/index"> <img
 	src="${pageContext.request.contextPath}/content/images/yorijorybig.png"
@@ -33,3 +34,10 @@
 		</fieldset>
 	</form>
 </div>
+
+
+
+
+
+
+			
