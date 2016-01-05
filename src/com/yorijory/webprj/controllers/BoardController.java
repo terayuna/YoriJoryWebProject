@@ -32,9 +32,27 @@ public class BoardController {
 	
 	
 	@RequestMapping("board")
-	private String adminBoard(PrintWriter out, Model model) throws SQLException {
+	private String adminBoard(String pg, String f, String q,PrintWriter out, Model model) throws SQLException {
 		//BoardDao dao = new MybatisBoardDao();
-		List<Board> list = boardDao.getBoards(1, "TITLE", "");
+		
+		int page  = 1;
+		String field = "TITLE";
+		String query = "";
+		
+		  if(pg!=null && !pg.equals("")){
+			  page = Integer.parseInt(pg);
+		  }
+		  
+		  if(f!=null && !f.equals("")){
+			  field = f;
+		  }
+		  
+		  if(q!=null && !q.equals("")){
+			  query = q;
+		  }
+		  
+		  
+		List<Board> list = boardDao.getBoards(page, field, query);
 		
 		model.addAttribute("blist", list);
 		

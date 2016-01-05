@@ -4,6 +4,34 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
 
+<script>
+ var param = {f:'${param.f}', q:'${param.q}'};
+ if(param.f == "") param.f = "TITLE";
+ 
+ var numClick = function(event){
+     var page = event.target.innerText;
+     //----------------------------------------
+     var request;
+     
+     var request = new XMLHttpRequest();
+     request.onreadystatechange = function(){
+     if(request.readyState==4)
+     {
+        var tbody=document.querySelector("#boards tbody");
+        
+        tbody.innerHTML=request.responseText;
+     }
+   };
+
+  request.open("GET", "boardPartial?pg="+page+"&f="+param.f+"&q="+param.q, true); //요청방식, 사용자가 요청할 URL, 동기-비동기 결정
+  request.send(null);
+  
+     
+     return false;
+  };
+ 
+</script>
+
     				<h2>자유게시판</h2>
 					<h3 class="hidden">방문페이지 로그</h3>
 					<ul id="breadscrumb" class="block_hlist clear">
@@ -16,7 +44,7 @@
 						</li>
 					</ul>
 					<h3 class="hidden">게시판 목록</h3>
-					<form id="content-searchform" class="article-search-form" action="notice.jsp" method="get">
+					<form id="content-searchform" class="article-search-form" action="board" method="get">
 						<fieldset>
 							<legend class="hidden">
 								목록 검색 폼
@@ -25,11 +53,11 @@
 							<label for="f"
 							class="hidden">검색필드</label>
 							<select name="f">
-								<option value="TITLE">제목</option>
-								<option value="CONTENT">내용</option>
+								<option value="TITLE" <c:if test = "${param.f == TITLE}"> selected="selected"</c:if>>제목</option>
+								<option value="CONTENT" <c:if test = "${param.f == CONTENT}"> selected="selected"</c:if>>내용</option>
 							</select>
 							<label class="hidden" for="q">검색어</label>
-							<input type="text" name="q" value="" />
+							<input type="text" name="q" value="${param.q }" />
 							<input type="submit" value="검색" />
 						</fieldset>
 					</form>
@@ -71,24 +99,14 @@
 						<div class="pager clear">
 							<p id="btnPrev">
 								<a class="button btn-prev"
-								href="notice.jsp">이전</a>
+								href="board.jsp">이전</a>
 							</p>
 							<ul>
-								<li>
-									<a class="strong" href="">1</a>
-								</li>
-								<li>
-									<a href="">2</a>
-								</li>
-								<li>
-									<a href="">3</a>
-								</li>
-								<li>
-									<a href="">4</a>
-								</li>
-								<li>
-									<a href="">5</a>
-								</li>
+								<li><a class="strong" href="board?pg=1&f=${param.f}&q=${param.q}">1</a></li>
+        			  		    <li><a href="board?pg=2&f=${param.f}&q=${param.q}">2</a></li>
+        			   			<li><a href="board?pg=3&f=${param.f}&q=${param.q}">3</a></li>
+      			       			<li><a href="board?pg=4&f=${param.f}&q=${param.q}">4</a></li>
+      				   			<li><a href="board?pg=5&f=${param.f}&q=${param.q}">5</a></li>
 							</ul>
 							<p id="btnNext">
 								<span class="button btn-next">다음</span>
