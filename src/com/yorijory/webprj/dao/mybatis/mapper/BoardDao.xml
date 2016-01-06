@@ -41,6 +41,9 @@
 		</selectKey>	 
 		INSERT INTO BOARDS(code, title, content, members_mid) Values(#{code}+1,#{title},#{content},#{members_Mid})
 	</insert>
+	<select id="getBoardCount" resultType="Integer">
+  		SELECT COUNT(CODE) FROM BOARDS WHERE ${param1} LIKE '%${param2}%'
+	</select>
 	 
 	
 </mapper>

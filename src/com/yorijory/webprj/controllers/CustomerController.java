@@ -46,7 +46,10 @@ public class CustomerController {
 		
 		List<Notice> list = noticeDao.getNotices(page, field,query);
 		
+		int recordCount = noticeDao.getNoticeCount(field, query);
+		
 		model.addAttribute("list", list);
+		model.addAttribute("recordCount",recordCount);
 		//model.addAttribute("n", list.get(0));
 		
 		/*for(Notice n : list){
