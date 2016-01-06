@@ -103,4 +103,12 @@ public class MybatisNoticeDao implements NoticeDao{
 		
 		return code;
 	}
+
+	@Override
+	public int getNoticeCount(String field, String query) {
+		// TODO Auto-generated method stub
+		
+		NoticeDao dao = sqlSession.getMapper(NoticeDao.class);
+		return dao.getNoticeCount(field, query);
+	}
 }
