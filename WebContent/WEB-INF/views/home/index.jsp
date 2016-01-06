@@ -6,7 +6,7 @@
 	uri="http://www.springframework.org/security/tags"%>
 <c:set var="ctx" value="${pageContext.request.contextPath}" />
 
- <div id="main-visual">
+<div id="main-visual">
 	<div id="category">
 		<ul id="board-menu" class="clearfix">
 			<li><a href="../customer/notice">공지사항</a></li>
@@ -21,36 +21,138 @@
 			<li><a href="">탕</a></li>
 			<li><a href="">조림</a></li>
 			<li><a href="">디저트</a></li>
-			<img src = "${ctx}/content/home/images/yojoLogo.png"/>
-		</ul>
-	</div>
-</div> 
-
-
-
-<div class="content-container">
-	<div id="recipes-list">
-
-
-		<h1><a href ="../recipe/weekly">Weekly Recipes</a></h1>
-
-		<ul id="Weekly recipes" class="clearfix">
-			<li><img src="${ctx}/content/home/images/17d9541421c6.jpg" /></li>
-			<li><img src="${ctx}/content/home/images/7453911b6913.jpg" /></li>
-			<li><img src="${ctx}/content/home/images/aeaf076daf20.jpg" /></li>
-			<li><img src="${ctx}/content/home/images/b6477973a414.jpg" /></li>
-			<li><img src="${ctx}/content/home/images/e06e2f7341cd.jpg" /></li>
-			
-		</ul>
-		<h1>New Recipes</h1>
-		<ul id="New recipes" class="clearfix">
-			<li><img src="${ctx}/content/home/images/bb4bf21b1e5d.jpg" /></li>
-			<li><img src="${ctx}/content/home/images/c882f4f46602.jpg" /></li>
-			<li><img src="${ctx}/content/home/images/c890104d8f06.jpg" /></li>
-			<li><img src="${ctx}/content/home/images/f8980d423c01.jpg" /></li>
-			<li><img src="${ctx}/content/home/images/37fbda6187b0.jpg" /></li>
+			<img src="${ctx}/content/home/images/yojoLogo.png" />
 		</ul>
 	</div>
 </div>
 
 
+<div id="recipes-list">
+	<div class="content-container">
+		<h1>
+			Weekly Recipes
+		</h1>
+
+		<ul id="Weekly recipes" class="clearfix">
+			<li>
+				<div class="card-r">
+					<div class="inner">
+						<div class="image">
+							<img src="${ctx}/content/home/images/17d9541421c6.jpg" />
+						</div>
+						<div class="info">
+							<div class="title">간장소스 국수</div>
+							<div class="chef">미미님</div>
+						</div>
+						<div class="bottom-row"></div>
+					</div>
+				</div>
+			</li>
+			<li>
+			<div class="card-r">
+					<div class="inner">
+						<div class="image">
+							<img src="${ctx}/content/home/images/37fbda6187b0.jpg" />
+						</div>
+						<div class="info">
+							<div class="title">간장소스 국수</div>
+							<div class="chef">미미님</div>
+						</div>
+						<div class="bottom-row"></div>
+					</div>
+				</div>
+			</li>
+			<li>
+			<div class="card-r">
+					<div class="inner">
+						<div class="image">
+							<img src="${ctx}/content/home/images/f8980d423c01.jpg" />
+						</div>
+						<div class="info">
+							<div class="title">간장소스 국수</div>
+							<div class="chef">미미님</div>
+						</div>
+						<div class="bottom-row"></div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="card-r">
+					<div class="inner">
+						<div class="image">
+							<img src="${ctx}/content/home/images/e06e2f7341cd.jpg" />
+						</div>
+						<div class="info">
+							<div class="title">간장소스 국수</div>
+							<div class="chef">미미님</div>
+						</div>
+						<div class="bottom-row"></div>
+					</div>
+				</div>
+			</li>
+			
+			
+		</ul>
+		<h1>New Recipes</h1>
+		<ul id="New recipes" class="clearfix">
+			<li>
+			<div class="card-r">
+					<div class="inner">
+						<div class="image">
+							<img src="${ctx}/content/home/images/bb4bf21b1e5d.jpg" />
+						</div>
+						<div class="info">
+							<div class="title">간장소스 국수</div>
+							<div class="chef">미미님</div>
+						</div>
+						<div class="bottom-row"></div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="card-r">
+					<div class="inner">
+						<div class="image">
+							<img src="${ctx}/content/home/images/aeaf076daf20.jpg" />
+						</div>
+						<div class="info">
+							<div class="title">간장소스 국수</div>
+							<div class="chef">미미님</div>
+						</div>
+						<div class="bottom-row"></div>
+					</div>
+				</div>
+			</li>
+			<li>
+			<div class="card-r">
+					<div class="inner">
+						<div class="image">
+							<img src="${ctx}/content/home/images/c882f4f46602.jpg" />
+						</div>
+						<div class="info">
+							<div class="title">간장소스 국수</div>
+							<div class="chef">미미님</div>
+						</div>
+						<div class="bottom-row"></div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="card-r">
+					<div class="inner">
+						<div class="image">
+							<img src="${ctx}/content/home/images/7453911b6913.jpg" />
+						</div>
+						<div class="info">
+							<div class="title">간장소스 국수</div>
+							<div class="chef">미미님</div>
+						</div>
+						<div class="bottom-row"></div>
+					</div>
+				</div>
+			</li>
+			
+		</ul>
+	</div>
+	<!-- </div>
+ -->

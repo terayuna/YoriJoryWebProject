@@ -72,13 +72,50 @@ h1 {
 	
 }
 
-#recipes-list>ul>li>img {
-	display : inline;
-	float : left;
-	width: 200px;
-	margin-left: 12px;
-	margin-right: 12px;
-	margin-bottom: 30px;
+.image>img {
+	display : block;
+	width: 230px;
+	margin-bottom: 20px;
+	text-align: center;
+	padding-top: 5px;
 }
 
+
+.card-r {
+	margin-right: 25px;
+    vertical-align: top;
+    position: relative;
+    background-color: #fff;
+    width: 250px;
+    height: 360px;
+    padding: 10px;
+    margin-bottom: 20px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+   	
+}
+
+.title {
+	font-size: 17px;
+	font-weight: bold;
+	padding-left: 10px;
+	padding-bottom: 5px;
+}
+
+.chef {
+	font-size: 11px;
+	padding-left: 10px;
+	padding-bottom: 5px;
+}
+
+
+#recipes-list li {
+    display: inline;
+    float: left;
+}
 
