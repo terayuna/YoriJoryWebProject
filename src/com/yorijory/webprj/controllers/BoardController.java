@@ -54,7 +54,10 @@ public class BoardController {
 		  
 		List<Board> list = boardDao.getBoards(page, field, query);
 		
+		int recordCount = boardDao.getBoardCount(field, query);
+		
 		model.addAttribute("blist", list);
+		model.addAttribute("recordCount", recordCount);
 		
 		/*for(Board n : list){
 			out.println("TITLE : " + n.getTitle());

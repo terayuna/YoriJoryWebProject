@@ -99,6 +99,12 @@ public class MybatisBoardDao implements BoardDao{
 		BoardDao dao = sqlSession.getMapper(BoardDao.class);
 		String code = dao.getLastCode();
 		return code;
+	}
+	@Override
+	public int getBoardCount(String field, String query) {
+		// TODO Auto-generated method stub
+		BoardDao dao = sqlSession.getMapper(BoardDao.class);
+		return dao.getBoardCount(field, query);
 	}	
 	
 }

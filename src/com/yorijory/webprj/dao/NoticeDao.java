@@ -16,4 +16,5 @@ public interface NoticeDao {
 	public int delete(int code);
 	public int insert(Notice notice);
 	public String getLastCode();
+	public int getNoticeCount(String field, String query);
 }

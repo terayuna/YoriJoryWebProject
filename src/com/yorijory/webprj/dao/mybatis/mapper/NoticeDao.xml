@@ -41,4 +41,8 @@
 	 <delete id="delete">
 	 	DELETE NOTICES WHERE MID=#{mid}
 	 </delete>
+	 
+	 <select id="getNoticeCount" resultType="Integer">
+  		SELECT COUNT(CODE) FROM NOTICES WHERE ${param1} LIKE '%${param2}%'
+	</select>
 </mapper>

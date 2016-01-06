@@ -3,7 +3,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
-
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="my" tagdir="/WEB-INF/tags" %>
 <script>
  var param = {f:'${param.f}', q:'${param.q}'};
  if(param.f == "") param.f = "TITLE";
@@ -90,8 +91,28 @@
 						<%-- <security:authorize ifAnyGranted="ROLE_ADMIN"> --%>
   							<a class="btn-write button" href="boardReg">글쓰기</a>
    						<%-- </security:authorize> --%>
-					</p>					
-					<p id="cur-page" class="margin-small">
+					</p>
+						<c:if test="${empty param.pg }">
+                         <c:set var="pg" value="1"></c:set>
+                     </c:if>
+                     <c:if test="${not empty param.pg }">
+                     	 <c:set var="pg" value="${param.pg}"></c:set>
+                     </c:if>
+               
+               <c:set var="gap" value="${(pg-1)%5}"></c:set>
+                     <c:set var="starNum" value="${pg-gap}"></c:set>	      
+                     
+               <c:set var="lastNum" value="${fn:substringBefore((recordCount/10 == 0? recordCount/10 : recordCount/10+1),'.') }"/>
+               
+               <p id="cur-page" class="margin-small">
+                  <span class="strong">${pg}</span> /
+                  ${lastNum }page
+               </p>
+               <div id="pager-wrapper" class="margin-small">
+               
+               <!-- 페이저가 포함될 영역 -->
+               <my:pages/>					
+					<%-- <p id="cur-page" class="margin-small">
 						<span class="strong">1</span> /
 						10	page
 					</p>
@@ -111,5 +132,5 @@
 							<p id="btnNext">
 								<span class="button btn-next">다음</span>
 							</p>
-						</div>
+						</div> --%>
 					</div>

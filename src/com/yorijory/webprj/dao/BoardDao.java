@@ -16,5 +16,6 @@ public interface BoardDao {
 	public int delete(String mid) throws SQLException; 
 	public int insert(Board board) throws SQLException;
 	public String getLastCode();
+	public int getBoardCount(String field, String query);
 
 }
