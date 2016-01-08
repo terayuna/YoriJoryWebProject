@@ -21,7 +21,6 @@
 			<li><a href="">탕</a></li>
 			<li><a href="">조림</a></li>
 			<li><a href="">디저트</a></li>
-			<img src="${ctx}/content/home/images/yojoLogo.png" />
 		</ul>
 	</div>
 </div>
