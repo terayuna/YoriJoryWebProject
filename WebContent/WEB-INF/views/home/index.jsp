@@ -28,9 +28,7 @@
 
 <div id="recipes-list">
 	<div class="content-container">
-		<h1>
-			Weekly Recipes
-		</h1>
+		<h1>Weekly Recipes</h1>
 
 		<ul id="Weekly recipes" class="clearfix">
 			<li>
@@ -48,7 +46,7 @@
 				</div>
 			</li>
 			<li>
-			<div class="card-r">
+				<div class="card-r">
 					<div class="inner">
 						<div class="image">
 							<img src="${ctx}/content/home/images/37fbda6187b0.jpg" />
@@ -62,7 +60,7 @@
 				</div>
 			</li>
 			<li>
-			<div class="card-r">
+				<div class="card-r">
 					<div class="inner">
 						<div class="image">
 							<img src="${ctx}/content/home/images/f8980d423c01.jpg" />
@@ -89,13 +87,13 @@
 					</div>
 				</div>
 			</li>
-			
-			
+
+
 		</ul>
 		<h1>New Recipes</h1>
 		<ul id="New recipes" class="clearfix">
 			<li>
-			<div class="card-r">
+				<div class="card-r">
 					<div class="inner">
 						<div class="image">
 							<img src="${ctx}/content/home/images/bb4bf21b1e5d.jpg" />
@@ -123,7 +121,7 @@
 				</div>
 			</li>
 			<li>
-			<div class="card-r">
+				<div class="card-r">
 					<div class="inner">
 						<div class="image">
 							<img src="${ctx}/content/home/images/c882f4f46602.jpg" />
@@ -150,8 +148,7 @@
 					</div>
 				</div>
 			</li>
-			
+
 		</ul>
 	</div>
-	<!-- </div>
- -->
+</div>

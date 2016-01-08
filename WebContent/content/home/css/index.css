@@ -55,7 +55,7 @@
 #recipes-list {
 	background: #f6f6f6;
     margin: 26px 0;
-    padding: 26px 0 60px;
+    padding: 26px 0 60px; 
     min-width: 1030px;   
     overflow-x: hidden;
 }
